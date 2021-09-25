@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="wrapper-header">
+        <h1>
+          Portfolio Informatikunterricht
+          <p class="header-desc">Jonas & Simon</p>
+        </h1>
+    </div>
+    <div class="grid">
+        <a class="grid-item" href="./Processing/Michael_Kipp/Processing.html">Java Processing (Michael Kipp)</a>
+        <a class="grid-item" href="./Processing/eigene_Projekte/Processing.html">Java Processing (eigene Projekte)</a>
+    </div>
+</body>
+<style>
+    *{
+        font-family: Nexa_Bold;
+        background-color: #1A1A1A;
+        color: #FFCC32;
+        margin: 0;
+    }
+
+    @font-face {
+        font-family: Nexa_Bold;
+        src: url(Nexa_Bold.otf);
+    }
+    h1{
+        font-size: 2.5em;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        width: 550px;
+      }
+      .header-desc{
+        color: #1A1A1A;
+        background-color: #FFCC32;
+        font-size: 0.5em;
+      }
+      .wrapper-header{
+        display: flex;
+        justify-content: center;
+        background-color: #FFCC32;
+        margin-bottom: 40px;
+        align-items: center;
+        height: 200px;
+    }
+    .grid-item{
+        text-decoration: none;
+        font-size: xx-large;
+        border: 2px solid #FFCC32;
+        padding: 0.8em;
+        width: 500px;
+        border-radius: 0.3em;
+        margin: 0;
+        color: #FFCC32;
+    }
+    .grid-item:hover{
+        background-color: #FFCC32;
+        color: #1A1A1A;
+    }
+    .grid{
+        display: grid;
+        gap: 10px;
+        justify-content: center;
+        grid-template-columns: 550px;
+    }
+</style>
+</html>
