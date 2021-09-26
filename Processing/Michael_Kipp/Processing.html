@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="wrapper-header">
-    <img class="logo-header" src="Logo_Portfolio_minimalistic.png"></img>
+    <a class="logo-header-link" href="../../index.html"><img class="logo-header" src="Logo_Portfolio_minimalistic.png"></img></a>
     <h1>
       <a class="link-mk" href="https://michaelkipp.de/processing/">Programmieren lernen</a>
       <p class="header-desc">mit Java Processing</p>
@@ -209,25 +209,28 @@
         top: 50%;
         transform: translate(-50%,-50%);
       }
-    .header-desc{
+      .header-desc{
         color: #1A1A1A;
         background-color: #FFCC32;
         font-size: 0.5em;
       }
-    .logo-header {
+      .logo-header {
         position: relative;
         width: 250px;
         height: 250px;
         background-color: transparent;
-    }
-    .wrapper-header{
+      }
+      .logo-header-link{
+        background-color: transparent;
+      }
+      .wrapper-header{
         position: relative;
         display: flex;
         background-color: #FFCC32;
         margin-bottom: 40px;
         align-items: center;
         height: 200px;
-    }
+      }
       .list-wrapper{
         font-size: xx-large;
         border: 2px solid #FFCC32;
