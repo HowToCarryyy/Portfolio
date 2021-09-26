@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="wrapper-header">
+        <img class="logo-header" src="Logo_Portfolio_minimalistic.png"></img>
         <h1>
           Portfolio Informatikunterricht
           <p class="header-desc">Jonas & Simon</p>
         </h1>
     </div>
-    <img class="logo-header" src="Logo_Portfolio.png"></img>
     <div class="grid">
         <a class="grid-item" href="./Processing/Michael_Kipp/Processing.html">Java Processing (Michael Kipp)</a>
         <a class="grid-item" href="./Processing/eigene_Projekte/Processing.html">Java Processing (eigene Projekte)</a>
@@ -32,10 +32,14 @@
         src: url(Nexa_Bold.otf);
     }
     h1{
+        position: absolute;
         font-size: 2.5em;
         background-color: #FFCC32;
         color: #1A1A1A;
         width: 550px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
       }
     .header-desc{
         color: #1A1A1A;
@@ -47,11 +51,10 @@
         width: 250px;
         height: 250px;
         background-color: transparent;
-        top: -260px;
     }
     .wrapper-header{
+        position: relative;
         display: flex;
-        justify-content: center;
         background-color: #FFCC32;
         margin-bottom: 40px;
         align-items: center;
