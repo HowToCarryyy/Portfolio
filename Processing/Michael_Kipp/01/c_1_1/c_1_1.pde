@@ -1,13 +1,13 @@
 void setup() {
-  size(100, 100);
+  size(1000, 1000);
 }
 void draw() {
   beginShape();
-  vertex(50, 50);
-  vertex(55, 45);
-  vertex(60, 50);
-  vertex(60, 60);
-  vertex(50, 60);
-  vertex(50, 50);
+  vertex(500, 500);
+  vertex(550, 450);
+  vertex(600, 500);
+  vertex(600, 600);
+  vertex(500, 600);
+  vertex(500, 500);
   endShape();
 }
