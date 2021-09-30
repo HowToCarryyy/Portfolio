@@ -4,6 +4,7 @@ void setup() {
   size(125, 150);
   y = 0;
   x = 0;
+  background(255);
 }
 void draw() {
   for (int i = 0; i < 400; i += 25) {
