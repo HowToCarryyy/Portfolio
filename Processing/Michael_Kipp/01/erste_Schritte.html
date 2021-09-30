@@ -21,11 +21,11 @@
       </div>
       <div class="div_1_1">
         <div class="top_div_1_1">
-            <article style="box-sizing: border-box; padding-right: 20px; color: #FFCC32;" ><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
+            <article class="expl_1_1"><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
             <img class="result-1_1" src="1_1.png">
         </div>
         <div class="bottom_div_1_1">
-            <pre>1.1 a) Haus<code class="language-processing">void setup(){
+            <pre><h2>1.1 a) Haus</h2><code class="language-processing">void setup(){
     size(125, 250);
 }
 void draw(){
@@ -34,12 +34,26 @@ void draw(){
     rect(20,120,80,100);
     rect(80,200,10,20);
 }</code></pre>
-<pre>1.1 b) Halbkreis<code class="language-processing">void setup(){
+<pre><h2>1.1 b) Halbkreis</h2><code class="language-processing">void setup(){
     size(100,100);
     background(255);
 }
 void draw(){
     arc(50, 50, 100, 100, PI,2*PI - PI/360);
+}</code></pre>
+<pre><h2>1.1 c) Haus</h2><code class="language-processing">void setup() {
+    size(1000, 1000);
+    background(255);
+}
+void draw() {
+    beginShape();
+    vertex(500, 500);
+    vertex(550, 450);
+    vertex(600, 500);
+    vertex(600, 600);
+    vertex(500, 600);
+    vertex(500, 500);
+    endShape();
 }</code></pre>
         </div>
     </div>
@@ -104,19 +118,25 @@ void draw(){
         width: 75%;
     }
     .top_div_1_1{
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background-color: #1A1A1A;
         margin-bottom: 20px;
     }
+    .expl_1_1 {
+        box-sizing: border-box; 
+        padding-right: 20px; 
+        color: #FFFFFF;
+    }
     .result-1_1{
-        height: min-content;
-        border: #FFCC32 solid 2px;
+        width: 100%;
+        height: auto;
     }
     .language-processing{
         background-color: #1A1A1A;
-        border: solid 2px #FFCC32;
-        border-radius: 9px;
+        border: solid 2px #FFFFFF;
         margin-right: 20px;
+        width: min-content;
     }
     .bottom_div_1_1{
         display: flex;
