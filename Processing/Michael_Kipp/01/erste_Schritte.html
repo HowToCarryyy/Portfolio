@@ -7,6 +7,9 @@
     <title>Erste Schritte</title>
     <script src="/Processing/Michael_Kipp/01/js/processing.js"></script>
     <link rel="icon" href="Logo_Portfolio_minimalistic.png">
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="/styles/grayscale-dark.min.css">
 </head>
 <body>
     <div class="wrapper-header">
@@ -16,18 +19,29 @@
           <p class="header-desc">Programmieren lernen</p>
         </h1>
       </div>
-      <div>
-        <canvas class="a_1_1" data-processing-sources="/Processing/Michael_Kipp/01/a_1_1/a_1_1.pde"></canvas>
-        <canvas class="b_1_1" data-processing-sources="/Processing/Michael_Kipp/01/b_1_1/b_1_1.pde"></canvas>
-        <canvas class="c_1_1" data-processing-sources="/Processing/Michael_Kipp/01/c_1_1/c_1_1.pde"></canvas>
-        <canvas class="d_1_1" data-processing-sources="/Processing/Michael_Kipp/01/d_1_1/d_1_1.pde"></canvas>
+      <div class="div_1_1">
+        <div class="top_div_1_1">
+            <article style="box-sizing: border-box; padding-right: 20px; color: #FFCC32;" ><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
+            <img style="height: min-content;" src="1_1.png">
+        </div>
+        <pre><code class="language-processing">
+void setup(){
+    size(125, 250);
+}
+void draw(){
+    background(255);
+    triangle(20, 120, 100, 120, 60, 40);
+    rect(20,120,80,100);
+    rect(80,200,10,20);
+}
+              
+        </code></pre>
       </div>
 </body>
 <style>
     *{
         font-family: Nexa_Bold;
         background-color: #1A1A1A;
-        color: #FFCC32;
         margin: 0;
         scroll-behavior: smooth;
     }
@@ -75,20 +89,17 @@
         align-items: center;
         height: 200px;
     }
-    .a_1_1{
-        background-color: #FFFFFF;
+    .div_1_1{
+        background-color: #1A1A1A;
+        margin: 0 auto;
+        width: 75%;
     }
-    .b_1_1{
-        width: 250px;
-        height: 250px;
+    .top_div_1_1{
+        display: flex;
+        background-color: #1A1A1A;
     }
-    .c_1_1{
-        width: 250px;
-        height: 250px;
-    }
-    .d_1_1{
-        width: 250px;
-        height: 250px;
+    .language-processing{
+        background-color: #1A1A1A;
     }
 </style>
 </html>
