@@ -9,7 +9,7 @@
     <link rel="icon" href="Logo_Portfolio_minimalistic.png">
     <script src="/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/grayscale-dark.min.css">
+    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
 </head>
 <body>
     <div class="wrapper-header">
@@ -22,10 +22,10 @@
       <div class="div_1_1">
         <div class="top_div_1_1">
             <article style="box-sizing: border-box; padding-right: 20px; color: #FFCC32;" ><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
-            <img style="height: min-content;" src="1_1.png">
+            <img class="result-1_1" src="1_1.png">
         </div>
-        <pre><code class="language-processing">
-void setup(){
+        <div class="bottom_div_1_1">
+            <pre>1.1 a) Haus<code class="language-processing">void setup(){
     size(125, 250);
 }
 void draw(){
@@ -33,10 +33,16 @@ void draw(){
     triangle(20, 120, 100, 120, 60, 40);
     rect(20,120,80,100);
     rect(80,200,10,20);
+}</code></pre>
+<pre>1.1 b) Halbkreis<code class="language-processing">void setup(){
+    size(100,100);
+    background(255);
 }
-              
-        </code></pre>
-      </div>
+void draw(){
+    arc(50, 50, 100, 100, PI,2*PI - PI/360);
+}</code></pre>
+        </div>
+    </div>
 </body>
 <style>
     *{
@@ -56,6 +62,9 @@ void draw(){
         width: 550px;
         text-decoration: none;
     }
+    pre{
+        color: #FFCC32;
+    }
     h1{
         position: absolute;
         font-size: 2.5em;
@@ -65,7 +74,7 @@ void draw(){
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-      }
+    }
     .header-desc{
         color: #1A1A1A;
         background-color: #FFCC32;
@@ -97,9 +106,21 @@ void draw(){
     .top_div_1_1{
         display: flex;
         background-color: #1A1A1A;
+        margin-bottom: 20px;
+    }
+    .result-1_1{
+        height: min-content;
+        border: #FFCC32 solid 2px;
     }
     .language-processing{
         background-color: #1A1A1A;
+        border: solid 2px #FFCC32;
+        border-radius: 9px;
+        margin-right: 20px;
     }
+    .bottom_div_1_1{
+        display: flex;
+        background-color: #1A1A1A;
+    }   
 </style>
 </html>
