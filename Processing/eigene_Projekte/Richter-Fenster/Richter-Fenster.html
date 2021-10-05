@@ -21,28 +21,23 @@
       </div>
       <div class="Article-Wrapper">
         <div class="top_Article-Wrapper">
-            <article class="expl_1_1"><h2 style="color: #FFCC32;">Das Richter-Fenster</h2>Das Richter-Fenster befindet sich im Südquerhaus des Kölner Dom und deckt eine Fensterfläche von 106m². Auf den ersten Blick scheint es einfach, als seien die verschieden-farbigen Fensterplättchen volkommen zufällig angeordnet, bei näherem Hinsehen fällt jedoch auf, dass eine gewisse Symmetrie vorliegt. <br>Die erste und die dritte "Spalte", sowie die Zweite und die Fünfte und die Vierte und Sechste, lassen sich vertikal an einer Gerade spiegeln. Gerhard Richter, Konstrukteur und Namensgeber der Fensterstruktur, wird sich also höchst wahrscheinlich ein Programm/Script dieser Art (siehe unten) erstellt haben, um diese zu erschaffen. <br> habe dies nun in Java Processing rekonstruiert. Mit Hilfe jeweils zweier verschachtelter For-Schleifen werden die gleichfarbigen "Kacheln" an einer y-Achse gespiegelt und bilden so jenes interessantes Muster, welches wie erwähnt auch im Kölner Dom zu finden ist. <br>Durch drüken der Leertaste, kann eine neue zufällige Anordnung der einzelnen Fenster generiert werden.</article>
-            <img class="Fenster-img" src="Richter-Fenster.jpg">
+            <article class="expl_1_1"><h2 style="color: #FFCC32;">Das Richter-Fenster</h2><a style="color: #FFFFFF;" href="https://www.derix.com/portfolio-items/richterfenster-koelner-dom/">Das Richter-Fenster</a> befindet sich im Südquerhaus des Kölner Dom und deckt eine Fensterfläche von 106m². Auf den ersten Blick scheint es einfach, als seien die verschieden-farbigen Fensterplättchen volkommen zufällig angeordnet, bei näherem Hinsehen fällt jedoch auf, dass eine gewisse Symmetrie vorliegt. <br>Die erste und die dritte "Spalte", sowie die Zweite und die Fünfte und die Vierte und Sechste, lassen sich vertikal an einer Gerade spiegeln. Gerhard Richter, Konstrukteur und Namensgeber der Fensterstruktur, wird sich also höchst wahrscheinlich ein Programm/Script dieser Art (siehe unten) erstellt haben, um diese zu erschaffen. <br> habe dies nun in Java Processing rekonstruiert. Mit Hilfe jeweils zweier verschachtelter For-Schleifen werden die gleichfarbigen "Kacheln" an einer y-Achse gespiegelt und bilden so jenes interessantes Muster, welches wie erwähnt auch im Kölner Dom zu finden ist. <br>Durch drüken der Leertaste, kann eine neue zufällige Anordnung der einzelnen Fenster generiert werden.</article>
+            <a href="https://www.derix.com/portfolio-items/richterfenster-koelner-dom/"><img class="Fenster-img" src="Richter-Fenster.jpg"></a>
             
         </div>
         <div class="bottom_Article-Wrapper">
-            <canvas data-processing-sources="/Processing/eigene_Projekte/Richter-Fenster/Kirchenfenster_Gerhard_Richter/Kirchenfenster_Gerhard_Richter.pde"></canvas>
             <pre><h2>Richter-Fenster Code</h2><code class="language-processing">int e;
-int y = 10;
-PImage img;
 void setup() {
-  size(1020, 1000);
+  size(395, 853);
   noStroke();
-  //frameRate(12);
   colorMode(HSB, 360, 100, 100);
-  img = loadImage("Kirchenfenster.png");
+  Fenster();
 }
 void draw() {
   if (keyPressed) {
     Fenster();
   }
 }
-//image(img,0,0);
 void Fenster() {
   //ganz links (13er Reihe)
   for (int i = 0; i <= 60; i = i + 5) {
@@ -82,6 +77,10 @@ void Fenster() {
   rect(265, 0, 10, 1000);
   rect(330, 0, 10, 1000);
 }</code></pre>
+<div>
+    <h2 style="color: #FFCC32;">Richter-Fenster Code</h2>
+    <canvas data-processing-sources="/Processing/eigene_Projekte/Richter-Fenster/Kirchenfenster_Gerhard_Richter/Kirchenfenster_Gerhard_Richter.pde"></canvas>
+</div>
         </div>
     </div>
 </body>
@@ -166,7 +165,8 @@ void Fenster() {
     .language-processing{
         background-color: #1A1A1A;
         border: solid 2px #FFFFFF;
-        width: 100%;
+        width: auto;
+        margin-right: 5px;
     }
     .bottom_Article-Wrapper{
         display: grid;

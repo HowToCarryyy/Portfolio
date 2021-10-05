@@ -1,11 +1,11 @@
 int e;
-int y = 10;
 PImage img;
 void setup() {
-  size(395, 1000);
+  size(395, 853);
   noStroke();
   //frameRate(12);
   colorMode(HSB, 360, 100, 100);
+  Fenster();
 }
 void draw() {
   if (keyPressed) {
