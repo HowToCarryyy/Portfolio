@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erste Schritte</title>
+    <script src="/js/processing.js"></script>
+    <link rel="icon" href="Logo_black.svg">
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+</head>
+<body>
+    <div class="wrapper-header">
+        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+        <h1>
+          <a class="link-mk" href="https://michaelkipp.de/processing/01%20erste-schritte.html">Erste Schritte</a>
+          <p class="header-desc">Programmieren lernen</p>
+        </h1>
+      </div>
+      <div class="Article-Wrapper">
+        <div class="top_Article-Wrapper">
+            <article class="expl_1_1"><h2 style="color: #FFCC32;">Das Richter-Fenster</h2>Das Richter-Fenster befindet sich im Südquerhaus des Kölner Dom und deckt eine Fensterfläche von 106m². Auf den ersten Blick scheint es einfach, als seien die verschieden-farbigen Fensterplättchen volkommen zufällig angeordnet, bei näherem Hinsehen fällt jedoch auf, dass eine gewisse Symmetrie vorliegt. <br>Die erste und die dritte "Spalte", sowie die Zweite und die Fünfte und die Vierte und Sechste, lassen sich vertikal an einer Gerade spiegeln. Gerhard Richter, Konstrukteur und Namensgeber der Fensterstruktur, wird sich also höchst wahrscheinlich ein Programm/Script dieser Art (siehe unten) erstellt haben, um diese zu erschaffen. <br> habe dies nun in Java Processing rekonstruiert. Mit Hilfe jeweils zweier verschachtelter For-Schleifen werden die gleichfarbigen "Kacheln" an einer y-Achse gespiegelt und bilden so jenes interessantes Muster, welches wie erwähnt auch im Kölner Dom zu finden ist. <br>Durch drüken der Leertaste, kann eine neue zufällige Anordnung der einzelnen Fenster generiert werden.</article>
+            <img class="Fenster-img" src="Richter-Fenster.jpg">
+            
+        </div>
+        <div class="bottom_Article-Wrapper">
+            <canvas data-processing-sources="/Processing/eigene_Projekte/Richter-Fenster/Kirchenfenster_Gerhard_Richter/Kirchenfenster_Gerhard_Richter.pde"></canvas>
+            <pre><h2>Richter-Fenster Code</h2><code class="language-processing">int e;
+int y = 10;
+PImage img;
+void setup() {
+  size(1020, 1000);
+  noStroke();
+  //frameRate(12);
+  colorMode(HSB, 360, 100, 100);
+  img = loadImage("Kirchenfenster.png");
+}
+void draw() {
+  if (keyPressed) {
+    Fenster();
+  }
+}
+//image(img,0,0);
+void Fenster() {
+  //ganz links (13er Reihe)
+  for (int i = 0; i <= 60; i = i + 5) {
+    for (int e = 0; e <= 1000; e = e + 5) {
+      fill(random(360), random(40, 90), random(40, 90));
+      rect(i, e, 5, 5);
+      rect(180-i, e, 5, 5);
+    }
+  }
+  //links+1 (11er Reihe)
+  for (int i = 65; i <= 115; i = i + 5) {
+    for (int e = 0; e <= 1000; e = e + 5) {
+      fill(random(360), random(40, 90), random(40, 90));
+      rect(i, e, 5, 5);
+      rect(390-i, e, 5, 5);
+    }
+  }
+  //Mitte (5er Reihe [ungespiegelt])
+  for (int i = 185; i <= 205; i = i + 5) {
+    for (int e = 0; e <= 1000; e = e + 5) {
+      fill(random(360), random(40, 90), random(40, 90));
+      rect(i, e, 5, 5);
+    }
+  }
+  //mitte rechts (13er Reihe)
+  for (int i = 210; i <= 270; i = i + 5) {
+    for (int e = 0; e <= 1000; e = e + 5) {
+      fill(random(360), random(40, 90), random(40, 90));
+      rect(i, e, 5, 5);
+      rect(600-i, e, 5, 5);
+    }
+  }
+  fill(0);
+  rect(55, 0, 10, 1000);
+  rect(120, 0, 10, 1000);
+  rect(185, 0, 25, 1000);
+  rect(265, 0, 10, 1000);
+  rect(330, 0, 10, 1000);
+}</code></pre>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        font-family: Nexa_Bold;
+        background-color: #1A1A1A;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+    @font-face {
+        font-family: Nexa_Bold;
+        src: url(Nexa_Bold.otf);
+    }
+    .link-mk{
+        font-size: 50px;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        width: 550px;
+        text-decoration: none;
+    }
+    canvas{
+        margin-bottom: 20px;
+    }
+    pre{
+        color: #FFCC32;
+    }
+    h1{
+        position: absolute;
+        font-size: 2.5em;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        width: 550px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .header-desc{
+        color: #1A1A1A;
+        background-color: #FFCC32;
+        font-size: 0.5em;
+      }
+    .logo-header {
+        position: relative;
+        width: 140px;
+        height: auto;
+        background-color: transparent;
+        margin-left: 20px;
+    }
+    .logo-header-link{
+        background-color: transparent;
+    }
+    .wrapper-header{
+        position: relative;
+        display: flex;
+        background-color: #FFCC32;
+        margin-bottom: 40px;
+        align-items: center;
+        height: 200px;
+    }
+    .Article-Wrapper{
+        background-color: #1A1A1A;
+        margin: 0 auto;
+        width: 75%;
+    }
+    .top_Article-Wrapper{
+        display: grid;
+        grid-template-columns: 50% 20%;
+        background-color: #1A1A1A;
+        margin-bottom: 20px;
+    }
+    .expl_1_1 {
+        box-sizing: border-box; 
+        padding-right: 20px; 
+        color: #FFFFFF;
+        line-height: 150%;
+    }
+    .Fenster-img{
+        width: 100%;
+        height: auto;
+    }
+    .language-processing{
+        background-color: #1A1A1A;
+        border: solid 2px #FFFFFF;
+        width: 100%;
+    }
+    .bottom_Article-Wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background-color: #1A1A1A;
+    }   
+</style>
+</html>
