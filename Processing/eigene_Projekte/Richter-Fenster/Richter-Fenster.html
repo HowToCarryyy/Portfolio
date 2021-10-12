@@ -10,6 +10,9 @@
     <script src="/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper-header">
@@ -87,12 +90,15 @@ void Fenster() {
 <style>
     html{
       width: auto;
+      font-family: Nexa_Bold;
     }
     *{
-        font-family: Nexa_Bold;
         background-color: #1A1A1A;
         margin: 0;
         scroll-behavior: smooth;
+    }
+    pre > code {
+      font-family: 'Ubuntu Mono', monospace !important;
     }
     @font-face {
         font-family: Nexa_Bold;
@@ -103,6 +109,7 @@ void Fenster() {
     }
     pre{
         color: #FFCC32;
+        font-family: Nexa_Bold;
     }
     h1{
         position: relative;
@@ -168,6 +175,24 @@ void Fenster() {
         grid-template-columns: 50% 50%;
         background-color: #1A1A1A;
     }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #555; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #FFCC32; 
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d8ad2b; 
+      }
     /*@media (max-width: 1400px){
       .Article-Wrapper{
         width: 95%;
