@@ -15,7 +15,7 @@
     <div class="wrapper-header">
         <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
         <h1>
-          <a style="color: #1A1A1A; background-color: #FFCC32;">Das Richter-Fenster</a>
+          <a style="color: #1A1A1A; background-color: transparent;">Das Richter-Fenster</a>
           <p class="header-desc">Kunst & Informatik</p>
         </h1>
       </div>
@@ -102,18 +102,16 @@ void Fenster() {
         color: #FFCC32;
     }
     h1{
-        position: absolute;
+        position: relative;
         font-size: 2.5em;
         background-color: #FFCC32;
         color: #1A1A1A;
-        width: 550px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+        width: 385px;
+        margin: 0 auto;
     }
     .header-desc{
         color: #1A1A1A;
-        background-color: #FFCC32;
+        background-color: transparent;
         font-size: 0.5em;
       }
     .logo-header {
@@ -133,6 +131,7 @@ void Fenster() {
         margin-bottom: 40px;
         align-items: center;
         height: 200px;
+        width: auto;
     }
     .Article-Wrapper{
         background-color: #1A1A1A;
@@ -165,6 +164,17 @@ void Fenster() {
         display: grid;
         grid-template-columns: 50% 50%;
         background-color: #1A1A1A;
-    }   
+    }
+    @media (max-width: 900px){
+      .logo-header{
+        display: none;
+      }
+      .top_Article-Wrapper{
+        display: block;
+      }
+      .bottom_Article-Wrapper{
+        display: block;
+      }
+    }
 </style>
 </html>
