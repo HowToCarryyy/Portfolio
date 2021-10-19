@@ -22,6 +22,10 @@
         </h1>
       </div>
         <main class="main1_1">
+          <div class="right">
+            <article class="expl_1_1"><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
+            <img class="result-1_1" src="1_1.png">
+        </div>
             <div class="code1_1">
             <pre><h2>1.1 a) Haus</h2><code class="language-processing">void setup(){
     size(125, 250);
@@ -119,10 +123,7 @@ void draw() {
   }
 }</code></pre>
             </div>
-            <div class="right">
-                <article class="expl_1_1"><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
-                <img class="result-1_1" src="1_1.png">
-            </div>
+            
         </main>
 
 </body>
@@ -202,14 +203,12 @@ void draw() {
     .language-processing{
         background-color: #1A1A1A;
         border: solid 2px #FFFFFF;
-        margin-right: 20px;
-        margin-bottom: 10px;
     }
     .main1_1{
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: #1A1A1A;
-        gap: 5px;
+        gap: 25px;
         background-color: #1A1A1A;
         margin: 0 auto;
         width: 75%;
@@ -217,6 +216,7 @@ void draw() {
     .code1_1{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 25px;
     }
     @media (max-width: 900px){
       .logo-header{
