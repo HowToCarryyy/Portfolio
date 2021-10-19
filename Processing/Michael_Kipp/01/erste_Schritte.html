@@ -10,6 +10,8 @@
     <script>hljs.highlightAll();</script>
     <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
     <script src="/js/processing.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper-header">
@@ -19,12 +21,8 @@
           <p class="header-desc">Programmieren lernen</p>
         </h1>
       </div>
-      <div class="div_1_1">
-        <div class="top_div_1_1">
-            <article class="expl_1_1"><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
-            <img class="result-1_1" src="1_1.png">
-        </div>
-        <div class="bottom_div_1_1">
+        <main class="main1_1">
+            <div class="code1_1">
             <pre><h2>1.1 a) Haus</h2><code class="language-processing">void setup(){
     size(125, 250);
 }
@@ -55,15 +53,94 @@ void draw() {
     vertex(500, 500);
     endShape();
 }</code></pre>
-        </div>
-    </div>
+<pre><h2>1.1 d) Drudenfuß</h2><code class="language-processing">void setup() {
+  size(1000, 1000);
+  background(255);
+}
+void draw() {
+  beginShape();
+  vertex(500, 500);
+  vertex(465, 590);
+  vertex(500, 566);
+  vertex(535, 590);
+  vertex(500, 500);
+  endShape();
+  beginShape();
+  vertex(450, 533);
+  vertex(500, 566);
+  vertex(550, 533);
+  vertex(450, 533);
+  endShape();
+  line(500, 500, 465, 590);
+  line(500, 500, 535, 590);
+}</code></pre>
+<pre><h2>1.1 e) Gesicht</h2><code class="language-processing">void setup(){
+  size(1000,1000);
+  background(255);
+}
+void draw(){
+  background(255);
+  ellipse(500,500,225,225);
+  arc(500,500, 175, 175, 0.4, PI-0.4); //Mund
+  triangle(500,500,525,525,475,525); //Nase
+  ellipse(450,500,25,25); // Auge links
+  ellipse(550,500,25,25); // Auge rechts
+}</code></pre>
+<pre><h2>1.1 f) Pyramide (for-Schleife)</h2><code class="language-processing">int y;
+float x;
+void setup() {
+  size(125, 150);
+  y = 0;
+  x = 0;
+  background(255);
+}
+void draw() {
+  for (int i = 0; i < 400; i += 25) {
+    if (i >= 225 && i < 250) {
+      y = 25;
+      x = i - 187.5;
+      rect(x, y, 25, 25);
+    }
+    if (i >= 175 && i < 225) {
+      y = 50;
+      x = i - 150;
+      rect(x, y, 25, 25);
+    }
+    if (i >= 100 && i < 175) {
+      y = 75;
+      x = i - 87.5;
+      rect(x, y, 25, 25);
+    } 
+    if (i >= 0 && i < 100) {
+      y = 100;
+      x = i;
+      rect(x, y, 25, 25);
+    }
+  }
+}</code></pre>
+            </div>
+            <div class="right">
+                <article class="expl_1_1"><h2 style="color: #FFCC32;">Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
+                <img class="result-1_1" src="1_1.png">
+            </div>
+        </main>
+
 </body>
 <style>
+    html{
+      width: auto;
+      font-family: Nexa_Bold;
+    }
     *{
-        font-family: Nexa_Bold;
         background-color: #1A1A1A;
         margin: 0;
         scroll-behavior: smooth;
+    }
+    pre > h2 > code {
+      font-family: 'Ubuntu Mono', monospace !important;
+    }
+    pre > h2{
+      font-family:Nexa_Bold !important;
     }
     @font-face {
         font-family: Nexa_Bold;
@@ -112,21 +189,11 @@ void draw() {
         align-items: center;
         height: 200px;
     }
-    .div_1_1{
-        background-color: #1A1A1A;
-        margin: 0 auto;
-        width: 75%;
-    }
-    .top_div_1_1{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        background-color: #1A1A1A;
-        margin-bottom: 20px;
-    }
     .expl_1_1 {
         box-sizing: border-box; 
         padding-right: 20px; 
         color: #FFFFFF;
+        margin-bottom: 20px;
     }
     .result-1_1{
         width: 100%;
@@ -136,11 +203,50 @@ void draw() {
         background-color: #1A1A1A;
         border: solid 2px #FFFFFF;
         margin-right: 20px;
-        width: min-content;
+        margin-bottom: 10px;
     }
-    .bottom_div_1_1{
-        display: flex;
+    .main1_1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background-color: #1A1A1A;
-    }   
+        gap: 5px;
+        background-color: #1A1A1A;
+        margin: 0 auto;
+        width: 75%;
+    } 
+    .code1_1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 900px){
+      .logo-header{
+        display: none;
+      }
+      .main1_1 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code1_1{
+        display: block;
+        margin: 0 auto;
+      }
+      .right{
+        display: block;
+      }
+      .expl_1_1{
+        margin-bottom: 50px;
+      }
+      pre{
+          width: min-content;
+      }
+    }
+    @media(max-width: 450px){
+      html{
+        width: min-content;
+      }
+      .Article-Wrapper{
+        padding: 5px;
+      }
+    }
 </style>
 </html>
