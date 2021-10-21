@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktion & Variablen</title>
+    <link rel="icon" href="Logo_black.svg">
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+    <script src="/js/processing.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper-header">
+        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+        <h1>
+          <a class="link-mk" href="https://michaelkipp.de/processing/02%20interaktion-variablen.html">Interaktion & Variablen</a>
+          <p class="header-desc">Programmieren lernen</p>
+        </h1>
+      </div>
+      <main class="main2_1">
+          <div class="left2_1">
+                <article class="expl_2_1"><h2 style="color: #FFCC32;">2.1</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
+                <h2 style="color: #FFCC32;"></h2>
+            </div>
+      </main>
+</body>
+<style>
+    html{
+      width: auto;
+      font-family: Nexa_Bold;
+    }
+    *{
+        background-color: #1A1A1A;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+    pre > h2 > code {
+      font-family: 'Ubuntu Mono', monospace !important;
+    }
+    pre > h2{
+      font-family:Nexa_Bold !important;
+    }
+    @font-face {
+        font-family: Nexa_Bold;
+        src: url(Nexa_Bold.otf);
+    }
+    .link-mk{
+        font-size: 50px;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        width: 550px;
+        text-decoration: none;
+    }
+    pre{
+        color: #FFCC32;
+    }
+    h1{
+        position: absolute;
+        font-size: 2.5em;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        width: 550px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .header-desc{
+        color: #1A1A1A;
+        background-color: #FFCC32;
+        font-size: 0.5em;
+      }
+    .logo-header {
+        position: relative;
+        width: 140px;
+        height: auto;
+        background-color: transparent;
+        margin-left: 20px;
+    }
+    .logo-header-link{
+        background-color: transparent;
+    }
+    .wrapper-header{
+        position: relative;
+        display: flex;
+        background-color: #FFCC32;
+        margin-bottom: 40px;
+        align-items: center;
+        height: 200px;
+    }
+    .expl_2_1 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_1{
+      width: 100%;
+      height: auto;
+    }
+    .language-processing{
+      background-color: #1A1A1A;
+      border: solid 2px #FFFFFF;
+    }
+    .main2_1{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    } 
+    .code2_1{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .footer2_1{
+      background-color: #FFCC32; 
+      height: 10px; 
+      grid-row: 2; 
+      grid-column: 1 / 3;
+    }
+
+    .main2_2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+    }
+    .code2_2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .expl_2_2 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_2{
+      width: 100%;
+      height: auto;
+    }
+    @media (max-width: 900px){
+      .logo-header{
+        display: none;
+      }
+      .main2_1 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_1{
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_1{
+        display: block;
+      }
+      .result-2_1{
+        margin-bottom: 40px;
+      }
+      .expl_2_1{
+        margin-bottom: 35px;
+      }
+      .footer2_1{
+        grid-row: 2;
+        grid-column: 1;
+      }
+      
+
+
+      .main2_2 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_2 {
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_2 {
+        display: block;
+      }
+      .result-2_2 {
+        margin-bottom: 40px;
+      }
+      .expl_2_2 {
+        margin-bottom: 35px;
+      }
+      pre{
+        width: min-content;
+        margin-bottom: 20px;
+      }
+    }
+    @media(max-width: 450px){
+      html{
+        width: min-content;
+      }
+      .Article-Wrapper{
+        padding: 5px;
+      }
+    }
+</style>
+</html>
