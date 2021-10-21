@@ -4,8 +4,8 @@ void setup(){
 void draw(){
   background(255);
   if (mouseX < 50){
-    rect(mouseX,mouseY,100-2*mouseX,100-2*mouseY,5);
+    rect(mouseX,mouseY,100-2*mouseX,100-2*mouseY);
   } else if (mouseX >= 50){
-    rect((mouseX-100)*-1, mouseY, (100-(2*mouseX))*-1,100-(2*mouseY),5);
+    rect((mouseX-100)*-1, mouseY, (100-(2*mouseX))*-1,100-(2*mouseY));
   }
 }

@@ -1,10 +1,10 @@
 void setup(){
-  size(1000,1000);
+  size(100,100);
 }
 void draw(){
   if (keyPressed == true){
     fill(random(255));
-    textSize(random(20,300));
-    text("hallo",random(1000),random(1000));
+    textSize(random(10,50));
+    text("hallo",random(100),random(100));
   }
 }
