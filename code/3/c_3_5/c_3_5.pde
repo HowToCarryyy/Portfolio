@@ -4,8 +4,8 @@ void setup(){
 }
 void draw(){
   background(80);
-  rect(50,GateY,5,height-GateY,20);
-  rect(50,GateY-20,5,-height+20,20);
+  rect(50,GateY,5,height-GateY);
+  rect(50,GateY-20,5,-height+20);
   if (GateY <= 20){
     GateY = 20;
   }

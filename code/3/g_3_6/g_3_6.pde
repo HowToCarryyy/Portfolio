@@ -25,8 +25,8 @@ void draw(){
     ballX = 0;
     ballY = round(random(10, 90));
   }
-  rect(80,GateY,5,height-GateY,20);
-  rect(80,GateY-20,5,-height+20,20);
+  rect(80,GateY,5,height-GateY);
+  rect(80,GateY-20,5,-height+20);
   fill(255);
   ellipse(ballX, ballY, 10, 10);
   fill(0);
