@@ -142,8 +142,15 @@ void draw(){
   arc(200,200,350,350,0,TWO_PI*mouseX/360);
 }</code></pre>
 <canvas data-processing-sources="/code/2/l_2_1/l_2_1.pde"></canvas>
-<pre><h2>2.1 m) Zeiger</h2><code class="language-processing">Wir haben diese Aufgabe übersprungen</code></pre>
-<canvas data-processing-sources=""></canvas>
+<pre><h2>2.1 m) Zeiger</h2><code class="language-processing">void draw() {
+  background(255);
+  float winkeö = mouseY/100.0 * 2 * PI;
+  float x = 50+40 * sin(winkel);
+  float y = 50-40 * cos(winkel);
+  ellipse(50,50,90,90);
+  line(50, 50, x, y);
+}</code></pre>
+<canvas data-processing-sources="/code/2/m_2_1/m_2_1.pde"></canvas>
 <pre><h2>2.1 n) Einfacher Stempel</h2><code class="language-processing">void setup(){
   size(100,100);
 }
@@ -261,8 +268,399 @@ void draw(){
           </div>
           <div class="footer"></div>
       </main>
-      <!--<pre><h2></h2><code class="language-processing"></code></pre>
-      <canvas data-processing-sources="/code/2/a_2_3/a_2_3.pde"></canvas>-->
+      <main class="main2_3">
+        <div class="left2_3">
+          <article class="expl_2_1"><h2 style="color: #FFCC32;">2.3</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
+          <h2 style="color: #FFCC32;"></h2>
+        </div>
+        <p placeholder></p>
+        <div class="code2_3">
+          <!--<pre><h2>2.3 a) Variablen für Position</h2><code class="language-processing"></code></pre>
+          <canvas data-processing-sources="/code/2/a_2_3/a_2_3.pde"></canvas>
+          <pre><h2>2.3 b) Smiley</h2><code class="language-processing"></code></pre>
+          <canvas data-processing-sources="/code/2/b_2_3/b_2_3.pde"></canvas>-->
+          <pre><h2>2.3 c) Dreisatz</h2><code class="language-processing">float muesliGroesse1 = 1000;
+float muesliPreis1 = 2;
+float muesliGroesse2 = 500;
+float muesliPreis2 = muesliPreis1/muesliGroesse1*muesliGroesse2;
+void setup(){
+  println(muesliPreis2);
+}</code></pre>
+          <pre><h2>2.3 c) Ergebnis</h2><code class="language-processing">1.0</code></pre>
+          <pre><h2>2.3 d) Pythagoras</h2><code class="language-processing">void setup(){
+  size(100,100);
+}
+void draw(){
+  background(0);
+  triangle(10,10,30,10,mouseX,mouseY);
+  println("X → Maus = "+ dist(10,10,mouseX,mouseY) + " : Y → Maus = "+ dist(300,10,mouseX,mouseY) );
+}</code></pre>
+          <div>
+            <pre><h2>2.3 d) Ergebnis</h2><code class="language-processing">X → Maus = 103.58572 : Y → Maus = 253.16003
+X → Maus = 103.58572 : Y → Maus = 253.16003
+X → Maus = 103.58572 : Y → Maus = 253.16003
+X → Maus = 103.58572 : Y → Maus = 253.16003
+X → Maus = 103.58572 : Y → Maus = 253.16003
+X → Maus = 103.58572 : Y → Maus = 253.16003</code></pre>
+            <img src="2_3_d.png" style="margin-top: 5px;">
+          </div>
+          <pre><h2>2.3 e) Mausposition ausgeben</h2><code class="language-processing">void setup(){
+  size(1000,1000);
+}
+void draw(){
+  println(""+mouseX+" : "+mouseY);
+}</code></pre>
+          <pre><h2>2.3 d) Ergebnis</h2><code class="language-processing">385 : 240
+465 : 230
+537 : 224
+605 : 220
+649 : 214
+681 : 208
+694 : 205
+695 : 205
+695 : 205
+695 : 205</code></pre>
+          <pre><h2>2.3 f) Halbe Pixel?</h2><code class="language-processing">float x = 0;
+void draw() {
+  if (mousePressed == true){
+    x += 0.5;
+  }
+  background(255);
+  ellipse(x, 50, 30, 30);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/f_2_3/f_2_3.pde"></canvas>
+          <pre><h2>2.3 g) Zeichenverkettung</h2><code class="language-processing">String la = "la";
+int Anzahl = 1;
+int y;
+void setup() {
+  println(la);
+  frameRate(12);
+}
+void draw() {
+  if (mousePressed){
+    Anzahl++;
+    for(int i = 0; i < Anzahl; i++){
+      print(la + " ");
+    }
+    print("\n");
+  }
+}</code></pre>
+          <pre><h2>2.3 g) Ergebnis</h2><code class="language-processing">la
+la la 
+la la la 
+la la la la 
+la la la la la 
+la la la la la la 
+la la la la la la la 
+la la la la la la la la 
+la la la la la la la la la 
+la la la la la la la la la la 
+la la la la la la la la la la la </code></pre>
+          <pre><h2>2.3 h) Schwarzweiß</h2><code class="language-processing">int Farbe;
+void setup(){
+  size(100,100);
+}
+void draw() {
+  background(Farbe);
+  rectMode(CENTER);
+  rect(50, 50, 40, 40);
+}
+void keyPressed(){
+  Farbe = 255;
+}
+void mousePressed(){
+  Farbe = 0;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/h_2_3/h_2_3.pde"></canvas>
+          <pre><h2>2.3 i) Schwarzweiß 2</h2><code class="language-processing">int Farbe;
+int Farbe2 = 255;
+void setup(){
+  size(100,100);
+}
+void draw() {
+  background(Farbe);
+  fill(Farbe2);
+  ellipse(50, 50, 40, 40);
+}
+void keyPressed(){
+  Farbe = 255;
+  Farbe2 = 0;
+}
+void mousePressed(){
+  Farbe = 0;
+  Farbe2 = 255;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/h_i_2_3/h_2_3.pde"></canvas>
+          <pre><h2>2.3 j) Zufällige Position</h2><code class="language-processing">float x = 50;
+float y = 50;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(80,80,80);
+  ellipse(x,y,10,10);
+}
+void mouseClicked(){
+  x = random(10,90);
+  y = random(10,90);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/j_2_3/j_2_3.pde"></canvas>
+        </div>
+        <div class="footer"></div>
+      </main>
+      <main class="main2_4">
+        <div class="left2_4">
+          <article class="expl_2_1"><h2 style="color: #FFCC32;">2.4</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
+          <h2 style="color: #FFCC32;"></h2>
+        </div>
+        <p placeholder></p>
+        <div class="code2_4">
+          <pre><h2>2.4 a) Ball nach rechts</h2><code class="language-processing">float x = 0;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(80);
+  ellipse(x,50,10,10);
+}
+void mouseClicked(){
+  x += 5;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/a_2_4/a_2_4.pde"></canvas>
+          <pre><h2>2.4 b) Quadrat wächst/schrumpft</h2><code class="language-processing">float x = 50;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(80);
+  rectMode(CENTER);
+  rect(50,50,x,x);
+}
+void keyPressed(){
+  x++;
+}
+void mousePressed(){
+  x--;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/b_2_4/b_2_4.pde"></canvas>
+          <pre><h2>2.4 c) Ball fliegt nach rechts</h2><code class="language-processing">int x = 10;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(80);
+  x++;
+  ellipse(x,50,20,20);
+  if ( x > width - 10){
+    x = 10;
+  }
+}</code></pre>
+          <canvas data-processing-sources="/code/2/c_2_4/c_2_4.pde"></canvas>
+          <pre><h2>2.4 d) Hintergrund-Farbwechsel</h2><code class="language-processing">int Farbe;
+int x = 10;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(Farbe);
+  x++;
+  fill(255,0,0);
+  ellipse(x,50,20,20);
+  if ( x > width - 10){
+    x = 10;
+  }
+}
+void keyPressed(){
+  Farbe = 255;
+}
+void mousePressed(){
+  Farbe = 0;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/d_2_4/d_2_4.pde"></canvas>
+          <pre><h2>2.4 e) Ball hoch/runter</h2><code class="language-processing">int x = 10;
+int y = 10;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(80);
+  x++;
+  ellipse(x,y,20,20);
+  if ( x > width - 10){
+    x = 10;
+  }
+}
+void mouseClicked(){
+  y--;
+}
+void keyPressed(){
+  y++;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/e_2_4/e_2_4.pde"></canvas>
+          <pre><h2>2.4 f) Animation auf Kreisbahn *</h2><code class="language-processing">void draw() {
+  background(0);
+  fill(255,0,0);
+  float a = (frameCount % 60)/60.0;
+  float x = 50 - sin(a * 2*PI) *30;
+  float y = 50 + cos(a * 2*PI) *30;
+  ellipse(x, y, 10, 10);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/f_2_4/f_2_4.pde"></canvas>
+          <pre><h2>2.4 g) Need for Speed</h2><code class="language-processing">float x;
+float x2 = 1;
+void setup(){
+  size(100,100);
+}
+void draw(){
+  background(80);
+  x = x * x2;
+  x++;
+  fill(0,255,0);
+  ellipse(x,50,20,20);
+  if ( x > width - 10){
+    x = 10;
+  }
+}
+void keyPressed(){
+  x2 += 0.01;
+}
+void mouseClicked(){
+  x2 = 1;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/g_2_4/g_2_4.pde"></canvas>
+        </div>
+        <div class="footer"></div>
+      </main>
+      <main class="main2_5">
+        <div class="left2_5">
+          <article class="expl_2_1"><h2 style="color: #FFCC32;">2.5</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
+          <h2 style="color: #FFCC32;"></h2>
+        </div>
+        <p placeholder></p>
+        <div class="code2_5">
+          <pre><h2>2.5 a) Zwillinge</h2><code class="language-processing">void setup() {  
+  size(100, 100);
+}
+
+void draw() {
+  background(80);
+  fill(255);
+  ellipse(mouseX, mouseY, 15, 15);
+  fill(0);
+  ellipse(-mouseX+100, -mouseY+100, 15, 15);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/a_2_5/a_2_5.pde"></canvas>
+          <pre><h2>2.5 b) Mitte</h2><code class="language-processing">void setup() {
+  size(100, 100);
+}
+
+void draw() {
+  background(80);
+  line(0, 0, mouseX, mouseY);
+  ellipse(mouseX, mouseY, 15, 15);
+  ellipse(mouseX/2, mouseY/2, 15, 15);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/b_2_5/b_2_5.pde"></canvas>
+          <pre><h2>2.5 c) World in Miniature</h2><code class="language-processing">float x = 130;
+float y = 100;
+float w = 60;
+float h = 40;
+
+void setup() {
+  size(200, 150);
+}
+
+void draw() {
+  background(0);
+  stroke(255);
+  noFill();
+  rect(x, y, w, h);
+  fill(255);
+  ellipse(mouseX, mouseY, 10, 10);
+  ellipse(mouseX/3.3333+x,mouseY/3.75+y,3,3);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/c_2_5/c_2_5.pde"></canvas>
+          <pre><h2>2.5 d) Balken</h2><code class="language-processing">void setup(){
+  size(125,100);
+}
+void draw(){
+  background(80);
+  int y = mouseY;
+  fill(0);
+  rect(0,100-y, 35, 300);
+  rect(45,100-y, 35, 300);
+  rect(90,100-y, 35, 300);
+  fill(255);
+  rect(25, y, 25, 300);
+  rect(75, y, 25, 300);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/d_2_5/d_2_5.pde"></canvas>
+        </div>
+        <div class="footer"></div>
+      </main>
+      <main class="main2_6">
+        <div class="left2_6">
+          <article class="expl_2_1"><h2 style="color: #FFCC32;">2.6</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
+          <h2 style="color: #FFCC32;"></h2>
+        </div>
+        <p placeholder></p>
+        <div class="code2_6">
+          <pre><h2>2.6 a) Muster</h2><code class="language-processing">int x = 0;
+float y = 0;
+int opacity;
+
+void draw() {
+  stroke(opacity);
+  line(x, 0, x, y);
+  x += 1;
+  y += 1;
+  opacity += 2;
+}</code></pre>
+          <canvas data-processing-sources="/code/2/a_2_6/a_2_6.pde"></canvas>
+          <pre><h2>2.6 b) Animation mit Modulo</h2><code class="language-processing">void draw(){
+  background(0);
+  ellipse(frameCount%width, 50, 20 ,20);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/b_2_6/b_2_6.pde"></canvas>
+          <pre><h2>2.6 c) Pulsierender Cursor</h2><code class="language-processing">void setup(){
+  noCursor();
+}
+void draw(){
+  background(0);
+  ellipse(mouseX, mouseY, frameCount%30, frameCount%30);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/c_2_6/c_2_6.pde"></canvas>
+        </div>
+        <div class="footer"></div>
+      </main>
+      <main class="main2_7">
+        <div class="left2_7">
+          <article class="expl_2_1"><h2 style="color: #FFCC32;">2.7</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
+          <h2 style="color: #FFCC32;"></h2>
+        </div>
+        <p placeholder></p>
+        <div class="code2_7">
+          <pre><h2>2.7 a) Zeichen-Ticker</h2><code class="language-processing">void draw(){
+  background(0);
+  textSize(40);
+  text(key,40,50);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/a_2_7/a_2_7.pde"></canvas>
+          <pre><h2>2.7 b) Mitte</h2><code class="language-processing">void setup(){
+  size(111,77);
+  ellipse(width/2, height/2,20,20);
+}</code></pre>
+          <canvas data-processing-sources="/code/2/b_2_7/b_2_7.pde"></canvas>
+          <pre><h2>2.7 c) Zähler *</h2><code class="language-processing">void draw(){
+  background(0);
+  text(frameCount/60,50,20);
+  if (mousePressed){
+    frameCount = 0;
+  }
+}</code></pre>
+          <canvas data-processing-sources="/code/2/c_2_7/c_2_7.pde"></canvas>
+        </div>
+      </main>
 </body>
 <style>
     html{
@@ -373,6 +771,7 @@ void draw(){
       background-color: #1A1A1A;
       margin: 0 auto;
       width: 75%;
+      margin-bottom: 50px;
     }
     .code2_2{
       display: grid;
@@ -387,6 +786,141 @@ void draw(){
       margin-bottom: 20px;
     }
     .result-2_2{
+      width: 100%;
+      height: auto;
+    }
+    .main2_3{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+    .code2_3{
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .expl_2_3 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_3{
+      width: 100%;
+      height: auto;
+    }
+
+
+    .main2_4{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+    .code2_4{
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .expl_2_4 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_4{
+      width: 100%;
+      height: auto;
+    }
+
+    .main2_5{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+    .code2_5{
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .expl_2_5 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_5{
+      width: 100%;
+      height: auto;
+    }
+
+    .main2_6{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+    .code2_6{
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .expl_2_6 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_6{
+      width: 100%;
+      height: auto;
+    }
+
+    .main2_7{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+    .code2_7{
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .expl_2_7 {
+      box-sizing: border-box; 
+      padding-right: 20px; 
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .result-2_7{
       width: 100%;
       height: auto;
     }
@@ -433,6 +967,102 @@ void draw(){
         margin-bottom: 40px;
       }
       .expl_2_2 {
+        margin-bottom: 35px;
+      }
+
+      .main2_3 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_3 {
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_3 {
+        display: block;
+      }
+      .result-2_3 {
+        margin-bottom: 40px;
+      }
+      .expl_2_3 {
+        margin-bottom: 35px;
+      }
+      
+
+
+      .main2_4 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_4 {
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_4 {
+        display: block;
+      }
+      .result-2_4 {
+        margin-bottom: 40px;
+      }
+      .expl_2_3 {
+        margin-bottom: 35px;
+      }
+            
+
+
+      .main2_5 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_5 {
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_5 {
+        display: block;
+      }
+      .result-2_5 {
+        margin-bottom: 40px;
+      }
+      .expl_2_5 {
+        margin-bottom: 35px;
+      }      
+
+
+      .main2_6 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_6 {
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_6 {
+        display: block;
+      }
+      .result-2_6 {
+        margin-bottom: 40px;
+      }
+      .expl_2_6{
+        margin-bottom: 35px;
+      }      
+
+
+      .main2_7 {
+          display: block;
+          margin: 0 auto;
+      }
+      .code2_7 {
+        display: block;
+        margin: 0 auto;
+      }
+      .left2_7 {
+        display: block;
+      }
+      .result-2_7 {
+        margin-bottom: 40px;
+      }
+      .expl_2_7{
         margin-bottom: 35px;
       }
       pre{

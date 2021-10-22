@@ -1,5 +1,5 @@
 void setup(){
-  size(1000,1000);
+  size(100,100);
 }
 void draw(){
   println(""+mouseX+" : "+mouseY);
