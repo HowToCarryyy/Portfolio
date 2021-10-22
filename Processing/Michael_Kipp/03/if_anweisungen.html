@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktion & Variablen</title>
+    <title>If-Anweisungen</title>
     <link rel="icon" href="Logo_black.svg">
     <script src="/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -17,7 +17,7 @@
     <div class="wrapper-header">
         <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
         <h1>
-          <a class="link-mk" href="https://michaelkipp.de/processing/02%20interaktion-variablen.html">Interaktion & Variablen</a>
+          <a class="link-mk" href="https://michaelkipp.de/processing/03%20ifanweisung.html">If-Anweisungen</a>
           <p class="header-desc">Programmieren lernen</p>
         </h1>
       </div>
@@ -860,7 +860,6 @@ html{
      background-color: #1A1A1A;
      margin: 0;
      scroll-behavior: smooth;
-     overflow: scroll;
 }
  canvas{
      margin-top: 1.5em;
@@ -889,6 +888,7 @@ html{
 }
  pre{
      color: #FFCC32;
+     overflow-x: scroll;
 }
  h1{
      position: absolute;
@@ -1083,9 +1083,23 @@ html{
      width: 100%;
      height: auto;
 }
-::-webkit-scrollbar {
-        width: 0px;
-        height: 0px;
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #1A1A1A; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #FFCC32; 
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d8ad2b; 
       }
  @media (max-width: 900px){
      .logo-header{
