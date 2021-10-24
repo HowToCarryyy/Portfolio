@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Spiel</title>
+    <script src="/js/processing.js"></script>
+    <link rel="icon" href="Logo_black.svg">
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+</head>
+<body>
+    <div class="wrapper-header">
+        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+        <h1>
+          <a style="color: #1A1A1A; background-color: #FFCC32;">Auto Spiel</a>
+          <p class="header-desc">Spiele in Processing</p>
+        </h1>
+      </div>
+      <div class="Article-Wrapper">
+        <div class="top_Article-Wrapper">
+            <article class="expl_1_1"><h2 style="color: #FFCC32;">Auto Spiel</h2>Das Spiel habe ich direkt im Anschluss zur ersten Stunde geschrieben. <br>Würde ich es nochmal schreiben bzw. zum jetzigen Zeitpunkt (24.10.2021), dann würde ich unter anderem die Kollisionserkennung in eine eigene Funktion schreiben. Ebenfalls kann man sich viele der Variablen sparen, wenn man zum Beispiel die Bilder der Autos einfach wiederverwertet. <br> Überdies müsste man das komplette Spielkonzept überarbeiten, damit das Spiel mehr als 5 Minuten Spaß macht. Einerseits müsste man die Autos so programmieren, dass sie unterschiedlich fahren und nicht immer nach dem gleichen Muster. Andererseits müsste könnte man ein "Endlosspiel" erstellen, bei dem sich der Hintergrund bewegt und nicht der Spieler. Punkte würde der Spieler dann erhalten, wenn er eine Straße überquert.<br> (Drücken Sie Enter um das Spiel, wenn Sie "gewonnen" haben, neu zu starten)</article>
+        </div>
+        <div class="bottom_Article-Wrapper">
+            <pre><h2>Auto Spiel Code</h2><code class="language-processing">/* @pjs preload="player.png","car_right.png","Road.png","trophy.png"; */
+int highscore;
+PImage trophy_img;
+int trophy;
+PFont font;
+int death;
+int x;
+int y;
+PImage bg;
+PImage player;
+PImage CarRightBottom;
+PImage CarRightBottom2;
+PImage CarRightBottom3;
+int CarRightBottomx;
+int CarRightBottomx2;
+int CarRightBottomx3;
+PImage CarLeftBottom;
+PImage CarLeftBottom2;
+PImage CarLeftBottom3;
+int CarLeftBottomx;
+int CarLeftBottomx2;
+int CarLeftBottomx3;
+PImage CarRightTop;
+PImage CarRightTop2;
+PImage CarRightTop3;
+int CarRightTopx;
+int CarRightTopx2;
+int CarRightTopx3;
+PImage CarLeftTop;
+PImage CarLeftTop2;
+PImage CarLeftTop3;
+int CarLeftTopx;
+int CarLeftTopx2;
+int CarLeftTopx3;
+void setup(){
+  highscore = 1000;
+  trophy_img = loadImage("trophy.png");
+  trophy = 0;
+  death = 0;
+  x = 500;
+  y = 920;
+  size(1000,1000);
+  noStroke();
+  bg = loadImage("Road.png");
+  
+  player = loadImage("player.png");
+  image(player, x, y);
+  CarRightBottom = loadImage("car_right.png");
+  CarRightBottom2 = loadImage("car_right.png");
+  CarRightBottom3 = loadImage("car_right.png");
+  CarRightBottomx = -200;
+  CarRightBottomx2 = -700;
+  CarRightBottomx3 = -1050;
+  CarLeftBottom = loadImage("car_left.png");
+  CarLeftBottom2 = loadImage("car_left.png");
+  CarLeftBottom3 = loadImage("car_left.png");
+  CarLeftBottomx = 1000;
+  CarLeftBottomx2 = 1500;
+  CarLeftBottomx3 = 1850;
+  CarRightTop = loadImage("car_right.png");
+  CarRightTop2 = loadImage("car_right.png");
+  CarRightTop3 = loadImage("car_right.png");
+  CarRightTopx = -200;
+  CarRightTopx2 = -700;
+  CarRightTopx3 = -1050;
+  CarLeftTop = loadImage("car_left.png");
+  CarLeftTop2 = loadImage("car_left.png");
+  CarLeftTop3 = loadImage("car_left.png");
+  CarLeftTopx = 1000;
+  CarLeftTopx2 = 1500;
+  CarLeftTopx3 = 1850;
+  font = createFont("Comfortaa", 16, true);
+}
+void draw(){
+  background(bg);
+  rect(x, y, 34, 50);
+  fill(256,0,0, 0);
+  //x = mouseX;
+  //y = mouseY;
+  image(player, x, y);
+  // Steuerung
+  if (keyPressed == true){
+    if(x < 0){
+      x = 0;
+      image(player, x, y);
+    }
+    if(x >= width-34){
+      x = width-34;
+      image(player, x, y);
+    }
+    if (y < 0){
+      y = 0;
+      image(player, x, y);
+    }
+    if (y >= height-50){
+      y = height-51;
+      image(player, x, y);
+    } else if (keyCode == UP){
+      y -= 2;
+    }
+    else if(keyCode == DOWN){
+      y += 2;
+    }
+    else if(keyCode == LEFT){
+      x -= 2;
+    }
+    else if(keyCode == RIGHT){
+      x += 2;
+    }
+  }
+  // car right bottom
+    if (CarRightBottomx <= width){
+    CarRightBottomx += 2;
+    rect(CarRightBottomx, 625, 202, 100);
+    image(CarRightBottom, CarRightBottomx, 625);
+    
+  } else {
+    CarRightBottomx = -202;
+  }
+  if (CarRightBottomx2 <= width){
+    CarRightBottomx2 += 2;
+    rect(CarRightBottomx2, 625, 202, 100);
+    image(CarRightBottom2, CarRightBottomx2, 625);
+  } else {
+    CarRightBottomx2 = -202;
+  }
+  if (CarRightBottomx3 <= width){
+    CarRightBottomx3 += 2;
+    rect(CarRightBottomx3, 625, 202, 100);
+    image(CarRightBottom3, CarRightBottomx3, 625);
+  } else {
+    CarRightBottomx3 = -202;
+  }
+  
+  // car left bottom
+  if (CarLeftBottomx >= -202){
+    CarLeftBottomx -= 2;
+    rect(CarLeftBottomx, 770, 202, 100);
+    image(CarLeftBottom, CarLeftBottomx, 770);
+    
+  } else {
+    CarLeftBottomx = 1000;
+  }
+  if (CarLeftBottomx2 >= -202){
+    CarLeftBottomx2 -= 2;
+    rect(CarLeftBottomx2, 770, 202, 100);
+    image(CarLeftBottom2, CarLeftBottomx2, 770);
+  } else {
+    CarLeftBottomx2 = 1000;
+  }
+  if (CarLeftBottomx3 >= -202){
+    CarLeftBottomx3 -= 2;
+    rect(CarLeftBottomx3, 770, 202, 100);
+    image(CarLeftBottom3, CarLeftBottomx3, 770);
+  } else {
+    CarLeftBottomx3 = 1000;
+  }
+  // is touching right bottom
+  if (x >= CarRightBottomx-34 && x <= CarRightBottomx+202 && y >= 625-50 && y <= 725){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarRightBottomx2-34 && x <= CarRightBottomx2+202 && y >= 625-50 && y <= 725){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarRightBottomx3-34 && x <= CarRightBottomx3+202 && y >= 625-50 && y <= 725){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  
+  // is touching left bottom
+  if (x >= CarLeftBottomx-34 && x <= CarLeftBottomx+202 && y >= 770-50 && y <= 870){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarLeftBottomx2-34 && x <= CarLeftBottomx2+202 && y >= 770-50 && y <= 870){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarLeftBottomx3-34 && x <= CarLeftBottomx3+202 && y >= 770-50 && y <= 870){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  // car right Top
+    if (CarRightTopx <= width){
+    CarRightTopx += 2;
+    rect(CarRightTopx, 175, 202, 100);
+    image(CarRightTop, CarRightTopx, 175);
+    
+  } else {
+    CarRightTopx = -202;
+  }
+  if (CarRightTopx2 <= width){
+    CarRightTopx2 += 2;
+    rect(CarRightTopx2, 175, 202, 100);
+    image(CarRightTop2, CarRightTopx2, 175);
+  } else {
+    CarRightTopx2 = -202;
+  }
+  if (CarRightTopx3 <= width){
+    CarRightTopx3 += 2;
+    rect(CarRightTopx3, 175, 202, 100);
+    image(CarRightTop3, CarRightTopx3, 175);
+  } else {
+    CarRightTopx3 = -202;
+  }
+  
+  // car left Top
+  if (CarLeftTopx >= -202){
+    CarLeftTopx -= 2;
+    rect(CarLeftTopx, 315, 202, 100);
+    image(CarLeftTop, CarLeftTopx, 315);
+    
+  } else {
+    CarLeftTopx = 1000;
+  }
+  if (CarLeftTopx2 >= -202){
+    CarLeftTopx2 -= 2;
+    rect(CarLeftTopx2, 315, 202, 100);
+    image(CarLeftTop2, CarLeftTopx2, 315);
+  } else {
+    CarLeftTopx2 = 1000;
+  }
+  if (CarLeftTopx3 >= -202){
+    CarLeftTopx3 -= 2;
+    rect(CarLeftTopx3, 315, 202, 100);
+    image(CarLeftTop3, CarLeftTopx3, 315);
+  } else {
+    CarLeftTopx3 = 1000;
+  }
+  // is touching right Top
+  if (x >= CarRightTopx-34 && x <= CarRightTopx+202 && y >= 175-50 && y <= 275){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarRightTopx2-34 && x <= CarRightTopx2+202 && y >= 175-50 && y <= 275){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarRightTopx3-34 && x <= CarRightTopx3+202 && y >= 175-50 && y <= 275){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  
+  // is touching left Top
+  if (x >= CarLeftTopx-34 && x <= CarLeftTopx+202 && y >= 315-50 && y <= 415){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarLeftTopx2-34 && x <= CarLeftTopx2+202 && y >= 315-50 && y <= 415){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  if (x >= CarLeftTopx3-34 && x <= CarLeftTopx3+202 && y >= 315-50 && y <= 415){
+    x = 500;
+    y = 920;
+    death += 1;
+  }
+  textFont(font);
+  fill(0);
+  textAlign(RIGHT);
+  text("Deaths: "+death,width-5,20);
+  if (highscore == 1000){
+  } else {
+  text("Highscore: "+highscore, width-5, 40);
+  }
+  if (y < 100){
+    trophy += 1;
+  }
+  if (trophy != 0){
+    image(trophy_img, 250, 250);
+    if (highscore >= death){
+      highscore = death;
+    }
+    if (keyCode == ENTER){
+      trophy = 0;
+      x = 500;
+      y = 920;
+      death = 0;
+    }
+  }
+  fill(256,0,0, 0);
+}</code></pre>
+<div>
+    <h2 style="color: #FFCC32;">Auto Spiel Ergebnis</h2>
+    <canvas data-processing-sources="/code/Car_Game/Car_Game.pde"></canvas>
+</div>
+</div>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        font-family: Nexa_Bold;
+        background-color: #1A1A1A;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+    @font-face {
+        font-family: Nexa_Bold;
+        src: url(Nexa_Bold.otf);
+    }
+    canvas{
+        margin-bottom: 20px;
+        height: auto;
+        width: 100%;
+    }
+    pre{
+        color: #FFCC32;
+        overflow-x: scroll;
+    }
+    h1{
+        position: absolute;
+        font-size: 2.5em;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        width: 550px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .header-desc{
+        color: #1A1A1A;
+        background-color: #FFCC32;
+        font-size: 0.5em;
+      }
+    .logo-header {
+        position: relative;
+        width: 140px;
+        height: auto;
+        background-color: transparent;
+        margin-left: 20px;
+    }
+    .logo-header-link{
+        background-color: transparent;
+    }
+    .wrapper-header{
+        position: relative;
+        display: flex;
+        background-color: #FFCC32;
+        margin-bottom: 40px;
+        align-items: center;
+        height: 200px;
+    }
+    .Article-Wrapper{
+        background-color: #1A1A1A;
+        margin: 0 auto;
+        width: 75%;
+    }
+    .top_Article-Wrapper{
+        display: grid;
+        grid-template-columns: 50% 20%;
+        background-color: #1A1A1A;
+        margin-bottom: 20px;
+    }
+    .expl_1_1 {
+        box-sizing: border-box; 
+        padding-right: 20px; 
+        color: #FFFFFF;
+        line-height: 150%;
+    }
+    .QlockTwo-img{
+        width: 100%;
+        height: auto;
+    }
+    .language-processing{
+        background-color: #1A1A1A;
+        border: solid 2px #FFFFFF;
+        width: auto;
+    }
+    .bottom_Article-Wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background-color: #1A1A1A;
+        gap: 30px 5px;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        display: none; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #FFCC32; 
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d8ad2b; 
+      }
+</style>
+</html>
