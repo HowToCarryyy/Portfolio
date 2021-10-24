@@ -148,14 +148,47 @@ void setup(){
     line(0, i, 100, i);
   }
 }</code></pre>
-            <pre><h2>5.2 f) Summe</h2><code class="language-processing"></code></pre>
-            <pre><h2>5.2 g) Fakultät</h2><code class="language-processing"></code></pre>
-            <pre><h2>5.2 h) Reihen</h2><code class="language-processing"></code></pre>
-            <pre><h2>5.2 i) Fibonacci-Zahlen</h2><code class="language-processing"></code></pre>
-            <pre><h2>5.2 j) Parabel</h2><code class="language-processing"></code></pre>
+            <canvas data-processing-sources="/code/5/e_5_2/e_5_2.pde"></canvas>
+            <pre><h2>5.2 f) Summe</h2><code class="language-processing">int n = 6;
+int sum;
+void setup(){
+  for(int i = 0; i <= n; i++){
+    sum = sum + i;
+  }
+  print(sum);
+}</code></pre>
+            <pre><h2>5.2 f) Ergebnis</h2><code class="language-processing">21</code></pre>
+            <pre><h2>5.2 g) Fakultät</h2><code class="language-processing">int n = 7;
+int sum = 1;
+void setup(){
+  for(int i = 1; i <= n; i++){
+    sum = sum * i;
+  }
+  print(sum);
+}</code></pre>
+            <pre><h2>5.2 h) Reihen</h2><code class="language-processing">5040</code></pre>
+            <pre><h2>5.2 i) Fibonacci-Zahlen</h2><code class="language-processing">int j = 1;
+int k = 0;
+int l;
+void setup() {
+  for (int i = 0; i <= 10; i++) {
+    l = j+k;
+    k = j;
+    j = l;
+    print(j+" ");
+  }
+}</code></pre>
+            <pre><h2>5.2 i) Ergebnis</h2><code class="language-processing">1 2 3 5 8 13 21 34 55 89 144</code></pre>
+            <pre><h2>5.2 j) Parabel</h2><code class="language-processing">void setup(){
+  for (int i = 0; i < 50; i++){
+    ellipse((i*10),100-(i*i), 5, 5);
+  }
+}</code></pre>
+            <canvas data-processing-sources="/code/5/j_5_2/j_5_2.pde"></canvas>
             <pre><h2>5.2 k) Spirale</h2><code class="language-processing"></code></pre>
         </div>
       </main>
+      <a class="topbtn" href="#" title="Go to top">▲</button>
 <style>
 html{
      width: auto;
@@ -166,6 +199,25 @@ html{
      margin: 0;
      scroll-behavior: smooth;
 }
+.topbtn{
+        text-decoration: none;
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #FFCC32;
+        color: #1A1A1A;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    a.topbtn:hover{
+        background-color: #555;
+    }
  canvas{
      margin-top: 1.5em;
 }
