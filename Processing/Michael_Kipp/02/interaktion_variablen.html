@@ -785,27 +785,26 @@ void draw(){
     grid-column: 1 / 3;
   }
 
+  pre {
+    color: #FFCC32;
+  }
+
   .link-mk {
-    font-size: 50px;
+    font-size: 1em;
     background-color: #FFCC32;
     color: #1A1A1A;
     width: 550px;
     text-decoration: none;
   }
 
-  pre {
-    color: #FFCC32;
-  }
-
   h1 {
-    position: absolute;
-    font-size: 2.5em;
+    position: relative;
+    font-size: (1.8em, 5vw, 2.5em);
     background-color: #FFCC32;
     color: #1A1A1A;
-    width: 550px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: clamp(30%, 550px, 90%);
+    margin: 0 auto;
+    grid-column: 2;
   }
 
   .header-desc {
@@ -828,11 +827,12 @@ void draw(){
 
   .wrapper-header {
     position: relative;
-    display: flex;
+    display: grid;
     background-color: #FFCC32;
     margin-bottom: 40px;
     align-items: center;
     height: 200px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .expl_2_1 {
