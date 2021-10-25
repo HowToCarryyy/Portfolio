@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richter-Fenster</title>
-    <script src="/js/processing.js"></script>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richter-Fenster</title>
+  <script src="/js/processing.js"></script>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a style="color: #1A1A1A; background-color: transparent;">Das Richter-Fenster</a>
-          <p class="header-desc">Kunst & Informatik</p>
-        </h1>
-      </div>
-      <div class="Article-Wrapper">
-        <div class="top_Article-Wrapper">
-            <article class="expl_1_1"><h2 style="color: #FFCC32;">Das Richter-Fenster</h2><a style="color: #FFFFFF;" href="https://www.derix.com/portfolio-items/richterfenster-koelner-dom/">Das Richter-Fenster</a> befindet sich im Südquerhaus des Kölner Doms und deckt eine Fensterfläche von 106m². Auf den ersten Blick scheint es einfach, als seien die verschieden-farbigen Fensterplättchen volkommen zufällig angeordnet, bei näherem Hinsehen fällt jedoch auf, dass eine gewisse Symmetrie vorliegt. <br>Die erste und die dritte "Spalte", sowie die Zweite und die Fünfte und die Vierte und Sechste, lassen sich vertikal an einer Geraden spiegeln. Gerhard Richter, Konstrukteur und Namensgeber der Fensterstruktur, wird sich also höchst wahrscheinlich ein Programm/Script dieser Art (siehe unten) erstellt haben, um diese zu erschaffen. <br> Ich habe dies nun in Java Processing rekonstruiert. Mit Hilfe jeweils zweier verschachtelter For-Schleifen werden die gleichfarbigen "Kacheln" an einer y-Achse gespiegelt und bilden so jenes interessante Muster, welches wie erwähnt auch im Kölner Dom zu finden ist. <br>Durch drüken der Leertaste, kann eine neue zufällige Anordnung der einzelnen Fenster generiert werden.</article>
-            <a href="https://www.derix.com/portfolio-items/richterfenster-koelner-dom/"><img class="Fenster-img" src="Richter-Fenster.jpg"></a>
-            
-        </div>
-        <div class="bottom_Article-Wrapper">
-            <pre><h2>Richter-Fenster Code</h2><code class="language-processing">int e;
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+    <h1>
+      <a style="color: #1A1A1A; background-color: transparent;">Das Richter-Fenster</a>
+      <p class="header-desc">Kunst & Informatik</p>
+    </h1>
+  </div>
+  <div class="Article-Wrapper">
+    <div class="top_Article-Wrapper">
+      <article class="expl_1_1">
+        <h2 style="color: #FFCC32;">Das Richter-Fenster</h2><a style="color: #FFFFFF;"
+          href="https://www.derix.com/portfolio-items/richterfenster-koelner-dom/">Das Richter-Fenster</a> befindet sich
+        im Südquerhaus des Kölner Doms und deckt eine Fensterfläche von 106m². Auf den ersten Blick scheint es einfach,
+        als seien die verschieden-farbigen Fensterplättchen volkommen zufällig angeordnet, bei näherem Hinsehen fällt
+        jedoch auf, dass eine gewisse Symmetrie vorliegt. <br>Die erste und die dritte "Spalte", sowie die Zweite und
+        die Fünfte und die Vierte und Sechste, lassen sich vertikal an einer Geraden spiegeln. Gerhard Richter,
+        Konstrukteur und Namensgeber der Fensterstruktur, wird sich also höchst wahrscheinlich ein Programm/Script
+        dieser Art (siehe unten) erstellt haben, um diese zu erschaffen. <br> Ich habe dies nun in Java Processing
+        rekonstruiert. Mit Hilfe jeweils zweier verschachtelter For-Schleifen werden die gleichfarbigen "Kacheln" an
+        einer y-Achse gespiegelt und bilden so jenes interessante Muster, welches wie erwähnt auch im Kölner Dom zu
+        finden ist. <br>Durch drüken der Leertaste, kann eine neue zufällige Anordnung der einzelnen Fenster generiert
+        werden.
+      </article>
+      <a href="https://www.derix.com/portfolio-items/richterfenster-koelner-dom/"><img class="Fenster-img"
+          src="Richter-Fenster.jpg"></a>
+
+    </div>
+    <div class="bottom_Article-Wrapper">
+      <pre><h2>Richter-Fenster Code</h2><code class="language-processing">int e;
 void setup() {
   size(395, 853);
   noStroke();
@@ -80,145 +96,170 @@ void Fenster() {
   rect(265, 0, 10, 1000);
   rect(330, 0, 10, 1000);
 }</code></pre>
-<div>
-    <h2 style="color: #FFCC32;">Richter-Fenster Ergebnis</h2>
-    <canvas data-processing-sources="/Processing/eigene_Projekte/Richter-Fenster/Kirchenfenster_Gerhard_Richter/Kirchenfenster_Gerhard_Richter.pde"></canvas>
-</div>
-        </div>
+      <div>
+        <h2 style="color: #FFCC32;">Richter-Fenster Ergebnis</h2>
+        <canvas
+          data-processing-sources="/Processing/eigene_Projekte/Richter-Fenster/Kirchenfenster_Gerhard_Richter/Kirchenfenster_Gerhard_Richter.pde"></canvas>
+      </div>
     </div>
+  </div>
 </body>
 <style>
-    html{
-      width: auto;
-      font-family: Nexa_Bold;
-    }
-    *{
-        background-color: #1A1A1A;
-        margin: 0;
-        scroll-behavior: smooth;
-    }
-    pre > code {
-      font-family: 'Ubuntu Mono', monospace !important;
-    }
-    @font-face {
-        font-family: Nexa_Bold;
-        src: url(Nexa_Bold.otf);
-    }
-    canvas{
-        margin-bottom: 20px;
-    }
-    pre{
-        color: #FFCC32;
-        font-family: Nexa_Bold;
-    }
-    h1{
-        position: relative;
-        font-size: 2.5em;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        /*width: 385px;*/
-        margin: 0 auto;
-    }
-    .header-desc{
-        color: #1A1A1A;
-        background-color: transparent;
-        font-size: 0.5em;
-      }
-    .logo-header {
-        position: relative;
-        width: 140px;
-        height: auto;
-        background-color: transparent;
-        margin-left: 20px;
-    }
-    .logo-header-link{
-        background-color: transparent;
-    }
-    .wrapper-header{
-        position: relative;
-        display: flex;
-        background-color: #FFCC32;
-        margin-bottom: 40px;
-        align-items: center;
-        height: 200px;
-        width: auto;
-    }
-    .Article-Wrapper{
-        background-color: #1A1A1A;
-        margin: 0 auto;
-        width: 75%;
-    }
-    .top_Article-Wrapper{
-        display: grid;
-        grid-template-columns: 50% 20%;
-        background-color: #1A1A1A;
-        margin-bottom: 20px;
-    }
-    .expl_1_1 {
-        box-sizing: border-box; 
-        padding-right: 20px; 
-        color: #FFFFFF;
-        line-height: 150%;
-    }
-    .Fenster-img{
-        width: 100%;
-        height: auto;
-    }
-    .language-processing{
-        background-color: #1A1A1A;
-        border: solid 2px #FFFFFF;
-        width: auto;
-        margin-right: 5px;
-    }
-    .bottom_Article-Wrapper{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        background-color: #1A1A1A;
-    }
-    ::-webkit-scrollbar {
-        width: 10px;
-      }
+  html {
+    width: auto;
+    font-family: Nexa_Bold;
+  }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #555; 
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #FFCC32; 
-      }
+  * {
+    background-color: #1A1A1A;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d8ad2b; 
-      }
-    /*@media (max-width: 1400px){
+  pre>code {
+    font-family: 'Ubuntu Mono', monospace !important;
+  }
+
+  @font-face {
+    font-family: Nexa_Bold;
+    src: url(Nexa_Bold.otf);
+  }
+
+  canvas {
+    margin-bottom: 20px;
+  }
+
+  pre {
+    color: #FFCC32;
+    font-family: Nexa_Bold;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 2.5em;
+    background-color: #FFCC32;
+    color: #1A1A1A;
+    /*width: 385px;*/
+    margin: 0 auto;
+  }
+
+  .header-desc {
+    color: #1A1A1A;
+    background-color: transparent;
+    font-size: 0.5em;
+  }
+
+  .logo-header {
+    position: relative;
+    width: 140px;
+    height: auto;
+    background-color: transparent;
+    margin-left: 20px;
+  }
+
+  .logo-header-link {
+    background-color: transparent;
+  }
+
+  .wrapper-header {
+    position: relative;
+    display: flex;
+    background-color: #FFCC32;
+    margin-bottom: 40px;
+    align-items: center;
+    height: 200px;
+    width: auto;
+  }
+
+  .Article-Wrapper {
+    background-color: #1A1A1A;
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .top_Article-Wrapper {
+    display: grid;
+    grid-template-columns: 50% 20%;
+    background-color: #1A1A1A;
+    margin-bottom: 20px;
+  }
+
+  .expl_1_1 {
+    box-sizing: border-box;
+    padding-right: 20px;
+    color: #FFFFFF;
+    line-height: 150%;
+  }
+
+  .Fenster-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .language-processing {
+    background-color: #1A1A1A;
+    border: solid 2px #FFFFFF;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .bottom_Article-Wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #1A1A1A;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #555;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FFCC32;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d8ad2b;
+  }
+
+  /*@media (max-width: 1400px){
       .Article-Wrapper{
         width: 95%;
       }
     }*/
-    @media (max-width: 900px){
-      .logo-header{
-        display: none;
-      }
-      .top_Article-Wrapper{
-        display: block;
-      }
-      .bottom_Article-Wrapper{
-        display: block;
-      }
-      .expl_1_1{
-        margin-bottom: 50px;
-      }
+  @media (max-width: 900px) {
+    .logo-header {
+      display: none;
     }
-    @media(max-width: 450px){
-      html{
-        width: min-content;
-      }
-      .Article-Wrapper{
-        padding: 5px;
-      }
+
+    .top_Article-Wrapper {
+      display: block;
     }
+
+    .bottom_Article-Wrapper {
+      display: block;
+    }
+
+    .expl_1_1 {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media(max-width: 450px) {
+    html {
+      width: min-content;
+    }
+
+    .Article-Wrapper {
+      padding: 5px;
+    }
+  }
 </style>
+
 </html>

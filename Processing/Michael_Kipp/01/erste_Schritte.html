@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erste Schritte</title>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
-    <script src="/js/processing.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erste Schritte</title>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <script src="/js/processing.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a class="link-mk" href="https://michaelkipp.de/processing/01%20erste-schritte.html">Erste Schritte</a>
-          <p class="header-desc">Programmieren lernen</p>
-        </h1>
-      </div>
-        <main class="main1_1">
-          <div class="left1_1">
-            <article class="expl_1_1"><h2 style="color: #FFCC32;">1.1</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
-            <h2 style="color: #FFCC32;">Ergebnisse 1.1</h2><img class="result-1_1" src="1_1.png">
-        </div>
-            <div class="code1_1">
-            <pre><h2>1.1 a) Haus</h2><code class="language-processing">void setup(){
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+    <h1>
+      <a class="link-mk" href="https://michaelkipp.de/processing/01%20erste-schritte.html">Erste Schritte</a>
+      <p class="header-desc">Programmieren lernen</p>
+    </h1>
+  </div>
+  <main class="main1_1">
+    <div class="left1_1">
+      <article class="expl_1_1">
+        <h2 style="color: #FFCC32;">1.1</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod,
+        repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias
+        odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus
+        libero aperiam.
+      </article>
+      <h2 style="color: #FFCC32;">Ergebnisse 1.1</h2><img class="result-1_1" src="1_1.png">
+    </div>
+    <div class="code1_1">
+      <pre><h2>1.1 a) Haus</h2><code class="language-processing">void setup(){
     size(125, 250);
 }
 void draw(){
@@ -36,14 +43,14 @@ void draw(){
     rect(20,120,80,100);
     rect(80,200,10,20);
 }</code></pre>
-<pre><h2>1.1 b) Halbkreis</h2><code class="language-processing">void setup(){
+      <pre><h2>1.1 b) Halbkreis</h2><code class="language-processing">void setup(){
     size(100,100);
     background(255);
 }
 void draw(){
     arc(50, 50, 100, 100, PI,2*PI - PI/360);
 }</code></pre>
-<pre><h2>1.1 c) Haus</h2><code class="language-processing">void setup() {
+      <pre><h2>1.1 c) Haus</h2><code class="language-processing">void setup() {
     size(1000, 1000);
     background(255);
 }
@@ -57,7 +64,7 @@ void draw() {
     vertex(500, 500);
     endShape();
 }</code></pre>
-<pre><h2>1.1 d) Drudenfuß</h2><code class="language-processing">void setup() {
+      <pre><h2>1.1 d) Drudenfuß</h2><code class="language-processing">void setup() {
   size(1000, 1000);
   background(255);
 }
@@ -78,7 +85,7 @@ void draw() {
   line(500, 500, 465, 590);
   line(500, 500, 535, 590);
 }</code></pre>
-<pre><h2>1.1 e) Gesicht</h2><code class="language-processing">void setup(){
+      <pre><h2>1.1 e) Gesicht</h2><code class="language-processing">void setup(){
   size(1000,1000);
   background(255);
 }
@@ -90,7 +97,7 @@ void draw(){
   ellipse(450,500,25,25); // Auge links
   ellipse(550,500,25,25); // Auge rechts
 }</code></pre>
-<pre><h2>1.1 f) Pyramide (for-Schleife)</h2><code class="language-processing">int y;
+      <pre><h2>1.1 f) Pyramide (for-Schleife)</h2><code class="language-processing">int y;
 float x;
 void setup() {
   size(125, 150);
@@ -122,16 +129,21 @@ void draw() {
     }
   }
 }</code></pre>
-            </div>
-            <div class="footer1_1"></div>
-        </main>
-        <main class="main1_2">
-          <div class="left1_2">
-            <article class="expl_1_2"><h2 style="color: #FFCC32;">1.2</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod, repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus libero aperiam.</article>
-            <h2 style="color: #FFCC32;">Ergebnisse 1.2</h2><img class="result-1_2 " src="1_2.png">
-          </div>
-          <div class="code1_2">
-            <pre><h2>1.2 b) Halb-Halb</h2><code class="language-processing">void setup(){
+    </div>
+    <div class="footer1_1"></div>
+  </main>
+  <main class="main1_2">
+    <div class="left1_2">
+      <article class="expl_1_2">
+        <h2 style="color: #FFCC32;">1.2</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod,
+        repudiandae ipsum commodi enim quos tempora adipisci deserunt tenetur sapiente, culpa praesentium. Amet alias
+        odio maiores consequatur maxime doloribus suscipit unde mollitia vero, laudantium quasi id dolorem temporibus
+        libero aperiam.
+      </article>
+      <h2 style="color: #FFCC32;">Ergebnisse 1.2</h2><img class="result-1_2 " src="1_2.png">
+    </div>
+    <div class="code1_2">
+      <pre><h2>1.2 b) Halb-Halb</h2><code class="language-processing">void setup(){
   size(100,100);
 }
 void draw(){
@@ -140,7 +152,7 @@ void draw(){
   fill(0);
   rect(20,10,10,10);
 }</code></pre>
-<pre><h2>1.2 c+d) Gesicht und Mund</h2><code class="language-processing">float x = 12.5;
+      <pre><h2>1.2 c+d) Gesicht und Mund</h2><code class="language-processing">float x = 12.5;
 void setup(){
   size(1000,1000);
   }
@@ -162,7 +174,7 @@ void draw(){
     line(x,500,x,540);
   }
 }</code></pre>
-<pre><h2>1.2 e) Regenbogen</h2><code class="language-processing">void setup(){
+      <pre><h2>1.2 e) Regenbogen</h2><code class="language-processing">void setup(){
   size(100,100);
   background(0,0,255);
   noStroke();
@@ -177,107 +189,123 @@ void draw(){
   fill(0,0,256);
   ellipse(50,100,25,25);
 }</code></pre>
-          </div>
-        </main>
-        <a class="topbtn" href="#" title="Go to top">▲</button>
-</body>
-<style>
-    html{
+    </div>
+  </main>
+  <a class="topbtn" href="#" title="Go to top">▲</a>
+  <style>
+    html {
       width: auto;
       font-family: Nexa_Bold;
     }
-    *{
-        background-color: #1A1A1A;
-        margin: 0;
-        scroll-behavior: smooth;
+
+    * {
+      background-color: #1A1A1A;
+      margin: 0;
+      scroll-behavior: smooth;
     }
-    .topbtn{
-        text-decoration: none;
-        display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
+
+    .topbtn {
+      text-decoration: none;
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
     }
-    a.topbtn:hover{
-        background-color: #555;
+
+    a.topbtn:hover {
+      background-color: #555;
     }
-    pre > h2 > code {
+
+    pre>h2>code {
       font-family: 'Ubuntu Mono', monospace !important;
     }
-    pre > h2{
-      font-family:Nexa_Bold !important;
+
+    pre>h2 {
+      font-family: Nexa_Bold !important;
     }
+
     @font-face {
-        font-family: Nexa_Bold;
-        src: url(Nexa_Bold.otf);
+      font-family: Nexa_Bold;
+      src: url(Nexa_Bold.otf);
     }
-    .link-mk{
-        font-size: 50px;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        width: 550px;
-        text-decoration: none;
+
+    .link-mk {
+      font-size: 50px;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      text-decoration: none;
     }
-    pre{
-        color: #FFCC32;
+
+    pre {
+      color: #FFCC32;
     }
-    h1{
-        position: absolute;
-        font-size: 2.5em;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        width: 550px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+
+    h1 {
+      position: absolute;
+      font-size: 2.5em;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
-    .header-desc{
-        color: #1A1A1A;
-        background-color: #FFCC32;
-        font-size: 0.5em;
-      }
+
+    .header-desc {
+      color: #1A1A1A;
+      background-color: #FFCC32;
+      font-size: 0.5em;
+    }
+
     .logo-header {
-        position: relative;
-        width: 140px;
-        height: auto;
-        background-color: transparent;
-        margin-left: 20px;
+      position: relative;
+      width: 140px;
+      height: auto;
+      background-color: transparent;
+      margin-left: 20px;
     }
-    .logo-header-link{
-        background-color: transparent;
+
+    .logo-header-link {
+      background-color: transparent;
     }
-    .wrapper-header{
-        position: relative;
-        display: flex;
-        background-color: #FFCC32;
-        margin-bottom: 40px;
-        align-items: center;
-        height: 200px;
+
+    .wrapper-header {
+      position: relative;
+      display: flex;
+      background-color: #FFCC32;
+      margin-bottom: 40px;
+      align-items: center;
+      height: 200px;
     }
+
     .expl_1_1 {
-      box-sizing: border-box; 
-      padding-right: 20px; 
+      box-sizing: border-box;
+      padding-right: 20px;
       color: #FFFFFF;
       margin-bottom: 20px;
     }
-    .result-1_1{
+
+    .result-1_1 {
       width: 100%;
       height: auto;
     }
-    .language-processing{
+
+    .language-processing {
       background-color: #1A1A1A;
       border: solid 2px #FFFFFF;
     }
-    .main1_1{
+
+    .main1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       background-color: #1A1A1A;
@@ -286,20 +314,22 @@ void draw(){
       margin: 0 auto;
       width: 75%;
       margin-bottom: 50px;
-    } 
-    .code1_1{
+    }
+
+    .code1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 25px;
     }
-    .footer1_1{
-      background-color: #FFCC32; 
-      height: 10px; 
-      grid-row: 2; 
+
+    .footer1_1 {
+      background-color: #FFCC32;
+      height: 10px;
+      grid-row: 2;
       grid-column: 1 / 3;
     }
 
-    .main1_2{
+    .main1_2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       background-color: #1A1A1A;
@@ -308,96 +338,116 @@ void draw(){
       margin: 0 auto;
       width: 75%;
     }
-    .code1_2{
+
+    .code1_2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 25px;
     }
+
     .expl_1_2 {
-      box-sizing: border-box; 
-      padding-right: 20px; 
+      box-sizing: border-box;
+      padding-right: 20px;
       color: #FFFFFF;
       margin-bottom: 20px;
     }
-    .result-1_2{
+
+    .result-1_2 {
       width: 100%;
       height: auto;
     }
+
     ::-webkit-scrollbar {
-        width: 10px;
-      }
+      width: 10px;
+    }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #1A1A1A; 
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #FFCC32; 
-      }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #1A1A1A;
+    }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d8ad2b; 
-      }
-    @media (max-width: 900px){
-      .logo-header{
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #FFCC32;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d8ad2b;
+    }
+
+    @media (max-width: 900px) {
+      .logo-header {
         display: none;
       }
+
       .main1_1 {
-          display: block;
-          margin: 0 auto;
-      }
-      .code1_1{
         display: block;
         margin: 0 auto;
       }
-      .left1_1{
+
+      .code1_1 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left1_1 {
         display: block;
       }
-      .result-1_1{
+
+      .result-1_1 {
         margin-bottom: 40px;
       }
-      .expl_1_1{
+
+      .expl_1_1 {
         margin-bottom: 35px;
       }
-      .footer1_1{
+
+      .footer1_1 {
         grid-row: 2;
         grid-column: 1;
       }
-      
+
 
 
       .main1_2 {
-          display: block;
-          margin: 0 auto;
+        display: block;
+        margin: 0 auto;
       }
+
       .code1_2 {
         display: block;
         margin: 0 auto;
       }
+
       .left1_2 {
         display: block;
       }
+
       .result-1_2 {
         margin-bottom: 40px;
       }
+
       .expl_1_2 {
         margin-bottom: 35px;
       }
-      pre{
+
+      pre {
         width: min-content;
         margin-bottom: 20px;
       }
     }
-    @media(max-width: 450px){
-      html{
+
+    @media(max-width: 450px) {
+      html {
         width: min-content;
       }
-      .Article-Wrapper{
+
+      .Article-Wrapper {
         padding: 5px;
       }
     }
-</style>
+  </style>
+</body>
+
 </html>

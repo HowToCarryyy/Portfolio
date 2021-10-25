@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>If-Anweisungen</title>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
-    <script src="/js/processing.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If-Anweisungen</title>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <script src="/js/processing.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a class="link-mk" href="https://michaelkipp.de/processing/03%20ifanweisung.html">If-Anweisungen</a>
-          <p class="header-desc">Programmieren lernen</p>
-        </h1>
-      </div>
-      <main class="main3_1">
-        <div class="left3_1">
-            <article class="expl_3_1"><h2 style="color: #FFCC32;">3.1</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code3_1">
-            <pre><h2>3.1 a) Gerade/ungerade</h2><code class="language-processing">int x = 0;
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></a>
+    <h1>
+      <a class="link-mk" href="https://michaelkipp.de/processing/03%20ifanweisung.html">If-Anweisungen</a>
+      <p class="header-desc">Programmieren lernen</p>
+    </h1>
+  </div>
+  <main class="main3_1">
+    <div class="left3_1">
+      <article class="expl_3_1">
+        <h2 style="color: #FFCC32;">3.1</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda
+        voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore
+        iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem
+        maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis
+        culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita
+        quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum
+        rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente
+        perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code3_1">
+      <pre><h2>3.1 a) Gerade/ungerade</h2><code class="language-processing">int x = 0;
 void setup(){
   frameRate(1);
 }
@@ -40,13 +51,13 @@ void draw(){
     println(""+x+" = Ungerade");
   }
 }</code></pre>
-            <pre><h2>3.1 a) Ergebnis</h2><code class="language-processing">1 = Ungerade
+      <pre><h2>3.1 a) Ergebnis</h2><code class="language-processing">1 = Ungerade
 2 = Gerade
 3 = Ungerade
 4 = Gerade
 5 = Ungerade
 6 = Gerade</code></pre>
-            <pre><h2>3.1 b) Verschachteltes If</h2><code class="language-processing">int a = 10;
+      <pre><h2>3.1 b) Verschachteltes If</h2><code class="language-processing">int a = 10;
 int b = 20;
 int x = 15;
 void draw() {
@@ -56,13 +67,13 @@ void draw() {
     println("nicht drin");
   }
 }</code></pre>
-            <pre><h2>3.1 b) Ergebnis</h2><code class="language-processing">drin
+      <pre><h2>3.1 b) Ergebnis</h2><code class="language-processing">drin
 drin
 drin
 drin
 drin
 drin</code></pre>
-            <pre><h2>3.1 c) Klausurnoten</h2><code class="language-processing">int punkte = 10;
+      <pre><h2>3.1 c) Klausurnoten</h2><code class="language-processing">int punkte = 10;
 void draw(){
   if (punkte > 5 && punkte < 10){
     println("Bestanden");
@@ -72,10 +83,10 @@ void draw(){
     println("Bestanden mit Auszeichnung");
   }
 }</code></pre>
-            <pre><h2>3.1 c) Ergebnis</h2><code class="language-processing">Bestanden mit Auszeichnung
+      <pre><h2>3.1 c) Ergebnis</h2><code class="language-processing">Bestanden mit Auszeichnung
 Bestanden mit Auszeichnung
 Bestanden mit Auszeichnung</code></pre>
-            <pre><h2>3.1 d) Stehenbleiben</h2><code class="language-processing">int x = 0;
+      <pre><h2>3.1 d) Stehenbleiben</h2><code class="language-processing">int x = 0;
 
 void draw() {
   background(255);
@@ -86,8 +97,8 @@ void draw() {
     x = width/2;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/d_3_1/d_3_1.pde"></canvas>
-            <pre><h2>3.1 e) Hoch-runter</h2><code class="language-processing">int x = 0;
+      <canvas data-processing-sources="/code/3/d_3_1/d_3_1.pde"></canvas>
+      <pre><h2>3.1 e) Hoch-runter</h2><code class="language-processing">int x = 0;
 
 void draw() {
   background(255);
@@ -98,8 +109,8 @@ void draw() {
     x = 0;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/e_3_1/e_3_1.pde"></canvas>
-            <pre><h2>3.1 f) Wachsen</h2><code class="language-processing">int x = 0;
+      <canvas data-processing-sources="/code/3/e_3_1/e_3_1.pde"></canvas>
+      <pre><h2>3.1 f) Wachsen</h2><code class="language-processing">int x = 0;
 int ball = 10;
 
 void draw() {
@@ -111,8 +122,8 @@ void draw() {
     ball++;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/f_3_1/f_3_1.pde"></canvas>
-            <pre><h2>3.1 g) Wachsen 2</h2><code class="language-processing">int ball = 0;
+      <canvas data-processing-sources="/code/3/f_3_1/f_3_1.pde"></canvas>
+      <pre><h2>3.1 g) Wachsen 2</h2><code class="language-processing">int ball = 0;
 void draw(){
   background(0);
   ellipse(50,50,ball,ball);
@@ -121,8 +132,8 @@ void draw(){
     ball = 0;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/g_3_1/g_3_1.pde"></canvas>
-            <pre><h2>3.1 h) Mutierender Mousezeiger</h2><code class="language-processing">void draw(){
+      <canvas data-processing-sources="/code/3/g_3_1/g_3_1.pde"></canvas>
+      <pre><h2>3.1 h) Mutierender Mousezeiger</h2><code class="language-processing">void draw(){
   noCursor();
   background(80);
   rectMode(CENTER);
@@ -134,13 +145,13 @@ void draw(){
     ellipse(mouseX, mouseY,10,10);
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/h_3_1/h_3_1.pde"></canvas>
-            <pre><h2>3.1 i) Timer</h2><code class="language-processing">void draw(){
+      <canvas data-processing-sources="/code/3/h_3_1/h_3_1.pde"></canvas>
+      <pre><h2>3.1 i) Timer</h2><code class="language-processing">void draw(){
     frameRate(1);
     print(" . ");
 }</code></pre>
-            <pre><h2>3.1 i) Ergebnis</h2><code class="language-processing">.  .  .  .  .  .</code></pre>
-            <pre><h2>3.1 j) Glücksspiel</h2><code class="language-processing">int gewinnChance = 20;
+      <pre><h2>3.1 i) Ergebnis</h2><code class="language-processing">.  .  .  .  .  .</code></pre>
+      <pre><h2>3.1 j) Glücksspiel</h2><code class="language-processing">int gewinnChance = 20;
 
 void draw() {
 }
@@ -152,7 +163,7 @@ void keyPressed() {
     println("Verloren");
   }
 }</code></pre>
-            <pre><h2>3.1 j) Ergebnis</h2><code class="language-processing">Verloren
+      <pre><h2>3.1 j) Ergebnis</h2><code class="language-processing">Verloren
 Verloren
 Gewonnen
 Verloren
@@ -162,7 +173,7 @@ Verloren
 Gewonnen
 Verloren
 Verloren</code></pre>
-            <pre><h2>3.1 k) Stoppuhr</h2><code class="language-processing">int start = 270;
+      <pre><h2>3.1 k) Stoppuhr</h2><code class="language-processing">int start = 270;
 int stop = 270;
 void draw(){
   background(0);
@@ -175,18 +186,27 @@ void draw(){
     stop = 270;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/k_3_1/k_3_1.pde"></canvas>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main3_2">
-        <div class="left3_2">
-            <article class="expl_3_1"><h2 style="color: #FFCC32;">3.2</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code3_2">
-            <pre><h2>3.2 a) Klausurnoten</h2><code class="language-processing">int Note = 45;
+      <canvas data-processing-sources="/code/3/k_3_1/k_3_1.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main3_2">
+    <div class="left3_2">
+      <article class="expl_3_1">
+        <h2 style="color: #FFCC32;">3.2</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda
+        voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore
+        iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem
+        maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis
+        culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita
+        quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum
+        rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente
+        perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code3_2">
+      <pre><h2>3.2 a) Klausurnoten</h2><code class="language-processing">int Note = 45;
 void draw(){
   if (Note < 10){
     println("Durchgefallen!");
@@ -200,11 +220,11 @@ void draw(){
     println("Super!");
   }
 }</code></pre>
-            <pre><h2>3.2 a) Ergebnis</h2><code class="language-processing">Super!
+      <pre><h2>3.2 a) Ergebnis</h2><code class="language-processing">Super!
 Super!
 Super!
 Super!</code></pre>
-            <pre><h2>3.2 b) Lauftext</h2><code class="language-processing">int zustand = 0;
+      <pre><h2>3.2 b) Lauftext</h2><code class="language-processing">int zustand = 0;
 
 void setup() {
   textAlign(CENTER);
@@ -233,18 +253,27 @@ void mouseClicked(){
     zustand = 0;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/b_3_2/b_3_2.pde"></canvas>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main3_3">
-          <div class="left3_3">
-            <article class="expl_3_1"><h2 style="color: #FFCC32;">3.3</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-          </div>
-          <p placeholder></p>
-          <div class="code3_3">
-            <pre><h2>3.3 a) Human Resources</h2><code class="language-processing">int alter = 20;
+      <canvas data-processing-sources="/code/3/b_3_2/b_3_2.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main3_3">
+    <div class="left3_3">
+      <article class="expl_3_1">
+        <h2 style="color: #FFCC32;">3.3</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda
+        voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore
+        iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem
+        maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis
+        culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita
+        quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum
+        rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente
+        perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code3_3">
+      <pre><h2>3.3 a) Human Resources</h2><code class="language-processing">int alter = 20;
 float note = 3.7;
 void setup(){
   if (alter >= 20 && alter <= 60 && note < 3.0){
@@ -253,8 +282,8 @@ void setup(){
     println("Lieber nicht!");
   }
 }</code></pre>
-            <pre><h2>3.3 a) Ergebnis</h2><code class="language-processing">Lieber nicht!</code></pre>
-            <pre><h2>3.3 b) Human Resources 2</h2><code class="language-processing">float note = 1.0;
+      <pre><h2>3.3 a) Ergebnis</h2><code class="language-processing">Lieber nicht!</code></pre>
+      <pre><h2>3.3 b) Human Resources 2</h2><code class="language-processing">float note = 1.0;
 int erfahrung = 4;
 void setup(){
   if (note <= 1.0 || (erfahrung == 5 && note <= 3.0)){
@@ -265,8 +294,8 @@ void setup(){
     print("Ablehnen!");
   }
 }</code></pre>
-            <pre><h2>3.3 b) Ergebnis</h2><code class="language-processing">Einstellen!</code></pre>
-            <pre><h2>3.3 c) Pulsieren</h2><code class="language-processing">int speed = 0;
+      <pre><h2>3.3 b) Ergebnis</h2><code class="language-processing">Einstellen!</code></pre>
+      <pre><h2>3.3 c) Pulsieren</h2><code class="language-processing">int speed = 0;
 int buffer = 0;
 void draw(){
   background(0);
@@ -282,8 +311,8 @@ void draw(){
   }
   ellipse(50,50,speed,speed);
 }</code></pre>
-            <canvas data-processing-sources="/code/3/c_3_3/c_3_3.pde"></canvas>
-            <pre><h2>3.3 d) Pulsierende Farbe</h2><code class="language-processing">int colour = 0;
+      <canvas data-processing-sources="/code/3/c_3_3/c_3_3.pde"></canvas>
+      <pre><h2>3.3 d) Pulsierende Farbe</h2><code class="language-processing">int colour = 0;
 int buffer = 0;
 void draw(){
   background(255);
@@ -301,8 +330,8 @@ void draw(){
   stroke(colour*2);
   ellipse(50,50,90,90);
 }</code></pre>
-            <canvas data-processing-sources="/code/3/d_3_3/d_3_3.pde"></canvas>
-            <pre><h2>3.3 e+f) Rote Zone 1+2</h2><code class="language-processing">int x = 0;
+      <canvas data-processing-sources="/code/3/d_3_3/d_3_3.pde"></canvas>
+      <pre><h2>3.3 e+f) Rote Zone 1+2</h2><code class="language-processing">int x = 0;
 
 void draw() {
   background(0);
@@ -330,27 +359,36 @@ void draw() {
   }
 
 }</code></pre>
-        <canvas data-processing-sources="/code/3/e_f_3_3/e_f_3_3.pde"></canvas>
-          </div>
-          <div class="footer"></div>
-      </main>
-      <main class="main3_4">
-        <div class="left3_4">
-            <article class="expl_3_1"><h2 style="color: #FFCC32;">3.4</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code3_4">
-            <pre><h2>3.4 a) Umschalten</h2><code class="language-processing">void setup() {
+      <canvas data-processing-sources="/code/3/e_f_3_3/e_f_3_3.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main3_4">
+    <div class="left3_4">
+      <article class="expl_3_1">
+        <h2 style="color: #FFCC32;">3.4</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda
+        voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore
+        iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem
+        maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis
+        culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita
+        quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum
+        rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente
+        perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code3_4">
+      <pre><h2>3.4 a) Umschalten</h2><code class="language-processing">void setup() {
   boolean foo = true;
   foo = !foo;
   println(foo);
   foo = !foo;
   println(foo);
 }</code></pre>
-            <pre><h2>3.4 a) Ergebnis</h2><code class="language-processing">false
+      <pre><h2>3.4 a) Ergebnis</h2><code class="language-processing">false
 true</code></pre>
-            <pre><h2>3.4 b) Now you see me...</h2><code class="language-processing">boolean sichtbar = true;
+      <pre><h2>3.4 b) Now you see me...</h2><code class="language-processing">boolean sichtbar = true;
 void draw(){
   background(240);
   fill(0);
@@ -361,8 +399,8 @@ void draw(){
 void mouseClicked(){
   sichtbar = !sichtbar;
 }</code></pre>
-            <canvas data-processing-sources="/code/3/b_3_4/b_3_4.pde"></canvas>
-            <pre><h2>3.4 c) Kreis oder Box</h2><code class="language-processing">boolean kreis = true;
+      <canvas data-processing-sources="/code/3/b_3_4/b_3_4.pde"></canvas>
+      <pre><h2>3.4 c) Kreis oder Box</h2><code class="language-processing">boolean kreis = true;
 void draw(){
   if (kreis){
     fill(255);
@@ -375,8 +413,8 @@ void draw(){
 void mouseClicked(){
   kreis = !kreis;
 }</code></pre>
-            <canvas data-processing-sources="/code/3/c_3_4/c_3_4.pde"></canvas>
-            <pre><h2>3.4 d) horizontal oder vertikal</h2><code class="language-processing">boolean bool = true;
+      <canvas data-processing-sources="/code/3/c_3_4/c_3_4.pde"></canvas>
+      <pre><h2>3.4 d) horizontal oder vertikal</h2><code class="language-processing">boolean bool = true;
 int x = 0;
 int y = 0;
 void draw() {
@@ -397,18 +435,27 @@ void draw() {
 void mouseClicked() {
   bool = !bool;
 }</code></pre>
-            <canvas data-processing-sources="/code/3/d_3_4/d_3_4.pde"></canvas>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main3_5">
-        <div class="left3_5">
-            <article class="expl_3_1"><h2 style="color: #FFCC32;">3.5</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code3_5">
-                <pre><h2>3.5 a+b) Eimer + Tropfen</h2><code class="language-processing">int EimerX = 250;
+      <canvas data-processing-sources="/code/3/d_3_4/d_3_4.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main3_5">
+    <div class="left3_5">
+      <article class="expl_3_1">
+        <h2 style="color: #FFCC32;">3.5</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda
+        voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore
+        iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem
+        maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis
+        culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita
+        quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum
+        rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente
+        perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code3_5">
+      <pre><h2>3.5 a+b) Eimer + Tropfen</h2><code class="language-processing">int EimerX = 250;
 int EllipseX1 = 0;
 int EllipseX2 = 0;
 int EllipseX3 = 0;
@@ -498,8 +545,8 @@ void keyPressed() {
     EimerX -= 5;
   }
 }</code></pre>
-                <canvas data-processing-sources="/code/3/a_b_3_5/a_b_3_5.pde"></canvas>
-                <pre><h2>3.5 c) Gate</h2><code class="language-processing">int GateY = 50;
+      <canvas data-processing-sources="/code/3/a_b_3_5/a_b_3_5.pde"></canvas>
+      <pre><h2>3.5 c) Gate</h2><code class="language-processing">int GateY = 50;
 void setup(){
   size(100,100);
 }
@@ -522,19 +569,28 @@ void keyPressed(){
     GateY += 1;
   }
 }</code></pre>
-                <canvas data-processing-sources="/code/3/c_3_5/c_3_5.pde"></canvas>
-        </div>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main3_6">
-        <div class="left3_6">
-            <article class="expl_3_1"><h2 style="color: #FFCC32;">3.6</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code3_6">
-            <pre><h2>3.6 a) Farb-Buttons</h2><code class="language-processing">int button1x = 125;
+      <canvas data-processing-sources="/code/3/c_3_5/c_3_5.pde"></canvas>
+    </div>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main3_6">
+    <div class="left3_6">
+      <article class="expl_3_1">
+        <h2 style="color: #FFCC32;">3.6</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda
+        voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore
+        iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem
+        maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis
+        culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita
+        quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum
+        rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente
+        perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code3_6">
+      <pre><h2>3.6 a) Farb-Buttons</h2><code class="language-processing">int button1x = 125;
 int button1y = 20;
 int button1width = 250;
 int button1height = 40;
@@ -588,8 +644,8 @@ void draw() {
 }
 void mouseClicked() {
 }</code></pre>
-            <canvas data-processing-sources="/code/3/a_3_6/a_3_6.pde"></canvas>
-            <pre><h2>3.6 b) Überlappende Buttons</h2><code class="language-processing">int x1 = 30;
+      <canvas data-processing-sources="/code/3/a_3_6/a_3_6.pde"></canvas>
+      <pre><h2>3.6 b) Überlappende Buttons</h2><code class="language-processing">int x1 = 30;
 int y1 = 10;
 int x2 = 10;
 int y2 = 40;
@@ -608,8 +664,8 @@ void draw() {
   }
   ellipse(mouseX, mouseY, 20, 20);
 }</code></pre>
-            <canvas data-processing-sources="/code/3/b_3_6/b_3_6.pde"></canvas>
-            <pre><h2>3.6 c) Raincatcher</h2><code class="language-processing">int EimerX = 250;
+      <canvas data-processing-sources="/code/3/b_3_6/b_3_6.pde"></canvas>
+      <pre><h2>3.6 c) Raincatcher</h2><code class="language-processing">int EimerX = 250;
 int EllipseX1 = 0;
 int EllipseX2 = 0;
 int EllipseX3 = 0;
@@ -699,8 +755,8 @@ void keyPressed() {
     EimerX -= 5;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/a_b_3_5/a_b_3_5.pde"></canvas>
-            <pre><h2>3.6 d) Kollision Punkt-Linie</h2><code class="language-processing">int lineX = 50;
+      <canvas data-processing-sources="/code/3/a_b_3_5/a_b_3_5.pde"></canvas>
+      <pre><h2>3.6 d) Kollision Punkt-Linie</h2><code class="language-processing">int lineX = 50;
 void draw() {
   background(0);
   if (keyPressed) {
@@ -719,8 +775,8 @@ void draw() {
   }
   rect(lineX, 60, 40, 5, 10);
 }</code></pre>
-            <canvas data-processing-sources="/code/3/d_3_6/d_3_6.pde"></canvas>
-            <pre><h2>3.6 e) Kollision Linie-Linie</h2><code class="language-processing">int lineX = 50;
+      <canvas data-processing-sources="/code/3/d_3_6/d_3_6.pde"></canvas>
+      <pre><h2>3.6 e) Kollision Linie-Linie</h2><code class="language-processing">int lineX = 50;
 void draw() {
   background(0);
   if (keyPressed) {
@@ -739,8 +795,8 @@ void draw() {
   }
   rect(lineX, 60, 40, 5, 10);
 }</code></pre>
-            <canvas data-processing-sources="/code/3/e_3_6/e_3_6.pde"></canvas>
-            <pre><h2>3.6 f) Pong</h2><code class="language-processing"int playerX = 0;
+      <canvas data-processing-sources="/code/3/e_3_6/e_3_6.pde"></canvas>
+      <pre><h2>3.6 f) Pong</h2><code class="language-processing"int playerX = 0;
 int ballX = 125;
 int ballY = 125;
 boolean boolY = true;
@@ -800,8 +856,8 @@ void keyPressed() {
     }
   }
 }></code></pre>
-            <canvas data-processing-sources="/code/3/f_3_6/f_3_6.pde"></canvas>
-            <pre><h2>3.6 g) GateGame</h2><code class="language-processing">int GateY = 50;
+      <canvas data-processing-sources="/code/3/f_3_6/f_3_6.pde"></canvas>
+      <pre><h2>3.6 g) GateGame</h2><code class="language-processing">int GateY = 50;
 int ballX = 500;
 int ballY;
 int score;
@@ -848,402 +904,479 @@ void keyPressed(){
     score = 0;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/3/g_3_6/g_3_6.pde"></canvas>
-        </div>
-      </main>
-      <a class="topbtn" href="#" title="Go to top">▲</button>
-<style>
-html{
-     width: auto;
-     font-family: Nexa_Bold;
-}
- *{
-     background-color: #1A1A1A;
-     margin: 0;
-     scroll-behavior: smooth;
-}
-.topbtn{
-        text-decoration: none;
-        display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
+      <canvas data-processing-sources="/code/3/g_3_6/g_3_6.pde"></canvas>
+    </div>
+  </main>
+  <a class="topbtn" href="#" title="Go to top">▲</a>
+  <style>
+    html {
+      width: auto;
+      font-family: Nexa_Bold;
     }
-    a.topbtn:hover{
-        background-color: #555;
+
+    * {
+      background-color: #1A1A1A;
+      margin: 0;
+      scroll-behavior: smooth;
     }
- canvas{
-     margin-top: 1.5em;
-}
- pre > h2 > code {
-     font-family: 'Ubuntu Mono', monospace !important;
-}
- pre > h2{
-     font-family:Nexa_Bold !important;
-}
- @font-face {
-     font-family: Nexa_Bold;
-     src: url(Nexa_Bold.otf);
-}
- .footer{
-     background-color: #FFCC32;
-     height: 10px;
-     grid-column: 1 / 3;
-}
- .link-mk{
-     font-size: 50px;
-     background-color: #FFCC32;
-     color: #1A1A1A;
-     width: 550px;
-     text-decoration: none;
-}
- pre{
-     color: #FFCC32;
-     overflow-x: scroll;
-}
- h1{
-     position: absolute;
-     font-size: 2.5em;
-     background-color: #FFCC32;
-     color: #1A1A1A;
-     width: 550px;
-     left: 50%;
-     top: 50%;
-     transform: translate(-50%,-50%);
-}
- .header-desc{
-     color: #1A1A1A;
-     background-color: #FFCC32;
-     font-size: 0.5em;
-}
- .logo-header {
-     position: relative;
-     width: 140px;
-     height: auto;
-     background-color: transparent;
-     margin-left: 20px;
-}
- .logo-header-link{
-     background-color: transparent;
-}
- .wrapper-header{
-     position: relative;
-     display: flex;
-     background-color: #FFCC32;
-     margin-bottom: 40px;
-     align-items: center;
-     height: 200px;
-}
- .expl_3_1 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-3_1{
-     width: 100%;
-     height: auto;
-}
- .language-processing{
-     background-color: #1A1A1A;
-     border: solid 2px #FFFFFF;
-}
- .main3_1{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code3_1{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .main3_2{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code3_2{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_3_2 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-3_2{
-     width: 100%;
-     height: auto;
-}
- .main3_3{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code3_3{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_3_3 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-3_3{
-     width: 100%;
-     height: auto;
-}
- .main3_4{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code3_4{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_3_4 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-3_4{
-     width: 100%;
-     height: auto;
-}
- .main3_5{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code3_5{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_3_5 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-3_5{
-     width: 100%;
-     height: auto;
-}
- .main3_6{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code3_6{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_3_6 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-3_6{
-     width: 100%;
-     height: auto;
-}
+
+    .topbtn {
+      text-decoration: none;
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    a.topbtn:hover {
+      background-color: #555;
+    }
+
+    canvas {
+      margin-top: 1.5em;
+    }
+
+    pre>h2>code {
+      font-family: 'Ubuntu Mono', monospace !important;
+    }
+
+    pre>h2 {
+      font-family: Nexa_Bold !important;
+    }
+
+    @font-face {
+      font-family: Nexa_Bold;
+      src: url(Nexa_Bold.otf);
+    }
+
+    .footer {
+      background-color: #FFCC32;
+      height: 10px;
+      grid-column: 1 / 3;
+    }
+
+    .link-mk {
+      font-size: 50px;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      text-decoration: none;
+    }
+
+    pre {
+      color: #FFCC32;
+      overflow-x: scroll;
+    }
+
+    h1 {
+      position: absolute;
+      font-size: 2.5em;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-desc {
+      color: #1A1A1A;
+      background-color: #FFCC32;
+      font-size: 0.5em;
+    }
+
+    .logo-header {
+      position: relative;
+      width: 140px;
+      height: auto;
+      background-color: transparent;
+      margin-left: 20px;
+    }
+
+    .logo-header-link {
+      background-color: transparent;
+    }
+
+    .wrapper-header {
+      position: relative;
+      display: flex;
+      background-color: #FFCC32;
+      margin-bottom: 40px;
+      align-items: center;
+      height: 200px;
+    }
+
+    .expl_3_1 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-3_1 {
+      width: 100%;
+      height: auto;
+    }
+
+    .language-processing {
+      background-color: #1A1A1A;
+      border: solid 2px #FFFFFF;
+    }
+
+    .main3_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code3_1 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .main3_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code3_2 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_3_2 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-3_2 {
+      width: 100%;
+      height: auto;
+    }
+
+    .main3_3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code3_3 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_3_3 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-3_3 {
+      width: 100%;
+      height: auto;
+    }
+
+    .main3_4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code3_4 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_3_4 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-3_4 {
+      width: 100%;
+      height: auto;
+    }
+
+    .main3_5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code3_5 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_3_5 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-3_5 {
+      width: 100%;
+      height: auto;
+    }
+
+    .main3_6 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code3_6 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_3_6 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-3_6 {
+      width: 100%;
+      height: auto;
+    }
+
     ::-webkit-scrollbar {
-        width: 10px;
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #1A1A1A;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #FFCC32;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d8ad2b;
+    }
+
+    @media (max-width: 900px) {
+      .logo-header {
+        display: none;
       }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #1A1A1A; 
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #FFCC32; 
+      .main3_1 {
+        display: block;
+        margin: 0 auto;
       }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d8ad2b; 
+      .code3_1 {
+        display: block;
+        margin: 0 auto;
       }
- @media (max-width: 900px){
-     .logo-header{
-         display: none;
+
+      .left3_1 {
+        display: block;
+      }
+
+      .result-3_1 {
+        margin-bottom: 40px;
+      }
+
+      .expl_3_1 {
+        margin-bottom: 35px;
+      }
+
+      .footer3_1 {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .main3_2 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code3_2 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left3_2 {
+        display: block;
+      }
+
+      .result-3_2 {
+        margin-bottom: 40px;
+      }
+
+      .expl_3_2 {
+        margin-bottom: 35px;
+      }
+
+      .main3_3 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code3_3 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left3_3 {
+        display: block;
+      }
+
+      .result-3_3 {
+        margin-bottom: 40px;
+      }
+
+      .expl_3_3 {
+        margin-bottom: 35px;
+      }
+
+      .main3_4 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code3_4 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left3_4 {
+        display: block;
+      }
+
+      .result-3_4 {
+        margin-bottom: 40px;
+      }
+
+      .expl_3_3 {
+        margin-bottom: 35px;
+      }
+
+      .main3_5 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code3_5 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left3_5 {
+        display: block;
+      }
+
+      .result-3_5 {
+        margin-bottom: 40px;
+      }
+
+      .expl_3_5 {
+        margin-bottom: 35px;
+      }
+
+      .main3_6 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code3_6 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left3_6 {
+        display: block;
+      }
+
+      .result-3_6 {
+        margin-bottom: 40px;
+      }
+
+      .expl_3_6 {
+        margin-bottom: 35px;
+      }
+
+      pre {
+        width: min-content;
+        margin-bottom: 20px;
+      }
     }
-     .main3_1 {
-         display: block;
-         margin: 0 auto;
+
+    @media(max-width: 450px) {
+      html {
+        width: min-content;
+      }
+
+      .Article-Wrapper {
+        padding: 5px;
+      }
     }
-     .code3_1{
-         display: block;
-         margin: 0 auto;
-    }
-     .left3_1{
-         display: block;
-    }
-     .result-3_1{
-         margin-bottom: 40px;
-    }
-     .expl_3_1{
-         margin-bottom: 35px;
-    }
-     .footer3_1{
-         grid-row: 2;
-         grid-column: 1;
-    }
-     .main3_2 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code3_2 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left3_2 {
-         display: block;
-    }
-     .result-3_2 {
-         margin-bottom: 40px;
-    }
-     .expl_3_2 {
-         margin-bottom: 35px;
-    }
-     .main3_3 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code3_3 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left3_3 {
-         display: block;
-    }
-     .result-3_3 {
-         margin-bottom: 40px;
-    }
-     .expl_3_3 {
-         margin-bottom: 35px;
-    }
-     .main3_4 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code3_4 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left3_4 {
-         display: block;
-    }
-     .result-3_4 {
-         margin-bottom: 40px;
-    }
-     .expl_3_3 {
-         margin-bottom: 35px;
-    }
-     .main3_5 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code3_5 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left3_5 {
-         display: block;
-    }
-     .result-3_5 {
-         margin-bottom: 40px;
-    }
-     .expl_3_5 {
-         margin-bottom: 35px;
-    }
-     .main3_6 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code3_6 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left3_6 {
-         display: block;
-    }
-     .result-3_6 {
-         margin-bottom: 40px;
-    }
-     .expl_3_6{
-         margin-bottom: 35px;
-    }
-     pre{
-         width: min-content;
-         margin-bottom: 20px;
-    }
-}
- @media(max-width: 450px){
-     html{
-         width: min-content;
-    }
-     .Article-Wrapper{
-         padding: 5px;
-    }
-}
-</style>
+  </style>
 </body>
+
 </html>

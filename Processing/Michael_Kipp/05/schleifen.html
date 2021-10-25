@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schleifen</title>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
-    <script src="/js/processing.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schleifen</title>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <script src="/js/processing.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a class="link-mk" href="https://michaelkipp.de/processing/05%20schleifen.html">Schleifen</a>
-          <p class="header-desc">Programmieren lernen</p>
-        </h1>
-      </div>
-      <main class="main5_1">
-        <div class="left5_1">
-            <article class="expl_5_1"><h2 style="color: #FFCC32;">5.1 While-Schleife</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code5_1">
-            <pre><h2>5.1 a) 2er-Schritte</h2><code class="language-processing">int zaehler = 0;
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+    <h1>
+      <a class="link-mk" href="https://michaelkipp.de/processing/05%20schleifen.html">Schleifen</a>
+      <p class="header-desc">Programmieren lernen</p>
+    </h1>
+  </div>
+  <main class="main5_1">
+    <div class="left5_1">
+      <article class="expl_5_1">
+        <h2 style="color: #FFCC32;">5.1 While-Schleife</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis
+        libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti
+        delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro
+        corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam
+        voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla
+        ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint
+        adipisci illum, sapiente perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code5_1">
+      <pre><h2>5.1 a) 2er-Schritte</h2><code class="language-processing">int zaehler = 0;
 void draw(){
   while (zaehler < 10){
     zaehler += 2;
     println(zaehler);
   }
 }</code></pre>
-            <pre><h2>5.1 a) Ergebnis</h2><code class="language-processing">2
+      <pre><h2>5.1 a) Ergebnis</h2><code class="language-processing">2
 4
 6
 8
 10</code></pre>
-            <pre><h2>5.1 b) 2er-Schritte rückwärts</h2><code class="language-processing">int zaehler = 12;
+      <pre><h2>5.1 b) 2er-Schritte rückwärts</h2><code class="language-processing">int zaehler = 12;
 void draw(){
   while (zaehler > 0){
     zaehler = zaehler - 2;
     println(zaehler);
   }
 }</code></pre>
-            <pre><h2>5.1 b) Ergebnis</h2><code class="language-processing">10
+      <pre><h2>5.1 b) Ergebnis</h2><code class="language-processing">10
 8
 6
 4
 2
 0</code></pre>
-            <pre><h2>5.1 c) Hash-Zeichen</h2><code class="language-processing">int anzahl = 3;
+      <pre><h2>5.1 c) Hash-Zeichen</h2><code class="language-processing">int anzahl = 3;
 String ahash;
 void draw() {
   while (anzahl >= 1) {
@@ -62,16 +73,16 @@ void draw() {
     print(ahash);
   }
 }</code></pre>
-            <pre><h2>5.1 c) Ergebnis</h2><code class="language-processing">###</code></pre>
-            <pre><h2>5.1 d) Viele Quadrate</h2><code class="language-processing">int posX = 10;
+      <pre><h2>5.1 c) Ergebnis</h2><code class="language-processing">###</code></pre>
+      <pre><h2>5.1 d) Viele Quadrate</h2><code class="language-processing">int posX = 10;
 void draw(){
   while (posX < 90){
     rect(posX, 40, 20, 20);
     posX += 30;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/5/d_5_1/d_5_1.pde"></canvas>
-            <pre><h2>5.1 e) Teiler</h2><code class="language-processing">int num = 0;
+      <canvas data-processing-sources="/code/5/d_5_1/d_5_1.pde"></canvas>
+      <pre><h2>5.1 e) Teiler</h2><code class="language-processing">int num = 0;
 void draw() {
   while (num <= 49) {
     if (num % 7 == 0) {
@@ -82,47 +93,56 @@ void draw() {
     num++;
   }
 }</code></pre>
-            <pre><h2>5.1 e) Ergebnis</h2><code class="language-processing">7
+      <pre><h2>5.1 e) Ergebnis</h2><code class="language-processing">7
 14
 21
 28
 35
 42
 49</code></pre>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main5_2">
-        <div class="left5_2">
-            <article class="expl_5_1"><h2 style="color: #FFCC32;">5.2 For-Schleife</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code5_2">
-            <pre><h2>5.2 a) 2er-Schritte</h2><code class="language-processing">int zaehler = 0;
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main5_2">
+    <div class="left5_2">
+      <article class="expl_5_1">
+        <h2 style="color: #FFCC32;">5.2 For-Schleife</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+        assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero
+        tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus
+        voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis
+        perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in
+        sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos
+        amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum,
+        sapiente perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code5_2">
+      <pre><h2>5.2 a) 2er-Schritte</h2><code class="language-processing">int zaehler = 0;
 void setup(){
   for (zaehler = 0; zaehler < 10; zaehler += 2){
     println(zaehler);
   }
 }</code></pre>
-            <pre><h2>5.2 a) Ergebnis</h2><code class="language-processing">0
+      <pre><h2>5.2 a) Ergebnis</h2><code class="language-processing">0
 2
 4
 6
 8</code></pre>
-            <pre><h2>5.2 b) 2er-Schritte rückwärts</h2><code class="language-processing">int zaehler = 10;
+      <pre><h2>5.2 b) 2er-Schritte rückwärts</h2><code class="language-processing">int zaehler = 10;
 void setup() {
   for (zaehler = 10; zaehler > 0; zaehler -= 2) {
     println(zaehler);
   }
 }</code></pre>
-            <pre><h2>5.2 b) Ergebnis</h2><code class="language-processing">10
+      <pre><h2>5.2 b) Ergebnis</h2><code class="language-processing">10
 8
 6
 4
 2
 </code></pre>
-            <pre><h2>5.2 c) Hash-Zeichen</h2><code class="language-processing">int anzahl = 3;
+      <pre><h2>5.2 c) Hash-Zeichen</h2><code class="language-processing">int anzahl = 3;
 String ahash;
 void setup() {
   for (anzahl = 3; anzahl >= 1; anzahl--) {
@@ -130,8 +150,8 @@ void setup() {
     print(ahash);
   }
 }</code></pre>
-            <pre><h2>5.2 c) Ergebnis</h2><code class="language-processing">###</code></pre>
-            <pre><h2>5.2 d) ASCII-Art 1</h2><code class="language-processing">int anzahl = 8;
+      <pre><h2>5.2 c) Ergebnis</h2><code class="language-processing">###</code></pre>
+      <pre><h2>5.2 d) ASCII-Art 1</h2><code class="language-processing">int anzahl = 8;
 String ASCII; 
 void setup(){
   for (int i = 0; i <= anzahl-1; i++){
@@ -142,14 +162,14 @@ void setup(){
     }
   }
 }</code></pre>
-            <pre><h2>5.2 d) ASCII-Art 1</h2><code class="language-processing">#.#.#.#.</code></pre>
-            <pre><h2>5.2 e) Streifen</h2><code class="language-processing">void draw() {
+      <pre><h2>5.2 d) ASCII-Art 1</h2><code class="language-processing">#.#.#.#.</code></pre>
+      <pre><h2>5.2 e) Streifen</h2><code class="language-processing">void draw() {
   for (int i = 0; i <= height; i += 10) {
     line(0, i, 100, i);
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/5/e_5_2/e_5_2.pde"></canvas>
-            <pre><h2>5.2 f) Summe</h2><code class="language-processing">int n = 6;
+      <canvas data-processing-sources="/code/5/e_5_2/e_5_2.pde"></canvas>
+      <pre><h2>5.2 f) Summe</h2><code class="language-processing">int n = 6;
 int sum;
 void setup(){
   for(int i = 0; i <= n; i++){
@@ -157,8 +177,8 @@ void setup(){
   }
   print(sum);
 }</code></pre>
-            <pre><h2>5.2 f) Ergebnis</h2><code class="language-processing">21</code></pre>
-            <pre><h2>5.2 g) Fakultät</h2><code class="language-processing">int n = 7;
+      <pre><h2>5.2 f) Ergebnis</h2><code class="language-processing">21</code></pre>
+      <pre><h2>5.2 g) Fakultät</h2><code class="language-processing">int n = 7;
 int sum = 1;
 void setup(){
   for(int i = 1; i <= n; i++){
@@ -166,8 +186,8 @@ void setup(){
   }
   print(sum);
 }</code></pre>
-            <pre><h2>5.2 h) Reihen</h2><code class="language-processing">5040</code></pre>
-            <pre><h2>5.2 i) Fibonacci-Zahlen</h2><code class="language-processing">int j = 1;
+      <pre><h2>5.2 h) Reihen</h2><code class="language-processing">5040</code></pre>
+      <pre><h2>5.2 i) Fibonacci-Zahlen</h2><code class="language-processing">int j = 1;
 int k = 0;
 int l;
 void setup() {
@@ -178,238 +198,278 @@ void setup() {
     print(j+" ");
   }
 }</code></pre>
-            <pre><h2>5.2 i) Ergebnis</h2><code class="language-processing">1 2 3 5 8 13 21 34 55 89 144</code></pre>
-            <pre><h2>5.2 j) Parabel</h2><code class="language-processing">void setup(){
+      <pre><h2>5.2 i) Ergebnis</h2><code class="language-processing">1 2 3 5 8 13 21 34 55 89 144</code></pre>
+      <pre><h2>5.2 j) Parabel</h2><code class="language-processing">void setup(){
   for (int i = 0; i < 50; i++){
     ellipse((i*10),100-(i*i), 5, 5);
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/5/j_5_2/j_5_2.pde"></canvas>
-            <pre><h2>5.2 k) Spirale</h2><code class="language-processing"></code></pre>
-        </div>
-      </main>
-      <a class="topbtn" href="#" title="Go to top">▲</button>
-<style>
-html{
-     width: auto;
-     font-family: Nexa_Bold;
-}
- *{
-     background-color: #1A1A1A;
-     margin: 0;
-     scroll-behavior: smooth;
-}
-.topbtn{
-        text-decoration: none;
+      <canvas data-processing-sources="/code/5/j_5_2/j_5_2.pde"></canvas>
+      <pre><h2>5.2 k) Spirale</h2><code class="language-processing"></code></pre>
+    </div>
+  </main>
+  <a class="topbtn" href="#" title="Go to top">▲</a>
+  <style>
+    html {
+      width: auto;
+      font-family: Nexa_Bold;
+    }
+
+    * {
+      background-color: #1A1A1A;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    .topbtn {
+      text-decoration: none;
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    a.topbtn:hover {
+      background-color: #555;
+    }
+
+    canvas {
+      margin-top: 1.5em;
+    }
+
+    pre>h2>code {
+      font-family: 'Ubuntu Mono', monospace !important;
+    }
+
+    pre>h2 {
+      font-family: Nexa_Bold !important;
+    }
+
+    @font-face {
+      font-family: Nexa_Bold;
+      src: url(Nexa_Bold.otf);
+    }
+
+    .footer {
+      background-color: #FFCC32;
+      height: 10px;
+      grid-column: 1 / 3;
+    }
+
+    .link-mk {
+      font-size: 50px;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      text-decoration: none;
+    }
+
+    pre {
+      color: #FFCC32;
+      overflow-x: scroll;
+    }
+
+    h1 {
+      position: absolute;
+      font-size: 2.5em;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-desc {
+      color: #1A1A1A;
+      background-color: #FFCC32;
+      font-size: 0.5em;
+    }
+
+    .logo-header {
+      position: relative;
+      width: 140px;
+      height: auto;
+      background-color: transparent;
+      margin-left: 20px;
+    }
+
+    .logo-header-link {
+      background-color: transparent;
+    }
+
+    .wrapper-header {
+      position: relative;
+      display: flex;
+      background-color: #FFCC32;
+      margin-bottom: 40px;
+      align-items: center;
+      height: 200px;
+    }
+
+    .expl_5_1 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-5_1 {
+      width: 100%;
+      height: auto;
+    }
+
+    .language-processing {
+      background-color: #1A1A1A;
+      border: solid 2px #FFFFFF;
+    }
+
+    .main5_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code5_1 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .main5_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code5_2 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_5_2 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-5_2 {
+      width: 100%;
+      height: auto;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #1A1A1A;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #FFCC32;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d8ad2b;
+    }
+
+    @media (max-width: 900px) {
+      .logo-header {
+        display: none;
+      }
+
+      .main5_1 {
         display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
-    }
-    a.topbtn:hover{
-        background-color: #555;
-    }
- canvas{
-     margin-top: 1.5em;
-}
- pre > h2 > code {
-     font-family: 'Ubuntu Mono', monospace !important;
-}
- pre > h2{
-     font-family:Nexa_Bold !important;
-}
- @font-face {
-     font-family: Nexa_Bold;
-     src: url(Nexa_Bold.otf);
-}
- .footer{
-     background-color: #FFCC32;
-     height: 10px;
-     grid-column: 1 / 3;
-}
- .link-mk{
-     font-size: 50px;
-     background-color: #FFCC32;
-     color: #1A1A1A;
-     width: 550px;
-     text-decoration: none;
-}
- pre{
-     color: #FFCC32;
-     overflow-x: scroll;
-}
- h1{
-     position: absolute;
-     font-size: 2.5em;
-     background-color: #FFCC32;
-     color: #1A1A1A;
-     width: 550px;
-     left: 50%;
-     top: 50%;
-     transform: translate(-50%,-50%);
-}
- .header-desc{
-     color: #1A1A1A;
-     background-color: #FFCC32;
-     font-size: 0.5em;
-}
- .logo-header {
-     position: relative;
-     width: 140px;
-     height: auto;
-     background-color: transparent;
-     margin-left: 20px;
-}
- .logo-header-link{
-     background-color: transparent;
-}
- .wrapper-header{
-     position: relative;
-     display: flex;
-     background-color: #FFCC32;
-     margin-bottom: 40px;
-     align-items: center;
-     height: 200px;
-}
- .expl_5_1 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-5_1{
-     width: 100%;
-     height: auto;
-}
- .language-processing{
-     background-color: #1A1A1A;
-     border: solid 2px #FFFFFF;
-}
- .main5_1{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code5_1{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .main5_2{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code5_2{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_5_2 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-5_2{
-     width: 100%;
-     height: auto;
-}
-::-webkit-scrollbar {
-        width: 10px;
+        margin: 0 auto;
       }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #1A1A1A; 
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #FFCC32; 
+      .code5_1 {
+        display: block;
+        margin: 0 auto;
       }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d8ad2b; 
+      .left5_1 {
+        display: block;
       }
 
- @media (max-width: 900px){
-     .logo-header{
-         display: none;
+      .result-5_1 {
+        margin-bottom: 40px;
+      }
+
+      .expl_5_1 {
+        margin-bottom: 35px;
+      }
+
+      .footer5_1 {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .main5_2 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code5_2 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left5_2 {
+        display: block;
+      }
+
+      .result-5_2 {
+        margin-bottom: 40px;
+      }
+
+      .expl_5_2 {
+        margin-bottom: 35px;
+      }
+
+      pre {
+        width: min-content;
+        margin-bottom: 20px;
+      }
     }
-     .main5_1 {
-         display: block;
-         margin: 0 auto;
+
+    @media(max-width: 450px) {
+      html {
+        width: min-content;
+      }
+
+      .Article-Wrapper {
+        padding: 5px;
+      }
     }
-     .code5_1{
-         display: block;
-         margin: 0 auto;
-    }
-     .left5_1{
-         display: block;
-    }
-     .result-5_1{
-         margin-bottom: 40px;
-    }
-     .expl_5_1{
-         margin-bottom: 35px;
-    }
-     .footer5_1{
-         grid-row: 2;
-         grid-column: 1;
-    }
-     .main5_2 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code5_2 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left5_2 {
-         display: block;
-    }
-     .result-5_2 {
-         margin-bottom: 40px;
-    }
-     .expl_5_2 {
-         margin-bottom: 35px;
-    }
-     pre{
-         width: min-content;
-         margin-bottom: 20px;
-    }
-}
- @media(max-width: 450px){
-     html{
-         width: min-content;
-    }
-     .Article-Wrapper{
-         padding: 5px;
-    }
-}
-</style>
+  </style>
 </body>
+
 </html>

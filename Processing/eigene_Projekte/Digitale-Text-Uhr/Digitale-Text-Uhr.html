@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitale Textuhr</title>
-    <script src="/js/processing.js"></script>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitale Textuhr</title>
+  <script src="/js/processing.js"></script>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a style="color: #1A1A1A; background-color: #FFCC32;">Digitale Text Uhr</a>
-          <p class="header-desc">Uhrzeiten in Processing</p>
-        </h1>
-      </div>
-      <div class="Article-Wrapper">
-        <div class="top_Article-Wrapper">
-            <article class="expl_1_1"><h2 style="color: #FFCC32;">Digitale Text Uhr</h2>Die Uhr, die ich in Java Processing geschrieben habe zeigt die Uhrzeit nicht wie eine herkömmliche Uhr in Zeigeform oder in digitaler Schreibweise an, sondern stellt die Uhrzeit als Text dar. Bei der Uhr habe ich mich an der <a style="color: #FFFFFF;" href="">QlockTwo</a> orientiert. Anders als bei dieser kann man jedoch durch Tasten bzw. Mausklick keine Anzeige der genauen Uhrzeit durch Sekundenanzeige erreichen, es wird bei meiner Version angezeigt, ob es sich bei der Uhrzeit um Vormittags (AM) bzw. Nachmittags (PM) handelt.<br>Auch wird bei meiner Version nicht die genaue Minute angezeigt, dies wäre ein Feature, welches ich noch hinzuügen könnte. Bei QlockTwo wird die Minutenanzeige durch Vier Punkte in den Ecken erreicht. <br> Ergänzend habe ich die QlockTwo jedoch noch auf Englisch übersetzt (weiter unten auf der Seite).</article>
-            <a href=""><img class="QlockTwo-img" src="Logo_black.svg"></a>
-            
-        </div>
-        <div class="bottom_Article-Wrapper">
-            <pre><h2>Digitale Text Uhr (DE) Code</h2><code class="language-processing">int fontSize;
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+    <h1>
+      <a style="color: #1A1A1A; background-color: #FFCC32;">Digitale Text Uhr</a>
+      <p class="header-desc">Uhrzeiten in Processing</p>
+    </h1>
+  </div>
+  <div class="Article-Wrapper">
+    <div class="top_Article-Wrapper">
+      <article class="expl_1_1">
+        <h2 style="color: #FFCC32;">Digitale Text Uhr</h2>Die Uhr, die ich in Java Processing geschrieben habe zeigt die
+        Uhrzeit nicht wie eine herkömmliche Uhr in Zeigeform oder in digitaler Schreibweise an, sondern stellt die
+        Uhrzeit als Text dar. Bei der Uhr habe ich mich an der <a style="color: #FFFFFF;" href="">QlockTwo</a>
+        orientiert. Anders als bei dieser kann man jedoch durch Tasten bzw. Mausklick keine Anzeige der genauen Uhrzeit
+        durch Sekundenanzeige erreichen, es wird bei meiner Version angezeigt, ob es sich bei der Uhrzeit um Vormittags
+        (AM) bzw. Nachmittags (PM) handelt.<br>Auch wird bei meiner Version nicht die genaue Minute angezeigt, dies wäre
+        ein Feature, welches ich noch hinzuügen könnte. Bei QlockTwo wird die Minutenanzeige durch Vier Punkte in den
+        Ecken erreicht. <br> Ergänzend habe ich die QlockTwo jedoch noch auf Englisch übersetzt (weiter unten auf der
+        Seite).
+      </article>
+      <a href=""><img class="QlockTwo-img" src="Logo_black.svg"></a>
+
+    </div>
+    <div class="bottom_Article-Wrapper">
+      <pre><h2>Digitale Text Uhr (DE) Code</h2><code class="language-processing">int fontSize;
 int hide;
 PFont mono;
 PFont mono2;
@@ -154,11 +166,11 @@ void draw() {
 void mouseClicked() {
   hide++;
 }</code></pre>
-<div>
-    <h2 style="color: #FFCC32;">Digitale Text Uhr (DE) Ergebnis</h2>
-    <canvas data-processing-sources="/Processing/eigene_Projekte/Digitale-Text-Uhr/Uhr/Uhr.pde"></canvas>
-</div>
-<pre><h2>Digitale Text Uhr (EN) Code</h2><code class="language-processing">int fontSize;
+      <div>
+        <h2 style="color: #FFCC32;">Digitale Text Uhr (DE) Ergebnis</h2>
+        <canvas data-processing-sources="/Processing/eigene_Projekte/Digitale-Text-Uhr/Uhr/Uhr.pde"></canvas>
+      </div>
+      <pre><h2>Digitale Text Uhr (EN) Code</h2><code class="language-processing">int fontSize;
 int hide;
 PFont mono;
 PFont mono2;
@@ -283,96 +295,111 @@ void draw() {
 void mouseClicked() {
   hide++;
 }</code></pre>
-<div>
-  <h2 style="color: #FFCC32;">Digitale Text Uhr (EN) Ergebnis</h2>
-  <canvas data-processing-sources="/Processing/eigene_Projekte/Digitale-Text-Uhr/watch/watch.pde"></canvas>
-</div>
-        </div>
+      <div>
+        <h2 style="color: #FFCC32;">Digitale Text Uhr (EN) Ergebnis</h2>
+        <canvas data-processing-sources="/Processing/eigene_Projekte/Digitale-Text-Uhr/watch/watch.pde"></canvas>
+      </div>
     </div>
-</body>
-<style>
-    *{
-        font-family: Nexa_Bold;
-        background-color: #1A1A1A;
-        margin: 0;
-        scroll-behavior: smooth;
+  </div>
+  <style>
+    * {
+      font-family: Nexa_Bold;
+      background-color: #1A1A1A;
+      margin: 0;
+      scroll-behavior: smooth;
     }
+
     @font-face {
-        font-family: Nexa_Bold;
-        src: url(Nexa_Bold.otf);
+      font-family: Nexa_Bold;
+      src: url(Nexa_Bold.otf);
     }
-    canvas{
-        margin-bottom: 20px;
-        height: auto;
-        width: 100%;
+
+    canvas {
+      margin-bottom: 20px;
+      height: auto;
+      width: 100%;
     }
-    pre{
-        color: #FFCC32;
+
+    pre {
+      color: #FFCC32;
     }
-    h1{
-        position: absolute;
-        font-size: 2.5em;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        width: 550px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+
+    h1 {
+      position: absolute;
+      font-size: 2.5em;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
-    .header-desc{
-        color: #1A1A1A;
-        background-color: #FFCC32;
-        font-size: 0.5em;
-      }
+
+    .header-desc {
+      color: #1A1A1A;
+      background-color: #FFCC32;
+      font-size: 0.5em;
+    }
+
     .logo-header {
-        position: relative;
-        width: 140px;
-        height: auto;
-        background-color: transparent;
-        margin-left: 20px;
+      position: relative;
+      width: 140px;
+      height: auto;
+      background-color: transparent;
+      margin-left: 20px;
     }
-    .logo-header-link{
-        background-color: transparent;
+
+    .logo-header-link {
+      background-color: transparent;
     }
-    .wrapper-header{
-        position: relative;
-        display: flex;
-        background-color: #FFCC32;
-        margin-bottom: 40px;
-        align-items: center;
-        height: 200px;
+
+    .wrapper-header {
+      position: relative;
+      display: flex;
+      background-color: #FFCC32;
+      margin-bottom: 40px;
+      align-items: center;
+      height: 200px;
     }
-    .Article-Wrapper{
-        background-color: #1A1A1A;
-        margin: 0 auto;
-        width: 75%;
+
+    .Article-Wrapper {
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
     }
-    .top_Article-Wrapper{
-        display: grid;
-        grid-template-columns: 50% 20%;
-        background-color: #1A1A1A;
-        margin-bottom: 20px;
+
+    .top_Article-Wrapper {
+      display: grid;
+      grid-template-columns: 50% 20%;
+      background-color: #1A1A1A;
+      margin-bottom: 20px;
     }
+
     .expl_1_1 {
-        box-sizing: border-box; 
-        padding-right: 20px; 
-        color: #FFFFFF;
-        line-height: 150%;
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      line-height: 150%;
     }
-    .QlockTwo-img{
-        width: 100%;
-        height: auto;
+
+    .QlockTwo-img {
+      width: 100%;
+      height: auto;
     }
-    .language-processing{
-        background-color: #1A1A1A;
-        border: solid 2px #FFFFFF;
-        width: auto;
+
+    .language-processing {
+      background-color: #1A1A1A;
+      border: solid 2px #FFFFFF;
+      width: auto;
     }
-    .bottom_Article-Wrapper{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        background-color: #1A1A1A;
-        gap: 30px 5px;
-    }   
-</style>
+
+    .bottom_Article-Wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      background-color: #1A1A1A;
+      gap: 30px 5px;
+    }
+  </style>
+</body>
+
 </html>

@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objekte</title>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
-    <script src="/js/processing.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objekte</title>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <script src="/js/processing.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a class="link-mk" href="https://michaelkipp.de/processing/04%20objekte.html">Objekte</a>
-          <p class="header-desc">Programmieren lernen</p>
-        </h1>
-      </div>
-      <main class="main4_1">
-        <div class="left4_1">
-            <article class="expl_4_1"><h2 style="color: #FFCC32;">4.1 Vektoren</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code4_1">
-            <pre><h2>4.1 a) Addition/Subtraktion</h2><code class="language-processing">PVector v1 = new PVector(5, 5);
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
+    <h1>
+      <a class="link-mk" href="https://michaelkipp.de/processing/04%20objekte.html">Objekte</a>
+      <p class="header-desc">Programmieren lernen</p>
+    </h1>
+  </div>
+  <main class="main4_1">
+    <div class="left4_1">
+      <article class="expl_4_1">
+        <h2 style="color: #FFCC32;">4.1 Vektoren</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+        assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero
+        tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus
+        voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis
+        perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in
+        sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos
+        amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum,
+        sapiente perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code4_1">
+      <pre><h2>4.1 a) Addition/Subtraktion</h2><code class="language-processing">PVector v1 = new PVector(5, 5);
 PVector v2 = new PVector(3, 2);
 void setup(){
   println(v1.add(v2));
@@ -36,9 +47,9 @@ void setup(){
   // Das Ergebnis der ersten Subtraktion ist das gleiche wie das ursprüngliche Ergebnis von v1, da der PVector mit dem ergebnis v1+v2 rechnet.
   // Also (v1+v2)-v2.
 }</code></pre>
-            <pre><h2>4.1 a) Ergebnis</h2><code class="language-processing">[ 8.0, 7.0, 0.0 ]
+      <pre><h2>4.1 a) Ergebnis</h2><code class="language-processing">[ 8.0, 7.0, 0.0 ]
 [ 5.0, 5.0, 0.0 ]</code></pre>
-            <pre><h2>4.1 b) Ball mit Vektor</h2><code class="language-processing">PVector ball = new PVector(50, 50);
+      <pre><h2>4.1 b) Ball mit Vektor</h2><code class="language-processing">PVector ball = new PVector(50, 50);
 void draw(){
   background(80);
   ellipse(ball.x, ball.y, 20, 20);
@@ -47,8 +58,8 @@ void draw(){
     ball.x = 0;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/4/b_4_1/b_4_1.pde"></canvas>
-            <pre><h2>4.1 c) Vektor als Hintergrund-Farbspeicher</h2><code class="language-processing">PVector ball = new PVector(50, 50);
+      <canvas data-processing-sources="/code/4/b_4_1/b_4_1.pde"></canvas>
+      <pre><h2>4.1 c) Vektor als Hintergrund-Farbspeicher</h2><code class="language-processing">PVector ball = new PVector(50, 50);
 PVector rgb = new PVector(80, 80, 80);
 void draw() {
   background(rgb.x, rgb.y, rgb.z);
@@ -65,11 +76,11 @@ void keyPressed() {
     rgb.set(255, 204, 50);
   }
 }</code></pre>
-            <div>
-                <canvas data-processing-sources="/code/4/c_4_1/c_4_1.pde"></canvas>
-                <a style="display: block; color: #FFCC32;">("1" und "2" um die Hintergrundfarbe zu ändern)</a>
-            </div>
-            <pre><h2>4.1 d) Bälle mit Vektoren</h2><code class="language-processing">PVector pos = new PVector(50, 50, 0);
+      <div>
+        <canvas data-processing-sources="/code/4/c_4_1/c_4_1.pde"></canvas>
+        <a style="display: block; color: #FFCC32;">("1" und "2" um die Hintergrundfarbe zu ändern)</a>
+      </div>
+      <pre><h2>4.1 d) Bälle mit Vektoren</h2><code class="language-processing">PVector pos = new PVector(50, 50, 0);
 PVector speed = new PVector(random(-3, 3), random(-3, 3), 0);
 PVector size = new PVector(20, 20, 0);
 void draw() {
@@ -87,8 +98,8 @@ void draw() {
     speed.y = -speed.y;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/4/d_4_1/d_4_1.pde"></canvas>
-            <pre><h2>4.1 e) Mauskollision</h2><code class="language-processing">PVector pos = new PVector(50, 50, 0);
+      <canvas data-processing-sources="/code/4/d_4_1/d_4_1.pde"></canvas>
+      <pre><h2>4.1 e) Mauskollision</h2><code class="language-processing">PVector pos = new PVector(50, 50, 0);
 PVector speed = new PVector(random(-3, 3), random(-3, 3), 0);
 PVector size = new PVector(20, 20, 0);
 PVector mousepos = new PVector(0,0,0);
@@ -113,36 +124,45 @@ void draw() {
     fill(255);
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/4/e_4_1/e_4_1.pde"></canvas>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main4_2">
-        <div class="left4_2">
-            <article class="expl_4_1"><h2 style="color: #FFCC32;">4.2 Strings</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum, sapiente perferendis pariatur alias cumque modi.</article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-        <p placeholder></p>
-        <div class="code4_2">
-            <pre><h2>4.2 a) Vergleich</h2><code class="language-processing">String s1 = "mama";
+      <canvas data-processing-sources="/code/4/e_4_1/e_4_1.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main4_2">
+    <div class="left4_2">
+      <article class="expl_4_1">
+        <h2 style="color: #FFCC32;">4.2 Strings</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+        assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero
+        tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus
+        voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis
+        perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in
+        sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos
+        amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum,
+        sapiente perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code4_2">
+      <pre><h2>4.2 a) Vergleich</h2><code class="language-processing">String s1 = "mama";
 String s2 = "Mama";
 String s3 = s2.toLowerCase();
 println(s1.equals(s2));
 println(s1.equals(s3));</code></pre>
-            <pre><h2>4.2 a) Ergebnis</h2><code class="language-processing">false
+      <pre><h2>4.2 a) Ergebnis</h2><code class="language-processing">false
 true</code></pre>
-            <pre><h2>4.2 b) Teilstring</h2><code class="language-processing">String m = "Harry Potter";
+      <pre><h2>4.2 b) Teilstring</h2><code class="language-processing">String m = "Harry Potter";
 void setup(){
   print(m.substring(7, 12));
 }</code></pre>
-            <pre><h2>4.2 b) Ergebnis</h2><code class="language-processing">otter</code></pre>
-            <pre><h2>4.2 c) Vergleich ohne Groß-/Kleinschreibung</h2><code class="language-processing">String m1 = "Harry Potter";
+      <pre><h2>4.2 b) Ergebnis</h2><code class="language-processing">otter</code></pre>
+      <pre><h2>4.2 c) Vergleich ohne Groß-/Kleinschreibung</h2><code class="language-processing">String m1 = "Harry Potter";
 String m2 = "harry potter";
 void setup(){
   print(m2.equals(m1.toLowerCase()));
 }</code></pre>
-            <pre><h2>4.2 c) Ergebnis</h2><code class="language-processing">true</code></pre>
-            <pre><h2>4.2 d) Familienname</h2><code class="language-processing">String n1 = "Donald Duck";
+      <pre><h2>4.2 c) Ergebnis</h2><code class="language-processing">true</code></pre>
+      <pre><h2>4.2 d) Familienname</h2><code class="language-processing">String n1 = "Donald Duck";
 String n2 = "Dagobert Duck";
 String n1N;
 String n2N;
@@ -159,8 +179,8 @@ void setup() {
     print("Die beiden Personen haben nicht den gleichen Nachnamen.");
   }
 }</code></pre>
-            <pre><h2>4.2 d) Ergebnis</h2><code class="language-processing">Die beiden Personen haben den gleichen Nachnamen.</code></pre>
-            <pre><h2>4.2 e) Kleine Wanze</h2><code class="language-processing">String Wanze = "Wanze";
+      <pre><h2>4.2 d) Ergebnis</h2><code class="language-processing">Die beiden Personen haben den gleichen Nachnamen.</code></pre>
+      <pre><h2>4.2 e) Kleine Wanze</h2><code class="language-processing">String Wanze = "Wanze";
 String Wanze2 = "Wanze";
 int id = 1;
 void setup() {
@@ -179,238 +199,282 @@ void mouseClicked() {
     id = 0;
   }
 }</code></pre>
-            <canvas data-processing-sources="/code/4/e_4_2/e_4_2.pde"></canvas>
-        </div>
-        <div class="footer"></div>
-      </main>
-      <main class="main4_2">
-        <div class="left4_1">
-            <article class="expl_4_1"><h2 style="color: #FFCC32;">4.3 Bilder</h2>Zu dem Thema Bilder habe ich ein Projekt erstellt, dass nicht direkt von Michael Kipp ausgewiesen wurde. <br><br><a href="/Processing/eigene_Projekte/Auto-Spiel/auto-spiel.html" style="color: #FFFFFF;">Auto Spiel (Simon)</a></article>
-            <h2 style="color: #FFCC32;"></h2>
-        </div>
-      </main>
-      <a class="topbtn" href="#" title="Go to top">▲</button>
-<style>
-html{
-     width: auto;
-     font-family: Nexa_Bold;
-}
- *{
-     background-color: #1A1A1A;
-     margin: 0;
-     scroll-behavior: smooth;
-}
-.topbtn{
-        text-decoration: none;
+      <canvas data-processing-sources="/code/4/e_4_2/e_4_2.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main4_2">
+    <div class="left4_1">
+      <article class="expl_4_1">
+        <h2 style="color: #FFCC32;">4.3 Bilder</h2>Zu dem Thema Bilder habe ich ein Projekt erstellt, dass nicht direkt
+        von Michael Kipp ausgewiesen wurde. <br><br><a href="/Processing/eigene_Projekte/Auto-Spiel/auto-spiel.html"
+          style="color: #FFFFFF;">Auto Spiel (Simon)</a>
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+  </main>
+  <a class="topbtn" href="#" title="Go to top">▲</a>
+  <style>
+    html {
+      width: auto;
+      font-family: Nexa_Bold;
+    }
+
+    * {
+      background-color: #1A1A1A;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    .topbtn {
+      text-decoration: none;
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    a.topbtn:hover {
+      background-color: #555;
+    }
+
+    canvas {
+      margin-top: 1.5em;
+    }
+
+    pre>h2>code {
+      font-family: 'Ubuntu Mono', monospace !important;
+    }
+
+    pre>h2 {
+      font-family: Nexa_Bold !important;
+    }
+
+    @font-face {
+      font-family: Nexa_Bold;
+      src: url(Nexa_Bold.otf);
+    }
+
+    .footer {
+      background-color: #FFCC32;
+      height: 10px;
+      grid-column: 1 / 3;
+    }
+
+    .link-mk {
+      font-size: 50px;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      text-decoration: none;
+    }
+
+    pre {
+      color: #FFCC32;
+      overflow-x: scroll;
+    }
+
+    h1 {
+      position: absolute;
+      font-size: 2.5em;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-desc {
+      color: #1A1A1A;
+      background-color: #FFCC32;
+      font-size: 0.5em;
+    }
+
+    .logo-header {
+      position: relative;
+      width: 140px;
+      height: auto;
+      background-color: transparent;
+      margin-left: 20px;
+    }
+
+    .logo-header-link {
+      background-color: transparent;
+    }
+
+    .wrapper-header {
+      position: relative;
+      display: flex;
+      background-color: #FFCC32;
+      margin-bottom: 40px;
+      align-items: center;
+      height: 200px;
+    }
+
+    .expl_4_1 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-4_1 {
+      width: 100%;
+      height: auto;
+    }
+
+    .language-processing {
+      background-color: #1A1A1A;
+      border: solid 2px #FFFFFF;
+    }
+
+    .main4_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code4_1 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .main4_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code4_2 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_4_2 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-4_2 {
+      width: 100%;
+      height: auto;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #1A1A1A;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #FFCC32;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d8ad2b;
+    }
+
+    @media (max-width: 900px) {
+      .logo-header {
+        display: none;
+      }
+
+      .main4_1 {
         display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
-    }
-    a.topbtn:hover{
-        background-color: #555;
-    }
- canvas{
-     margin-top: 1.5em;
-}
- pre > h2 > code {
-     font-family: 'Ubuntu Mono', monospace !important;
-}
- pre > h2{
-     font-family:Nexa_Bold !important;
-}
- @font-face {
-     font-family: Nexa_Bold;
-     src: url(Nexa_Bold.otf);
-}
- .footer{
-     background-color: #FFCC32;
-     height: 10px;
-     grid-column: 1 / 3;
-}
- .link-mk{
-     font-size: 50px;
-     background-color: #FFCC32;
-     color: #1A1A1A;
-     width: 550px;
-     text-decoration: none;
-}
- pre{
-     color: #FFCC32;
-     overflow-x: scroll;
-}
- h1{
-     position: absolute;
-     font-size: 2.5em;
-     background-color: #FFCC32;
-     color: #1A1A1A;
-     width: 550px;
-     left: 50%;
-     top: 50%;
-     transform: translate(-50%,-50%);
-}
- .header-desc{
-     color: #1A1A1A;
-     background-color: #FFCC32;
-     font-size: 0.5em;
-}
- .logo-header {
-     position: relative;
-     width: 140px;
-     height: auto;
-     background-color: transparent;
-     margin-left: 20px;
-}
- .logo-header-link{
-     background-color: transparent;
-}
- .wrapper-header{
-     position: relative;
-     display: flex;
-     background-color: #FFCC32;
-     margin-bottom: 40px;
-     align-items: center;
-     height: 200px;
-}
- .expl_4_1 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-4_1{
-     width: 100%;
-     height: auto;
-}
- .language-processing{
-     background-color: #1A1A1A;
-     border: solid 2px #FFFFFF;
-}
- .main4_1{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code4_1{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .main4_2{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: #1A1A1A;
-     gap: 25px;
-     background-color: #1A1A1A;
-     margin: 0 auto;
-     width: 75%;
-     margin-bottom: 50px;
-}
- .code4_2{
-     display: grid;
-     grid-column: 1 / 3;
-     grid-template-columns: 1fr 1fr;
-     gap: 25px;
-}
- .expl_4_2 {
-     box-sizing: border-box;
-     padding-right: 20px;
-     color: #FFFFFF;
-     margin-bottom: 20px;
-}
- .result-4_2{
-     width: 100%;
-     height: auto;
-}
-::-webkit-scrollbar {
-        width: 10px;
+        margin: 0 auto;
       }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #1A1A1A; 
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #FFCC32; 
+      .code4_1 {
+        display: block;
+        margin: 0 auto;
       }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d8ad2b; 
+      .left4_1 {
+        display: block;
       }
 
- @media (max-width: 900px){
-     .logo-header{
-         display: none;
+      .result-4_1 {
+        margin-bottom: 40px;
+      }
+
+      .expl_4_1 {
+        margin-bottom: 35px;
+      }
+
+      .footer4_1 {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .main4_2 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .code4_2 {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .left4_2 {
+        display: block;
+      }
+
+      .result-4_2 {
+        margin-bottom: 40px;
+      }
+
+      .expl_4_2 {
+        margin-bottom: 35px;
+      }
+
+      pre {
+        width: min-content;
+        margin-bottom: 20px;
+      }
     }
-     .main4_1 {
-         display: block;
-         margin: 0 auto;
+
+    @media(max-width: 450px) {
+      html {
+        width: min-content;
+      }
+
+      .Article-Wrapper {
+        padding: 5px;
+      }
     }
-     .code4_1{
-         display: block;
-         margin: 0 auto;
-    }
-     .left4_1{
-         display: block;
-    }
-     .result-4_1{
-         margin-bottom: 40px;
-    }
-     .expl_4_1{
-         margin-bottom: 35px;
-    }
-     .footer4_1{
-         grid-row: 2;
-         grid-column: 1;
-    }
-     .main4_2 {
-         display: block;
-         margin: 0 auto;
-    }
-     .code4_2 {
-         display: block;
-         margin: 0 auto;
-    }
-     .left4_2 {
-         display: block;
-    }
-     .result-4_2 {
-         margin-bottom: 40px;
-    }
-     .expl_4_2 {
-         margin-bottom: 35px;
-    }
-     pre{
-         width: min-content;
-         margin-bottom: 20px;
-    }
-}
- @media(max-width: 450px){
-     html{
-         width: min-content;
-    }
-     .Article-Wrapper{
-         padding: 5px;
-    }
-}
-</style>
+  </style>
 </body>
+
 </html>

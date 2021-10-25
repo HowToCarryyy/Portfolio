@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Spiel</title>
-    <script src="/js/processing.js"></script>
-    <link rel="icon" href="Logo_black.svg">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Spiel</title>
+  <script src="/js/processing.js"></script>
+  <link rel="icon" href="Logo_black.svg">
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
 </head>
+
 <body>
-    <div class="wrapper-header">
-        <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></img></a>
-        <h1>
-          <a style="color: #1A1A1A; background-color: #FFCC32;">Auto Spiel</a>
-          <p class="header-desc">Spiele in Processing</p>
-        </h1>
-      </div>
-      <div class="Article-Wrapper">
-        <div class="top_Article-Wrapper">
-            <article class="expl_1_1"><h2 style="color: #FFCC32;">Auto Spiel</h2>Das Spiel habe ich direkt im Anschluss zur ersten Stunde geschrieben. <br>Würde ich es nochmal schreiben bzw. zum jetzigen Zeitpunkt (24.10.2021), dann würde ich unter anderem die Kollisionserkennung in eine eigene Funktion schreiben. Ebenfalls kann man sich viele der Variablen sparen, wenn man zum Beispiel die Bilder der Autos einfach wiederverwertet. <br> Überdies müsste man das komplette Spielkonzept überarbeiten, damit das Spiel mehr als 5 Minuten Spaß macht. Einerseits müsste man die Autos so programmieren, dass sie unterschiedlich fahren und nicht immer nach dem gleichen Muster. Andererseits müsste könnte man ein "Endlosspiel" erstellen, bei dem sich der Hintergrund bewegt und nicht der Spieler. Punkte würde der Spieler dann erhalten, wenn er eine Straße überquert.<br> (Drücken Sie Enter um das Spiel, wenn Sie "gewonnen" haben, neu zu starten)</article>
-        </div>
-        <div class="bottom_Article-Wrapper">
-            <pre><h2>Auto Spiel Code</h2><code class="language-processing">/* @pjs preload="player.png","car_right.png","Road.png","trophy.png"; */
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="Logo_yellow.svg"></a>
+    <h1>
+      <a style="color: #1A1A1A; background-color: #FFCC32;">Auto Spiel</a>
+      <p class="header-desc">Spiele in Processing</p>
+    </h1>
+  </div>
+  <div class="Article-Wrapper">
+    <div class="top_Article-Wrapper">
+      <article class="expl_1_1">
+        <h2 style="color: #FFCC32;">Auto Spiel</h2>Das Spiel habe ich direkt im Anschluss zur ersten Stunde geschrieben.
+        <br>Würde ich es nochmal schreiben bzw. zum jetzigen Zeitpunkt (24.10.2021), dann würde ich unter anderem die
+        Kollisionserkennung in eine eigene Funktion schreiben. Ebenfalls kann man sich viele der Variablen sparen, wenn
+        man zum Beispiel die Bilder der Autos einfach wiederverwertet. <br> Überdies müsste man das komplette
+        Spielkonzept überarbeiten, damit das Spiel mehr als 5 Minuten Spaß macht. Einerseits müsste man die Autos so
+        programmieren, dass sie unterschiedlich fahren und nicht immer nach dem gleichen Muster. Andererseits müsste
+        könnte man ein "Endlosspiel" erstellen, bei dem sich der Hintergrund bewegt und nicht der Spieler. Punkte würde
+        der Spieler dann erhalten, wenn er eine Straße überquert.<br> (Drücken Sie Enter um das Spiel, wenn Sie
+        "gewonnen" haben, neu zu starten)
+      </article>
+    </div>
+    <div class="bottom_Article-Wrapper">
+      <pre><h2>Auto Spiel Code</h2><code class="language-processing">/* @pjs preload="player.png","car_right.png","Road.png","trophy.png"; */
 int highscore;
 PImage trophy_img;
 int trophy;
@@ -319,116 +331,131 @@ void draw(){
   }
   fill(256,0,0, 0);
 }</code></pre>
-<div>
-    <h2 style="color: #FFCC32;">Auto Spiel Ergebnis</h2>
-    <canvas data-processing-sources="/code/Car_Game/Car_Game.pde"></canvas>
-</div>
-</div>
-        </div>
+      <div>
+        <h2 style="color: #FFCC32;">Auto Spiel Ergebnis</h2>
+        <canvas data-processing-sources="/code/Car_Game/Car_Game.pde"></canvas>
+      </div>
     </div>
+  </div>
 </body>
 <style>
-    *{
-        font-family: Nexa_Bold;
-        background-color: #1A1A1A;
-        margin: 0;
-        scroll-behavior: smooth;
-    }
-    @font-face {
-        font-family: Nexa_Bold;
-        src: url(Nexa_Bold.otf);
-    }
-    canvas{
-        margin-bottom: 20px;
-        height: auto;
-        width: 100%;
-    }
-    pre{
-        color: #FFCC32;
-        overflow-x: scroll;
-    }
-    h1{
-        position: absolute;
-        font-size: 2.5em;
-        background-color: #FFCC32;
-        color: #1A1A1A;
-        width: 550px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-    .header-desc{
-        color: #1A1A1A;
-        background-color: #FFCC32;
-        font-size: 0.5em;
-      }
-    .logo-header {
-        position: relative;
-        width: 140px;
-        height: auto;
-        background-color: transparent;
-        margin-left: 20px;
-    }
-    .logo-header-link{
-        background-color: transparent;
-    }
-    .wrapper-header{
-        position: relative;
-        display: flex;
-        background-color: #FFCC32;
-        margin-bottom: 40px;
-        align-items: center;
-        height: 200px;
-    }
-    .Article-Wrapper{
-        background-color: #1A1A1A;
-        margin: 0 auto;
-        width: 75%;
-    }
-    .top_Article-Wrapper{
-        display: grid;
-        grid-template-columns: 50% 20%;
-        background-color: #1A1A1A;
-        margin-bottom: 20px;
-    }
-    .expl_1_1 {
-        box-sizing: border-box; 
-        padding-right: 20px; 
-        color: #FFFFFF;
-        line-height: 150%;
-    }
-    .QlockTwo-img{
-        width: 100%;
-        height: auto;
-    }
-    .language-processing{
-        background-color: #1A1A1A;
-        border: solid 2px #FFFFFF;
-        width: auto;
-    }
-    .bottom_Article-Wrapper{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        background-color: #1A1A1A;
-        gap: 30px 5px;
-    }
-    ::-webkit-scrollbar {
-        width: 10px;
-      }
+  * {
+    font-family: Nexa_Bold;
+    background-color: #1A1A1A;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        display: none; 
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #FFCC32; 
-      }
+  @font-face {
+    font-family: Nexa_Bold;
+    src: url(Nexa_Bold.otf);
+  }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d8ad2b; 
-      }
+  canvas {
+    margin-bottom: 20px;
+    height: auto;
+    width: 100%;
+  }
+
+  pre {
+    color: #FFCC32;
+    overflow-x: scroll;
+  }
+
+  h1 {
+    position: absolute;
+    font-size: 2.5em;
+    background-color: #FFCC32;
+    color: #1A1A1A;
+    width: 550px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .header-desc {
+    color: #1A1A1A;
+    background-color: #FFCC32;
+    font-size: 0.5em;
+  }
+
+  .logo-header {
+    position: relative;
+    width: 140px;
+    height: auto;
+    background-color: transparent;
+    margin-left: 20px;
+  }
+
+  .logo-header-link {
+    background-color: transparent;
+  }
+
+  .wrapper-header {
+    position: relative;
+    display: flex;
+    background-color: #FFCC32;
+    margin-bottom: 40px;
+    align-items: center;
+    height: 200px;
+  }
+
+  .Article-Wrapper {
+    background-color: #1A1A1A;
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .top_Article-Wrapper {
+    display: grid;
+    grid-template-columns: 50% 20%;
+    background-color: #1A1A1A;
+    margin-bottom: 20px;
+  }
+
+  .expl_1_1 {
+    box-sizing: border-box;
+    padding-right: 20px;
+    color: #FFFFFF;
+    line-height: 150%;
+  }
+
+  .QlockTwo-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .language-processing {
+    background-color: #1A1A1A;
+    border: solid 2px #FFFFFF;
+    width: auto;
+  }
+
+  .bottom_Article-Wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #1A1A1A;
+    gap: 30px 5px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FFCC32;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d8ad2b;
+  }
 </style>
+
 </html>
