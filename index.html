@@ -58,7 +58,7 @@
 
         h1 {
             position: relative;
-            font-size: 2.5em;
+            font-size: clamp(1.8em, 5vw, 2.5em);
             background-color: #FFCC32;
             color: #1A1A1A;
             width: clamp(30%, 550px, 90%);
@@ -123,6 +123,25 @@
             gap: 10px;
             justify-content: center;
             grid-template-columns: clamp(30%, 500px, 80%);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #555;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #FFCC32;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d8ad2b;
         }
 
         @media (max-width: 900px) {
