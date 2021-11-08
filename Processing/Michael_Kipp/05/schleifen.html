@@ -206,19 +206,19 @@ void setup() {
 }</code></pre>
       <canvas data-processing-sources="/code/5/j_5_2/j_5_2.pde"></canvas>
       <pre><h2>5.2 k) Spirale</h2><code class="language-processing">int cx = 100;
-        int cy = 100;
-        float a = 0.03;
-        void setup() {
-          size(200, 200);
-          noStroke();
-          for (float i = 0; i <= 2480; i++){
-              float c = radians(i);
-              float x = cx + a * i * cos(c);
-              float y = cy + a * i * sin(c);
-              ellipse(x,y , 5, 5);
-              a += 0.00001;
-          }
-        }</code></pre>
+int cy = 100;
+float a = 0.03;
+void setup() {
+  size(200, 200);
+  noStroke();
+  for (float i = 0; i <= 2480; i++){
+      float c = radians(i);
+      float x = cx + a * i * cos(c);
+      float y = cy + a * i * sin(c);
+      ellipse(x,y , 5, 5);
+      a += 0.00001;
+  }
+}</code></pre>
         <canvas data-processing-sources="/code/5/k_5_2/k_5_2.pde"></canvas>
     </div>
     <div class="footer"></div>
