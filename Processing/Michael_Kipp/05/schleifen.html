@@ -205,7 +205,346 @@ void setup() {
   }
 }</code></pre>
       <canvas data-processing-sources="/code/5/j_5_2/j_5_2.pde"></canvas>
-      <pre><h2>5.2 k) Spirale</h2><code class="language-processing"></code></pre>
+      <pre><h2>5.2 k) Spirale</h2><code class="language-processing">int cx = 100;
+        int cy = 100;
+        float a = 0.03;
+        void setup() {
+          size(200, 200);
+          noStroke();
+          for (float i = 0; i <= 2480; i++){
+              float c = radians(i);
+              float x = cx + a * i * cos(c);
+              float y = cy + a * i * sin(c);
+              ellipse(x,y , 5, 5);
+              a += 0.00001;
+          }
+        }</code></pre>
+        <canvas data-processing-sources="/code/5/k_5_2/k_5_2.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main5_3">
+    <div class="left5_2">
+      <article class="expl_5_1">
+        <h2 style="color: #FFCC32;">5.2 For-Schleife</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+        assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero
+        tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus
+        voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis
+        perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in
+        sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos
+        amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum,
+        sapiente perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code5_2">
+      <pre><h2>5.3 a) Kringel-Cursor</h2><code class="language-processing">void setup(){
+  noCursor();
+}
+void draw() {
+  background(255);
+  for (int i = 30; i >= 0; i -= 10){
+    ellipse(mouseX, mouseY, i, i);
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/a_5_3/a_5_3.pde"></canvas>
+      <pre><h2>5.3 b) Linie zum Mauszeiger</h2><code class="language-processing">void draw(){
+  background(255);
+  fill(0);
+  for (int i = 0; i <= mouseX; i +=4){
+    ellipse(i, mouseY, 1, 1);
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/b_5_3/b_5_3.pde"></canvas>
+      <pre><h2>5.3 c) Rechteck zum Mauszeiger</h2><code class="language-processing">void draw() {
+  background(255);
+  for (int i = 0; i < mouseY; i += 4) {
+    for (int e = 0; e < mouseX; e += 4) {
+      ellipse(e, i, 2, 2);
+    }
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/c_5_3/c_5_3.pde"></canvas>
+      <pre><h2>5.3 d) Animierte Streifen</h2><code class="language-processing">void draw(){
+  background(255);
+  for (int i = 0; i <= 100;i += 10){
+    line(0, i+(frameCount%10), 100, i+(frameCount%10));
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/d_5_3/d_5_3.pde"></canvas>
+      <pre><h2>5.3 e) Gitter-Cursor</h2><code class="language-processing">int num = 6;
+void draw(){
+  background(255);
+  for (int i = mouseX; i < mouseX+num*10;i += 10){
+    for (int e = mouseY; e < mouseY+num*10; e += 10){
+      line(mouseX, e, mouseX+((num*10)-10), e);
+      line(i, mouseY, i, mouseY+((num*10)-10));
+     }
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/e_5_3/e_5_3.pde"></canvas>
+      <pre><h2>5.3 f) Kreise</h2><code class="language-processing">int kreise = 3;
+void setup(){
+  ellipseMode(CENTER);
+}
+void draw(){
+  background(255);
+  for (int i = kreise*10;i >= 0; i -= 10){
+    ellipse(50, 50, i, i);
+  }
+}
+void mouseClicked(){
+  kreise++;
+}</code></pre>
+      <canvas data-processing-sources="/code/5/f_5_3/f_5_3.pde"></canvas>
+    </div>
+    <div class="footer"></div>
+  </main>
+  <main class="main5_3">
+    <div class="left5_2">
+      <article class="expl_5_1">
+        <h2 style="color: #FFCC32;">5.2 For-Schleife</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+        assumenda voluptate repudiandae deleniti mollitia vitae at, ipsum nulla perspiciatis, illo dicta officiis libero
+        tempore iusto dolor aspernatur aperiam. Itaque molestias, quisquam, quis odit sint veniam corrupti delectus
+        voluptatem maxime, iste deleniti aliquid repudiandae necessitatibus iure soluta saepe eligendi porro corporis
+        perferendis culpa blanditiis dolor at numquam repellendus! Nisi voluptatum repudiandae numquam voluptatibus in
+        sed expedita quia? Aspernatur accusantium, dolorum sapiente sed accusamus adipisci quam. Nulla ipsam quod, quos
+        amet harum rerum deserunt aperiam nobis quis, neque maiores hic enim veniam explicabo sint adipisci illum,
+        sapiente perferendis pariatur alias cumque modi.
+      </article>
+      <h2 style="color: #FFCC32;"></h2>
+    </div>
+    <p placeholder></p>
+    <div class="code5_2">
+      <pre><h2>5.4 a) Kleines Einmaleins</h2><code class="language-processing">void setup(){
+  for (int reihe = 1; reihe < 11; reihe++){
+    println("Die "+reihe+"er-Reihe:");
+    for (int mult = 1; mult < 11; mult++){
+      println(reihe+" x "+mult+" ist "+ reihe*mult);
+    }
+  }
+}</code></pre>
+      <pre><h2>5.4 a) Ergebnis</h2><code class="language-processing">Die 1er-Reihe:
+1 x 1 ist 1
+1 x 2 ist 2
+1 x 3 ist 3
+1 x 4 ist 4
+1 x 5 ist 5
+1 x 6 ist 6
+1 x 7 ist 7
+1 x 8 ist 8
+1 x 9 ist 9
+1 x 10 ist 10
+Die 2er-Reihe:
+2 x 1 ist 2
+2 x 2 ist 4
+2 x 3 ist 6
+2 x 4 ist 8
+2 x 5 ist 10
+2 x 6 ist 12
+2 x 7 ist 14
+2 x 8 ist 16
+2 x 9 ist 18
+2 x 10 ist 20
+Die 3er-Reihe:
+3 x 1 ist 3
+3 x 2 ist 6
+3 x 3 ist 9
+3 x 4 ist 12
+3 x 5 ist 15
+3 x 6 ist 18
+3 x 7 ist 21
+3 x 8 ist 24
+3 x 9 ist 27
+3 x 10 ist 30
+Die 4er-Reihe:
+4 x 1 ist 4
+4 x 2 ist 8
+4 x 3 ist 12
+4 x 4 ist 16
+4 x 5 ist 20
+4 x 6 ist 24
+4 x 7 ist 28
+4 x 8 ist 32
+4 x 9 ist 36
+4 x 10 ist 40
+Die 5er-Reihe:
+5 x 1 ist 5
+5 x 2 ist 10
+5 x 3 ist 15
+5 x 4 ist 20
+5 x 5 ist 25
+5 x 6 ist 30
+5 x 7 ist 35
+5 x 8 ist 40
+5 x 9 ist 45
+5 x 10 ist 50
+Die 6er-Reihe:
+6 x 1 ist 6
+6 x 2 ist 12
+6 x 3 ist 18
+6 x 4 ist 24
+6 x 5 ist 30
+6 x 6 ist 36
+6 x 7 ist 42
+6 x 8 ist 48
+6 x 9 ist 54
+6 x 10 ist 60
+Die 7er-Reihe:
+7 x 1 ist 7
+7 x 2 ist 14
+7 x 3 ist 21
+7 x 4 ist 28
+7 x 5 ist 35
+7 x 6 ist 42
+7 x 7 ist 49
+7 x 8 ist 56
+7 x 9 ist 63
+7 x 10 ist 70
+Die 8er-Reihe:
+8 x 1 ist 8
+8 x 2 ist 16
+8 x 3 ist 24
+8 x 4 ist 32
+8 x 5 ist 40
+8 x 6 ist 48
+8 x 7 ist 56
+8 x 8 ist 64
+8 x 9 ist 72
+8 x 10 ist 80
+Die 9er-Reihe:
+9 x 1 ist 9
+9 x 2 ist 18
+9 x 3 ist 27
+9 x 4 ist 36
+9 x 5 ist 45
+9 x 6 ist 54
+9 x 7 ist 63
+9 x 8 ist 72
+9 x 9 ist 81
+9 x 10 ist 90
+Die 10er-Reihe:
+10 x 1 ist 10
+10 x 2 ist 20
+10 x 3 ist 30
+10 x 4 ist 40
+10 x 5 ist 50
+10 x 6 ist 60
+10 x 7 ist 70
+10 x 8 ist 80
+10 x 9 ist 90
+10 x 10 ist 100</code></pre>
+      <pre><h2>5.4 b) ASCII-Art 1</h2><code class="language-processing">void setup(){
+  for (int reihe = 1; reihe < 4; reihe++){
+    println("");
+    for (int spalte = 1; spalte < 6; spalte++){
+      print("#");
+    }
+  }
+}</code></pre>
+      <pre><h2>5.4 b) Ergebnis</h2><code class="language-processing">#####
+        #####
+        #####</code></pre>
+      <pre><h2>5.4 c) ASCII-Art 2</h2><code class="language-processing">void setup() {
+  int counter = 0;
+  for (int reihe = 1; reihe < 5; reihe++) {
+    println("");
+    counter++;
+    for (int spalte = 1; spalte < 5; spalte++) {
+      if (counter == spalte) {
+        print("#");
+      } else {
+        print(".");
+      }
+    }
+  }
+}</code></pre>
+      <pre><h2>5.4 c) Ergebnis</h2><code class="language-processing">#...
+.#..
+..#.
+...#</code></pre>
+      <pre><h2>5.4 d) ASCII-Art 3</h2><code class="language-processing">int counter = 4;
+int counter2 = 0;
+void setup() {
+  for (int e = 0; e < 4; e++) {
+    for (int i = counter2; i > 0; i--) {
+      print(".");
+    }
+    for (int i = counter; i > 0; i--) {
+      print("#");
+    }
+    
+    println("");
+    counter--;
+    counter2++;
+  }
+}</code></pre>
+      <pre><h2>5.4 d) Ergebnis</h2><code class="language-processing">####
+.###
+..##
+...#
+</code></pre>
+      <pre><h2>5.4 e) ASCII-Art 4</h2><code class="language-processing">int counter = 3;
+int counter2 = 1;
+void setup() {
+  for (int e = 0; e < 4; e++) {
+    for (int i = counter; i > 0; i--) {
+      print(".");
+    }
+    for (int i = counter2; i > 0; i--) {
+      print("#");
+    }
+    println("");
+    counter--;
+    counter2++;
+  }
+}</code></pre>
+      <pre><h2>5.4 e) Ergebnis</h2><code class="language-processing">...#
+..##
+.###
+####</code></pre>
+      <pre><h2>5.4 f)</h2><code class="language-processing">void setup(){
+  ellipseMode(CENTER);
+  rectMode(CENTER);
+  size(120, 120);
+}
+void draw(){
+  for (int i = 40; i <= 150; i += 30){
+    fill(0);
+    rect(10, i-30, 20, 20);
+    for (int e = 10; e <= 120; e += 30){
+      fill(255);
+      ellipse(i, e, 20, 20);
+    }
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/f_5_4/f_5_4.pde"></canvas>
+      <pre><h2>5.4 g)</h2><code class="language-processing">void setup() {
+  size(41, 41);
+  for (int i = 0; i <= 3; i++) {
+    for (int e = 0; e <= 3; e++) {
+      if ((i+e)%2 == 0){
+        fill(0);
+      } else{
+        fill(255);
+      }
+      rect(i*10, e*10, 10, 10);
+    }
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/g_5_4/g_5_4.pde"></canvas>
+      <pre><h2>5.4 h)</h2><code class="language-processing">void setup(){
+}
+void draw(){
+  translate(50, 50);
+  for (int i = 0; i <= 360; i += 45){
+    for (int e = 0; e <= 3; e++){
+      ellipse(cos(radians(i)) * 20 * e, sin(radians(i)) * 20 * e, 10, 10);
+    }
+  }
+}</code></pre>
+      <canvas data-processing-sources="/code/5/h_5_4/h_5_4.pde"></canvas>
     </div>
   </main>
   <a class="topbtn" href="#" title="Go to top">▲</a>
@@ -380,6 +719,41 @@ void setup() {
       width: 100%;
       height: auto;
     }
+
+
+
+    .main5_3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1A1A1A;
+      gap: 25px;
+      background-color: #1A1A1A;
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .code5_3 {
+      display: grid;
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .expl_5_3 {
+      box-sizing: border-box;
+      padding-right: 20px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .result-5_3 {
+      width: 100%;
+      height: auto;
+    }
+
+
+
 
     ::-webkit-scrollbar {
       width: 10px;
