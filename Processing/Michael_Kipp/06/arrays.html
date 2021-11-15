@@ -19,7 +19,7 @@
   <div class="wrapper-header">
     <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/Logo_yellow.svg"></img></a>
     <h1>
-      <a class="link-mk" href="https://michaelkipp.de/processing/05%20schleifen.html">Arrays</a>
+      <a class="link-mk" href="https://michaelkipp.de/processing/06%20arrays.html">Arrays</a>
       <p class="header-desc">Programmieren lernen</p>
     </h1>
   </div>
@@ -66,6 +66,25 @@ void setup(){
 [1] false
 [2] false
 </code></pre>
+      <pre><h2>6.1 b) Arrays verwenden 1</h2><code class="language-processing">int[] foo = {5, 45, -10, 20};
+int a;
+int b;
+void setup() {
+  a = foo[0] + foo[1];
+  println(a);
+  b = foo[2] + foo[3];
+  println(b);
+}</code></pre>
+      <pre><h2>6.1 b) Ergebnis</h2><code class="language-processing">50
+10</code></pre>
+      <pre><h2>6.1 c) Arrays verwenden 2</h2><code class="language-processing">int[] bar = {2, 4, 6};
+void setup() {
+  bar[2] = bar[0] * bar[1];
+  println(bar);
+}</code></pre>
+      <pre><h2>6.1 c) Ergebnis</h2><code class="language-processing">[0] 2
+[1] 4
+[2] 8</code></pre>
     </div>
     <div class="footer"></div>
   </main>
