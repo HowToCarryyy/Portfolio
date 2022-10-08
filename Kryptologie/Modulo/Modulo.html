@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Modulo</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="/js/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
     </head>
     <body>
         <div class="wrapper-header">
@@ -16,7 +21,48 @@
           </h1>
         </div>
         <main class="main1_1">
+          <article class="expl_1_1">
+            <h2 style="color: #FFCC32;">Aufgabe 1:</h2>
+            <p>a) \( 27\mod 4 = 3 \)</p>
+            <p>b) \(26\mod 5 = 1\)</p>
+            <p>c) \(18\mod 3 = 0\)</p>
+            <p>d) \(18\mod 7 = 4\)</p>
+            <p>e) \(21\mod 9 = 3\)</p>
+            <p>f) \(37\mod 10 = 7\)</p>
+            <p>g) \(100037\mod 10 = 10000 \cdot 10 \mod 10 + 37 \mod 10 = 0 + 7 = 7 \)</p>
+            <p>h) \(107\mod 4 = 100 + 7\mod 4 = 7\mod4 = 3 \)</p>
+            <p>i) \(1\mod 2 = 1\)</p>
+            <p>j) \(3\mod 2 = 1\)</p>
+          </article>
+          <artcle class="expl_1_2">
+            <h2 style="color: #FFCC32;">Aufgabe 2:</h2>
+            <p>a) und b)</p>
+<pre><h2></h2><code class="language-python hljs">for i in range(11):
+  if i % 2 == 0:
+      print(i, "ist gerade")
+  else:
+      print(i, "ist ungerade")
+</code></pre><br>
+<pre><code class="language-python hljs">0 ist gerade
+1 ist ungerade
+2 ist gerade
+3 ist ungerade
+4 ist gerade
+5 ist ungerade
+6 ist gerade
+7 ist ungerade
+8 ist gerade
+9 ist ungerade
+10 ist gerade
+</code></pre>
+            <p>c) \(34\mod4=2\)</p>
+            <p>d) \(134\mod4=2\)</p>
 
+          </artcle>
+          <article class="expl_1_1">
+            <h2 style="color: #FFCC32;">Aufgabe 3:</h2>
+
+          </article>
         </main>
         <a class="topbtn" href="#" title="Go to top">▲</a>
         <style>
@@ -128,20 +174,22 @@
             height: auto;
           }
       
-          .language-processing {
+          .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
+            width: fit-content;
           }
       
           .main1_1 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             background-color: #1A1A1A;
             gap: 25px;
             background-color: #1A1A1A;
             margin: 0 auto;
-            width: 75%;
+            width: 50%;
             margin-bottom: 50px;
+            
           }
       
           .code1_1 {
