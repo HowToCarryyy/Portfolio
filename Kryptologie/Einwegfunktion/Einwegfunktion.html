@@ -10,13 +10,37 @@
     <body>
         <div class="wrapper-header">
           <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
-          <h1>
+          <h1 style="background-color:#FFCC32 !important;">
             <a class="link-header" href="/src/tasks_kryptologie/Einwegfunktion.pdf">Einwegfunktion</a>
             <p class="header-desc">↑ Hier klicken, um die Aufgaben zu sehen. </p>
           </h1>
         </div>
         <main class="main1_1">
-
+          <article class="expl_1_1">
+            <h2 style="color: #FFCC32;">Aufgabe 1:</h2>
+            <p>In einem Telefonbuch ist der Name mit der Telefonnummer verknüpft. Nutzt man also nun das Telefonbuch, wie es gedacht ist, so erhält man die gewünschte Telefonnummer. <br>
+              Fragt man jemanden nun, von der Telefonnummer auf den Namen einer Person zu schließen, so ist dies fast nicht möglich und sehr zeitaufwendig. <br>
+            </p>
+          </article>
+          <article class="expl_1_1">
+            <h2 style="color: #FFCC32;">Aufgabe 2:</h2>
+            <p>
+              a) Hülsenfrüchte mischen: <br>
+              Dies lässt sich als Einwegfunktion beschreiben, da es relativ einfach ist die Erbsen und Linsen zu mischen. Diesen Prozess rückgänig zu machen würde sich aber als äußerst schwierig erweisen. <br> <br>
+              b) Farben mischen: <br> 
+              Auch hier lässt sich die Farbmischung als Einwegfunktion beschreiben. Es ist relativ einfach die Farben zu mischen, jedoch ist es so gut wie unmöglich die Farben wieder zu trennen. <br> <br>
+              c) Geld ausgeben: <br>
+              Handelt es sich um spezifisches Geld (Seriennummer etc.), so lässt sich dieses sofort ausgeben, aber nur sehr schwierig wieder zurückbekommen. <br> <br>
+              d) Sand und Kies mischen: <br> 
+              Ein Sand und Kies Gemisch lässt sich nur dann relativ einfach wieder trennen, wenn eines der beiden grob- und das andere feinkörnig ist. <br>
+            </p>
+          </article>
+          <article class="expl_1_1">
+            <h2 style="color: #FFCC32;">Aufgabe 3:</h2>
+            <p>
+              Ein Briefkasten lässt sich insofern als Trapdoor-Einwegfunktion beschreiben, als dass der Schlüssel zu dem Briefkasten eine gewisse geheime Zusatzinformation ist. Jeder der den Schlüssel besitzt, also die Information den Briefkasten zu öffnen, kommt auch an die Briefe.
+            </p>
+          </article>
         </main>
         <a class="topbtn" href="#" title="Go to top">▲</a>
         <style>
@@ -81,11 +105,8 @@
           h1 {
             position: relative;
             font-size: (1.8em, 5vw, 2.5em);
-            background-color: #FFCC32;
-            color: #1A1A1A;
-            width: clamp(30%, 550px, 90%);
-            margin: 0 auto;
-            grid-column: 2;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
           }
       
           .header-desc {
@@ -128,20 +149,22 @@
             height: auto;
           }
       
-          .language-processing {
+          .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
+            width: fit-content;
           }
       
           .main1_1 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             background-color: #1A1A1A;
             gap: 25px;
             background-color: #1A1A1A;
             margin: 0 auto;
-            width: 75%;
+            width: 50%;
             margin-bottom: 50px;
+            
           }
       
           .code1_1 {
