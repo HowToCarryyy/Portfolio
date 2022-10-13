@@ -6,17 +6,83 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>modulares Potenzieren</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-
+        <!--<script id="MathJax-script" async src="/js/mathjax.js"></script>-->
+        <script src="/js/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
     </head>
     <body>
         <div class="wrapper-header">
           <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
-          <h1>
-            <a class="link-header" href="/src/taksks_kryptologie/modulares_Potenzieren.pdf">modulares Potenzieren</a>
+          <h1 style="background-color: #FFCC32;">
+            <a class="link-header" href="/src/tasks_kryptologie/modulares_Potenzieren.pdf">modulares Potenzieren</a>
             <p class="header-desc">↑ Hier klicken, um die Aufgaben zu sehen. </p>
           </h1>
         </div>
         <main class="main1_1">
-
+          <article class="expl_1_1">
+          <h2 style="color: #FFCC32;">Aufgabe 1:</h2>
+          <p>1.1 <br>
+            Um \(7^4\mod12\quad\) zu berechnen, wurde die Form \((a^b)\mod m\quad\) in die Form \((a^c\cdot a^c)\mod12\quad\) wobei \(c = \frac{b}{2}\quad\) umgewandelt. <br>
+          </p>
+          <p> 1.2 <br>
+            Für das zweite Beispiel wurden die Restklassen verwendet, um die Berechnung zu vereinfachen. <br>
+            So ist die Restklasse von \([2]_5\), durch folgende Zahlenreihe zu beschreiben:
+            \( [2]_5 = \{…, 2, 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, …\}\). <br>
+            So kann 82 mit 2 ausgetauscht werden. <br>
+            Ebenso wird weitergearbeitet, um 16 zu -4 zu vereinfachen.
+          </p>
+        </article>
+        <article class="expl_1_1">
+          <h2 style="color: #FFCC32;">Aufgabe 2:</h2>
+          <p>
+            a) <br>
+            \(8^9\mod 7 = (8\mod 7)^9 \mod 7 = 1^9 \mod 7 = 1 \mod 7 = 1\quad\) <br>
+          </p>
+          <p>
+            b) <br>
+            \(6^9\mod 7 = (6\mod7)^9 \mod 7 = (-1 \mod 7)^9 \mod 7 = (-1)^9 \mod 7 = -1 \mod 7 = 6\quad\) <br>
+          </p>
+          <p>
+            c) <br>
+            \(54^{16}\mod 55 = (-1)^{16}\mod 55 = 1 \mod 55 = 1\)
+          </p>
+          <p>
+            d) <br>
+            \(3^{333} \mod 26 = 3^{3 \cdot 111} \mod 26 = (3^3 \mod 26)^{111} \mod 26 = (27 \mod 26)^{111} \mod 26 = 1^{111} \mod 26 = 1 \mod 26 = 1\)
+          </p>
+          <p>
+            e) <br>
+            Zunächst erstmal:
+            \(\frac{268}{4}=67\quad\) Daraus folgt: \((2^4)^{67}\mod17 = (2^4\mod 17)^{67} \mod 17 = (16 \mod 17)^{67}\mod 17 = \) <br>
+            \(((-1)\mod17)^{67}\mod17 = (-1)^{67}\mod17 = -1\mod17 = 16\mod17 = 16\)
+          </p>
+          <p>
+            f) <br>
+            \(2^{269}\mod 17 = 2\cdot(2)^{268}\mod 17\) <br>
+            Rechenweg siehe e) <br>
+            \(2\cdot (-1)\mod17 = (-2) \mod 17 = 15 \mod 17 = 15\)
+          </p>
+          <p>
+            g) <br>
+            Zunächst erstmal:
+            \(\frac{270}{9}=30\) Daraus folgt: \(2^{270} = (2^{9})^{30}\) <br>
+            \((2^{9})^{30} \mod 19 = (-1)^30\mod19 = 1\mod19 = 1\)
+          </p>
+          <p>
+            h) <br>
+            Genau wie bei f), verwenden wir den Wert der Aufgabe davor: <br>
+            \(2\cdot(-1)^30\mod19 =2\cdot 1\mod19 = 2\mod 19 = 2\))
+          </p>
+          <p>
+            i) <br>
+            \(3^4 \mod 15 = 3^2 \cdot 3^2\ \mod 15 = 9\cdot 9 \mod 15 = 81\mod 15 = 6\)
+            Da \(\frac{333}{4} = 83,25\), nehmen wir nur \(\frac{332}{4}=83\). Daraus folgt: <br>
+            \(3 \cdot (3^4)^{83} \mod 15 = 3 \cdot 81^{83} \mod 15 = 3 \cdot 6^{83} \mod 15 = 3 \cdot 6 \mod 15 \quad \text{(Da ja } 6^k\mod 15 \text{ immer gleich 6 ist)}\) <br>
+            \(18 \mod 15 = 3\)
+          </p>
         </main>
         <a class="topbtn" href="#" title="Go to top">▲</a>
         <style>
@@ -81,11 +147,8 @@
           h1 {
             position: relative;
             font-size: (1.8em, 5vw, 2.5em);
-            background-color: #FFCC32;
-            color: #1A1A1A;
-            width: clamp(30%, 550px, 90%);
-            margin: 0 auto;
-            grid-column: 2;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
           }
       
           .header-desc {
@@ -128,20 +191,22 @@
             height: auto;
           }
       
-          .language-processing {
+          .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
+            width: fit-content;
           }
       
           .main1_1 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             background-color: #1A1A1A;
             gap: 25px;
             background-color: #1A1A1A;
             margin: 0 auto;
-            width: 75%;
+            width: 50%;
             margin-bottom: 50px;
+            
           }
       
           .code1_1 {
