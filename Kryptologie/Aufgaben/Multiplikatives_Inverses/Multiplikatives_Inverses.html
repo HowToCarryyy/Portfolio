@@ -4,11 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Modulo</title>
+        <title>Multiplikatives Inverses</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <!--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
-        <script id="MathJax-script" async src="/js/mathjax.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--<script id="MathJax-script" async src="/js/mathjax.js"></script>-->
         <script src="/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
         <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
@@ -16,78 +16,21 @@
     <body>
         <div class="wrapper-header">
           <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
-          <h1>
-            <a class="link-header" href="/src/tasks_kryptologie/Modulo.pdf">Modulo</a>
+          <h1 style="background-color: #FFCC32;">
+            <a class="link-header" href="/src/tasks_kryptologie/Multiplikatives Inverses.pdf">Multiplikatives Inverses</a>
             <p class="header-desc">↑ Hier klicken, um die Aufgaben zu sehen. </p>
           </h1>
         </div>
         <main class="main1_1">
           <article class="expl_1_1">
             <h2 style="color: #FFCC32;">Aufgabe 1:</h2>
-            <p>a) \( 27\mod 4 = 3 \)</p>
-            <p>b) \(26\mod 5 = 1\)</p>
-            <p>c) \(18\mod 3 = 0\)</p>
-            <p>d) \(18\mod 7 = 4\)</p>
-            <p>e) \(21\mod 9 = 3\)</p>
-            <p>f) \(37\mod 10 = 7\)</p>
-            <p>g) \(100037\mod 10 = 10000 \cdot 10 \mod 10 + 37 \mod 10 = 0 + 7 = 7 \)</p>
-            <p>h) \(107\mod 4 = 100 + 7\mod 4 = 7\mod4 = 3 \)</p>
-            <p>i) \(1\mod 2 = 1\)</p>
-            <p>j) \(3\mod 2 = 1\)</p>
+            <p></p>
           </article>
-          <artcle class="expl_1_2">
+          <article class="expl_1_1">
             <h2 style="color: #FFCC32;">Aufgabe 2:</h2>
-            <p>a) und b)</p>
-<pre><h2></h2><code class="language-python hljs">for i in range(11):
-  if i % 2 == 0:
-      print(i, "ist gerade")
-  else:
-      print(i, "ist ungerade")
-</code></pre><br>
-<pre><code class="language-python hljs">0 ist gerade
-1 ist ungerade
-2 ist gerade
-3 ist ungerade
-4 ist gerade
-5 ist ungerade
-6 ist gerade
-7 ist ungerade
-8 ist gerade
-9 ist ungerade
-10 ist gerade
-</code></pre>
-            <p>c) \(34\mod4=2\)</p>
-            <p>d) \(134\mod4=2\)</p>
+            <p></p>
+          </article>
 
-          </artcle>
-          <article class="expl_1_1">
-            <h2 style="color: #FFCC32;">Aufgabe 3:</h2>
-            <p>a) \(25\mod4 = 1 \quad und  \quad (20\mod 4 + 5\mod 4)\mod 4 = (0 + 1) \mod 4 = 1 \) <br> → Ergebnisse sind identsich.</p>
-            <p>b) \(25\mod 4 = 1 \quad und \quad (19\mod 4 + 6\mod 4)\mod 4 = (3 + 2)\mod 4 = 5\mod 4 = 1\) <br> → Die Ergebnisse sind identsich.</p>
-            <p>c) \(26\mod 4 = 2 \quad und \quad (2\mod 4 \cdot 13\mod 4)\mod 4 = (2 \cdot 13)\mod 4 = 26\mod 4 = 2\) <br> → Die Ergebnisse sind identisch.</p>
-            <p>d) \( 7^3\mod 4 = 3 \quad und \quad (7\mod 4)^3\mod 4 = 3^3\mod 4 = 27\mod 4 = 3\)</p>
-          </article>
-          <article class="expl_1_1">
-            <h2 style="color: #FFCC32;">Aufgabe 4:</h2>
-            <p>a)</p>
-            <pre><h2></h2><code class="language-python hljs">for i in range(400):
-if i % 100 == 34:
-    print(i, "mod 4 =", i % 4)</code></pre>
-            <br>
-            <pre><h2></h2><code class="language-python hljs">34 mod 4 = 2
-134 mod 4 = 2
-234 mod 4 = 2
-334 mod 4 = 2</code></pre>
-              <p>b) <br>Wenn % 4 = 0, dann ist die Zahl durch 4 teilbar.</p>
-          </article>
-          <article class="expl_1_1">
-            <h2 style="color: #FFCC32;">Aufgabe 4:</h2>
-            <p>Für den Zahnarzttermin gilt: \(Uhrzeit: \quad (10+50)\mod 24 = 60\mod 24 = 12 \quad Tag: \quad (3 + (60 // 24))\mod 7 = (3+2)\mod 7 = 5\). Also am fünften Wochentag (Freitag) um 12 Uhr.
-              <br>
-              Für den Computerkurs gilt: \(Uhrzeit: \quad (10+70)\mod 24 = 80\mod 24 = 8 \quad Tag: \quad (3 + (80 // 24))\mod 7 = (3+3)\mod 7 = 6\). Also am sechsten Wochentag (Samstag) um 12 Uhr.
-            </p>
-
-          </article>
         </main>
         <a class="topbtn" href="#" title="Go to top">▲</a>
         <style>
@@ -152,11 +95,8 @@ if i % 100 == 34:
           h1 {
             position: relative;
             font-size: (1.8em, 5vw, 2.5em);
-            background-color: #FFCC32;
-            color: #1A1A1A;
-            width: clamp(30%, 550px, 90%);
-            margin: 0 auto;
-            grid-column: 2;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
           }
       
           .header-desc {

@@ -6,16 +6,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>euklidischer Algorithmus</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--<script id="MathJax-script" async src="/js/mathjax.js"></script>-->
+        <script src="/js/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
     </head>
     <body>
         <div class="wrapper-header">
           <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
-          <h1>
+          <h1 style="background-color: #FFCC32;">
             <a class="link-header" href="/src/tasks_kryptologie/euklidischer Algorithmus.pdf">euklidischer Algorithmus</a>
             <p class="header-desc">↑ Hier klicken, um die Aufgaben zu sehen. </p>
           </h1>
         </div>
         <main class="main1_1">
+          <article class="expl_1_1">
+            <h2 style="color: #FFCC32;">Aufgabe 1:</h2>
+            <p>a) <br>
+              ggT: 24 und 9 <br>
+              \(24 \div 9 = 2 \quad \text{Rest} \quad 6\) <br>
+              ggT: 9 und 6 <br>
+              \(9 \div 6 = 1 \quad \text{Rest} \quad 3\) <br>
+              ggT: 6 und 3 <br>
+              \(6 \div 3 = 2 \quad \text{Rest} \quad 0\) <br>
+              Daher ist der größte gemeinsame Teiler von 24 und 9 3.
+            </p>
+            <p> b) <br>
+              ggT: 36 und 18 <br>
+              \(36 \div 18 = 2 \quad \text{Rest} \quad 0\) <br>
+              Daher ist der größte gemeinsame Teiler von 36 und 18 18.
+            </p>
+            <p>c) <br>
+              ggT: 75 und 45 <br>
+              \(75 \div 45 = 1 \quad \text{Rest} \quad 30\) <br>
+              \(45 \div 30 = 1 \quad \text{Rest} \quad 15\) <br>
+              \(30 \div 15 = 2 \quad \text{Rest} \quad 0\) <br>
+              Daher ist der größte gemeinsame Teiler von 75 und 45 15.
+            </p>
+            <p>d) <br>
+              ggT: 720 und 288 <br>
+              \(720 \div 288 = 2 \quad \text{Rest} \quad 144\) <br>
+              \(288 \div 144 = 2 \quad \text{Rest} \quad 0\) <br>
+              Daher ist der größte gemeinsame Teiler von 720 und 288 144.
+            </p>
+            <p>e) <br>
+              ggT: 1071 und 1029 <br>
+              \(1071 \div 1029 = 1 \quad \text{Rest} \quad 42\) <br>
+              \(1029 \div 42 = 24 \quad \text{Rest} \quad 21\) <br>
+              \(42 \div 21 = 2 \quad \text{Rest} \quad 0\) <br>
+              Daher ist der größte gemeinsame Teiler von 1071 und 1029 21.
+            </p>
+          </article>
 
         </main>
         <a class="topbtn" href="#" title="Go to top">▲</a>
@@ -81,11 +124,8 @@
           h1 {
             position: relative;
             font-size: (1.8em, 5vw, 2.5em);
-            background-color: #FFCC32;
-            color: #1A1A1A;
-            width: clamp(30%, 550px, 90%);
-            margin: 0 auto;
-            grid-column: 2;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
           }
       
           .header-desc {
@@ -128,20 +168,22 @@
             height: auto;
           }
       
-          .language-processing {
+          .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
+            width: fit-content;
           }
       
           .main1_1 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             background-color: #1A1A1A;
             gap: 25px;
             background-color: #1A1A1A;
             margin: 0 auto;
-            width: 75%;
+            width: 50%;
             margin-bottom: 50px;
+            
           }
       
           .code1_1 {

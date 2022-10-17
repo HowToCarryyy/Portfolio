@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kryptologie</title>
+  <link rel="icon" href="/src/sj_logo_yellow.png">
+</head>
+
+<body>
+  <div class="wrapper-header">
+    <a class="logo-header-link" href="../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
+    <h1>
+      <a class="link-mk" href="">Kryptologie Projekte</a>
+      <p class="header-desc">mit Python</p>
+    </h1>
+  </div>
+  <div class="grid">
+    <a class="grid-item" href="Caesar/caesar.html">
+      <ul class="ul-link a">Caesar</ul>
+    </a>
+    
+  </div>
+  <button onclick="topFunction()" id="topbtn" title="Go to top">▲</button>
+  <style>
+    * {
+      font-family: Nexa_Bold;
+      background-color: #1A1A1A;
+      color: #FFCC32;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    @font-face {
+      font-family: Nexa_Bold;
+      src: url(/src/Nexa_Bold.otf);
+    }
+
+    .link-mk {
+      font-size: 1em;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: 550px;
+      text-decoration: none;
+    }
+
+    h1 {
+      position: relative;
+      font-size: (1.8em, 5vw, 2.5em);
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      width: clamp(30%, 550px, 90%);
+      margin: 0 auto;
+      grid-column: 2;
+    }
+
+    .header-desc {
+      color: #1A1A1A;
+      background-color: #FFCC32;
+      font-size: 0.5em;
+    }
+
+    .logo-header {
+      position: relative;
+      width: 140px;
+      height: auto;
+      background-color: transparent;
+      margin-left: 20px;
+    }
+
+    .logo-header-link {
+      background-color: transparent;
+    }
+
+    .wrapper-header {
+      position: relative;
+      display: grid;
+      background-color: #FFCC32;
+      margin-bottom: 40px;
+      align-items: center;
+      height: 200px;
+      grid-template-columns: repeat(3, 1fr)
+    }
+
+    .ul-link {
+      font-size: 2em;
+      border: 2px solid #FFCC32;
+      padding: 0.8em;
+      width: 1fr;
+      border-radius: 0.3em;
+      margin: 0;
+    }
+
+    .ul-link:hover {
+      background-color: #FFCC32;
+      color: #1A1A1A;
+    }
+
+    li {
+      padding-left: 3em;
+      list-style-type: none;
+      color: #FFFFFF;
+      font-size: medium;
+      background-color: inherit;
+    }
+
+    .grid-item {
+      text-decoration: none;
+      width: 1fr;
+      color: #FFCC32;
+    }
+
+    .grid {
+      display: grid;
+      gap: 10px;
+      justify-content: center;
+      grid-template-columns: clamp(30%, 500px, 80%);
+    }
+
+    #topbtn {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #FFCC32;
+      color: #1A1A1A;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #topbtn:hover {
+      background-color: #555;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #555;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #FFCC32;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d8ad2b;
+    }
+
+    @media (max-width: 900px) {
+      .logo-header {
+        display: none;
+      }
+
+      .git-icon {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    var top = document.getElementById("topbtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        top.style.display = "block";
+      } else {
+        top.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+
+</html>
