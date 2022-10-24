@@ -1,4 +1,4 @@
-from js import document
+from js import document, Element
 
 import Caesar as c
 
