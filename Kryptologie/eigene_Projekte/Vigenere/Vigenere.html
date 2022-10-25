@@ -4,41 +4,34 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>sym-asym Verschluesselung</title>
+        <title>Vigenère</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <!--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
-        <script id="MathJax-script" async src="/js/mathjax.js"></script>
+        <link rel="stylesheet" href="/js/pyscript/pyscript.css" />
+        <!-- <script defer src="/js/pyscript/pyscript.js"></script> -->
         <script src="/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
         <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+        <py-env>
+- paths:
+  - /src/Projekte/Vigenere/Vigenere.py
+        </py-env>
     </head>
     <body>
         <div class="wrapper-header">
           <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
-          <h1 style="background-color: #FFCC32 !important;">
-            <a class="link-header" href="/src/tasks_kryptologie/sym-asym-Verschluesselung.pdf">sym-asym Verschluesselung</a>
+          <h1 style="background-color:#FFCC32 !important;">
+            <a class="link-header" href="/src/Projekte/">Vigenère</a>
             <p class="header-desc">↑ Hier klicken, um die Aufgaben zu sehen. </p>
           </h1>
         </div>
         <main class="main1_1">
-        <article class="expl_1_1">
-          <h2 style="color: #FFCC32">Aufgabe 1:</h2>
-          <p>
-            Bei diesem Verfahren wird der Schlüssel für die Verschlüsselung und Entschlüsselung gleichzeitig verwendet. <br>
-            Ebenso muss dann auch der Schlüssel für die Entschlüsselung durch B mitgegeben werden. Dieser ist dann nicht sicher verschlüsselt und kann abgefangen werden. <br>
-            Somit ist diese Technik nicht wirklich sicher.
-          </p>
-        </article>
-        <article class="expl_1_1">
-          <h2 style="color: #FFCC32">Aufgabe 2:</h2>
-          <p>
-            1. A verschlüsselt eine Nachricht und sendet diese ohne Schlüssel an B. <br> <br>
-            2. B verschlüsselt eine Nachricht (eventuell mit der Nachricht von A in die Verschlüsselung integriert) erneut und sendet diese ohne Schlüssel an A. <br> <br>
-            3. A entschlüsselt seinen Part von der Nachricht und sendet diese an B. <br> <br>
-            4. B entschlüsselt die Nachricht von A und kann diese nun komplett lesen.<br> 
-          </p>
-        </article>
+            <article class="expl_1_1">
+                <h2 style="color: #FFCC32;">Die Vigenère-Chiffre</h2>
+                <p>
+                    Die Vigenère-Chiffre ist eine Erweiterung der Caesar-Chiffre. Sie ist eine polyalphabetische Substitution. Das bedeutet, dass die Verschlüsselung nicht nur mit mehreren Verschlüsselungsalphabeten funktioniert. Das Schlüsselwort wird wiederholt so oft wie nötig, bis es die Länge des Klartextes erreicht hat. Die Buchstaben des Klartextes werden dann mit der Stelle des Buchstaben im Schlüsselwort verschlüsselt.
+                </p>
+            </article>
+            <py-script src="./event_handler.py"></py-script>
         </main>
         <a class="topbtn" href="#" title="Go to top">▲</a>
         <style>
@@ -52,7 +45,37 @@
             margin: 0;
             scroll-behavior: smooth;
           }
-      
+
+          .headline3 {
+            color: #FFCC32;
+          }
+
+          .wrapper-section {
+            margin: 20px 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            gap: 1rem;
+          }
+          .section-child {
+            padding: 0.5rem;
+            border: 2px solid #FFFFFF;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            font-family: Nexa_Bold;
+            padding: 0.5rem;
+            width: 90% !important;
+            text-align: center;
+          }
+
+          .btn:hover {
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+            cursor: pointer;
+          }
           .topbtn {
             text-decoration: none;
             display: block;
@@ -74,11 +97,11 @@
             background-color: #555;
           }
       
-          pre>h2>code {
+          pre>h3>code {
             font-family: 'Ubuntu Mono', monospace !important;
           }
       
-          pre>h2 {
+          pre>h3 {
             font-family: Nexa_Bold !important;
           }
       
@@ -146,7 +169,7 @@
             width: 100%;
             height: auto;
           }
-      
+          
           .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
