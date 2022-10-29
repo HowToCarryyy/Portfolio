@@ -28,8 +28,25 @@
             <article class="expl_1_1">
                 <h2 style="color: #FFCC32;">Die Vigenère-Chiffre</h2>
                 <p>
-                    Die Vigenère-Chiffre ist eine Erweiterung der Caesar-Chiffre. Sie ist eine polyalphabetische Substitution. Das bedeutet, dass die Verschlüsselung nicht nur mit mehreren Verschlüsselungsalphabeten funktioniert. Das Schlüsselwort wird wiederholt so oft wie nötig, bis es die Länge des Klartextes erreicht hat. Die Buchstaben des Klartextes werden dann mit der Stelle des Buchstaben im Schlüsselwort verschlüsselt.
+                    Die Vigenère-Chiffre ist eine Erweiterung der Caesar-Chiffre. Sie ist eine polyalphabetische Substitution. Das bedeutet, dass die Verschlüsselung nicht nur mit mehreren Verschlüsselungsalphabeten funktioniert. Das Schlüsselwort wird wiederholt so oft wie nötig, bis es die Länge des Klartextes erreicht hat. Die Buchstaben des Klartextes werden dann mit der Stelle des Buchstaben im Schlüsselwort verschlüsselt. <br> Die Vigenère-Chiffre ist in der Therie nicht zu knacken, wenn das Schlüsselwort und der Klartext gleichlang sind, da nun keine Häufikeitsanalyse mehr stattfinden kann. <br> Die Vigenère-Chiffre, die ich verwendet habe verschlüsselt der Einfachheit halber nur Großbuchstaben ohne Umlaute etc.. Außerdem habe ich versucht den Verschlüsselungsalgortihmus in so wenig Zeilen wie möglich zu programmieren. Daher ist die Programmzeile, die für die Verschlüsselung zuständig ist, etwas komplizierter. 
                 </p>
+                <br>
+
+                <h3 class="headline3">Verschlüsselung:</h3>
+                <section class="wrapper-section">
+                  <input class="section-child" type="text" id="vigenere_encryption_text" placeholder="Klartext" />
+                  <input class="section-child" type="text" id="vigenere_encryption_key" placeholder="Anzahl der Verschiebungen" />
+                  <button class="section-child btn" id="vigenere_encryption_btn" type="submit" py-onClick="vigenere_encryption('')">Verschlüsseln</button>
+                  <div class="section-child" id="vigenere_encryption_output" style="display: none;"></div>
+                </section>
+                <h3 class="headline3">Entschlüsselung:</h3>
+                <section class="wrapper-section">
+                  <input class="section-child" type="text" id="vigenere_decryption_text" placeholder="Klartext" />
+                  <input class="section-child" type="text" id="vigenere_decryption_key" placeholder="Anzahl der Verschiebungen" />
+                  <button class="section-child btn" id="vigenere_decryption_btn" type="submit" py-onClick="vigenere_decryption('')">Entschlüsseln</button>
+                  <div class="section-child" id="vigenere_decryption_output" style="display: none;"></div>
+                </section>
+                <pre><h3 class="headline3">Code (Python):</h3><code class="language-python"></code></pre>              
             </article>
             <py-script src="./event_handler.py"></py-script>
         </main>
