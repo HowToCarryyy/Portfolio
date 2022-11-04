@@ -46,10 +46,33 @@
                   <button class="section-child btn" id="vigenere_decryption_btn" type="submit" py-onClick="vigenere_decryption('')">Entschlüsseln</button>
                   <div class="section-child" id="vigenere_decryption_output" style="display: none;"></div>
                 </section>
-                <div class="wrapper-pre">
                 <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def vigenere(input, key, direction):
   return "".join([" " if input[x] == " " else chr((ord(input[x]) + (direction * (ord(key[x % len(key)])) + 65) - 65) % 26 + 65) for x in range(len(input))])</code></pre>              
-                </div>
+  <br>
+  <pre><h3 class="headline3">Code (PyScript)</h3><code class="language-python">from js import document
+import Vigenere as v
+
+def vigenere_encryption(event):
+    text_input = document.getElementById("vigenere_encryption_text")
+    key_input = document.getElementById("vigenere_encryption_key")
+    encrypted_text = v.vigenere(text_input.value.upper(), key_input.value.upper(), 1)
+
+    document.getElementById("vigenere_decryption_text").value = encrypted_text.upper()
+    document.getElementById("vigenere_decryption_key").value = key_input.value.upper()
+
+    output = document.getElementById("vigenere_encryption_output")
+    output.style.display = "block"
+    final = "Verschlüsselter Text: " + encrypted_text
+    Element("vigenere_encryption_output").write(final)
+
+def vigenere_decryption(event):
+    text_input = document.getElementById("vigenere_decryption_text")
+    key_input = document.getElementById("vigenere_decryption_key")
+    decrypted_text = v.vigenere(text_input.value.upper(), key_input.value.upper(), -1)
+    output = document.getElementById("vigenere_decryption_output")
+    output.style.display = "block"
+    final = "Entschlüsselter Text: " + decrypted_text
+    Element("vigenere_decryption_output").write(final)</code></pre>
             </article>
             <py-script src="./event_handler.py"></py-script>
         </main>
