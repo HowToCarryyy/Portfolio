@@ -115,7 +115,3 @@ def caesar_with_unicode_decryption(text,key):
         decrypted_text += chr((ord(i) - key) % 1114111)
     return decrypted_text
          
-
-print(caesar_with_unicode_encryption(" T", -24))
-print(caesar_with_unicode_decryption(caesar_with_unicode_encryption(" T", -24), -24))
-print(caesar_with_unicode_decryption("<", -24))

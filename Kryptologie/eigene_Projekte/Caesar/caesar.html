@@ -47,7 +47,6 @@
                 <button class="section-child btn" id="simple_caesar_decryption_btn" type="submit" py-onClick="simple_caesar_decryption('')">Entschlüsseln</button>
                 <div class="section-child" id="simple_caesar_decryption_output" style="display: none;"></div>
               </section>
-              <div class="wrapper-pre">
               <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def simple_caesar_encryption(text, key):
     # Für die einfachste Version der Caesar-Verschlüsselung wird der Text zunächst in Großbuchstaben umgewandelt.
     text = text.upper()
@@ -85,7 +84,6 @@ def simple_caesar_decryption(text, key):
             decrypted_text += i
     return decrypted_text
               </code></pre><br>
-            </div>
               <pre><h3 class="headline3">Code (PyScript):</h3><code class="language-python">import Caesar as c
 
 def simple_caesar_encryption(event):
@@ -133,6 +131,11 @@ def simple_caesar_decryption(event):
               <div class="section-child" id="caesar_upper_and_lower_decryption_output" style="display: none;"></div>
             </section>
             <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def caesar_upper_and_lower_encryption(text, key):
+    # Die nächstschwierigere Variante der Caesar-Verschlüsselung ist die Verschlüsselung von Groß- und Kleinbuchstaben.
+    # Hier wird in der ASCII-Tabelle zwischen Groß- und Kleinbuchstaben unterschieden. 
+    ### Beispiel: ord("A") = 65, ord("a") = 97
+    # Nun beginnt ein neuer Algorithmus. 
+    # Dieser unterscheidet sich von dem der einfachen Caesar-Verschlüsselung nur darin, dass die ASCII-Zahlen für Groß- und Kleinbuchstaben unterschiedlich sind.
     encrypted_text = ""
     for i in text:
         if 97 <= ord(i) <= 122:
@@ -144,6 +147,8 @@ def simple_caesar_decryption(event):
     return encrypted_text
 
 def caesar_upper_and_lower_decryption(text, key):
+    # Für die Entschlüsselung wird genau der gleiche Algorithmus verwendet, wie bei der Verschlüsselung.
+    # Der einzige Unterschied ist, dass der Schlüssel subtrahiert wird.
     decrypted_text = ""
     for i in text:
         if 97 <= ord(i) <= 122:
@@ -153,29 +158,6 @@ def caesar_upper_and_lower_decryption(text, key):
         elif i == " ":
             decrypted_text += " "
     return decrypted_text
-            </code></pre><br>
-            <pre><h3 class="headline3">Code (PyScript):</h3><code class="language-python">import Caesar as c
-def caesar_upper_and_lower_encryption(event):
-    text_input = document.getElementById("caesar_upper_and_lower_encryption_text")
-    number_input = document.getElementById("caesar_upper_and_lower_encryption_number")
-    encrypted_text = c.caesar_upper_and_lower_encryption(text_input.value, int(number_input.value))
-
-    document.getElementById("caesar_upper_and_lower_decryption_text").value = encrypted_text
-    document.getElementById("caesar_upper_and_lower_decryption_number").value = int(number_input.value)
-
-    output = document.getElementById("caesar_upper_and_lower_encryption_output")
-    output.style.display = "block"
-    final = "Verschlüsselter Text: " + encrypted_text
-    Element("caesar_upper_and_lower_encryption_output").write(final)
-
-def caesar_upper_and_lower_decryption(event):
-    text_input = document.getElementById("caesar_upper_and_lower_decryption_text")
-    number_input = document.getElementById("caesar_upper_and_lower_decryption_number")
-    decrypted_text = c.caesar_upper_and_lower_decryption(text_input.value, int(number_input.value))
-    output = document.getElementById("caesar_upper_and_lower_decryption_output")
-    output.style.display = "block"
-    final = "Entschlüsselter Text: " + decrypted_text
-    Element("caesar_upper_and_lower_decryption_output").write(final)
               </code></pre><br>
           </article>
           <article class="expl_1_1">
@@ -200,32 +182,27 @@ def caesar_upper_and_lower_decryption(event):
               <div class="section-child" id="caesar_with_german_characters_decryption_output" style="display: none;"></div>
             </section>
             <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def caesar_with_german_characters_encryption(text, key):
-    german_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-     'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-      'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
-       'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-        's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'Ä', 'Ö', 'Ü', 'ä',
-         'ö', 'ü', 'ß']
+    # Da in der ursprünglichen Caesar-Verschlüsselung nur die Buchstaben A-Z verwendet werden, gibt es ungemein viele Möglichkeiten, verschieden Algorithmen zu schreiben.
+    # Eine weitere Möglichkeit ist die Verschlüsselung von Groß- und Kleinbuchstaben sowie Umlauten.
+    # Nun habe ich, der Einfachheit halber, von der ASCII-Tabelle abgesehen und die Umlaute manuell in die Variable des Alphabets eingefügt.
+    # Der Rest der Funktion ähnelt den zuvor beschriebenen Algorithmen.
+    german_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'Ä', 'Ö', 'Ü', 'ä', 'ö', 'ü', 'ß', " "]
     encrypted_text = ""
     for i, j in enumerate(text):
         for k, l in enumerate(german_alphabet):
             if j == l:    
-                encrypted_text += german_alphabet[((k + key) % 59)]
+                encrypted_text += german_alphabet[((k + key) % len(german_alphabet))]
 
     return encrypted_text
 
 def caesar_with_german_characters_decryption(text, key):
-    german_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-    'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
-      'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-      's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'Ä', 'Ö', 'Ü', 'ä',
-        'ö', 'ü', 'ß']
+    # Bei der Entschlüsselung ändert sich wieder nicht viel, außer dass der Schlüssel subtrahiert wird.
+    german_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'Ä', 'Ö', 'Ü', 'ä', 'ö', 'ü', 'ß', " "]
     decrypted_text = ""
     for i, j in enumerate(text):
         for k, l in enumerate(german_alphabet):
             if j == l:
-                decrypted_text += german_alphabet[((k - key) % 59)]
+                decrypted_text += german_alphabet[((k - key) % len(german_alphabet))]
 
     return decrypted_text
             </code></pre><br>
@@ -271,13 +248,21 @@ def caesar_with_german_characters_decryption(event):
               <button class="section-child btn" id="caesar_with_unicode_decryption_btn" type="submit" py-onClick="caesar_with_unicode_decryption('')">Entschlüsseln</button>
               <div class="section-child" id="caesar_with_unicode_decryption_output" style="display: none;"></div>
             </section>
-            <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def caesar_unicode_encryption(text, key):
+            <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def caesar_with_unicode_encryption(text, key):
+    # Die letzte Variante der Caesar-Verschlüsselung hat – ironischerweise –, die meisten Möglichkeiten zu verschlüsseln und ist gleichzeitig die simpelste Variante.
+    # Hier wird die Unicode-Tabelle verwendet, um die Buchstaben zu verschlüsseln. 
+    # Die Tabelle enthält alle Buchstaben, Zahlen und Sonderzeichen, die auf dem Computer dargestellt werden können.
+    # Das einzige Problem der Verschlüsselung mit der Unicode-Tabelle ist, dass einige Zeihen der Tabelle nicht dargestellt werden können.
+    # Somit können Fehler entstehen, beispielsweise bei der Verschlüsselung von einem Leerzeichen mit dem Schlüssel -24. 
+    # Das Leerzeichen wird dann durch eine Grundfunktion wie DEL ersetzt, welche nicht dargestellt werden kann.
+    # Eine Entschlüsselung ist nur dann möglich, wenn der Text nicht vom Nutzer sondern automatisch kopiert wird.
     encrypted_text = ""
     for i in text:
         encrypted_text += chr((ord(i) + key) % 1114111)
     return encrypted_text
 
-def caesar_unicode_decryption(text,key):
+def caesar_with_unicode_decryption(text,key):
+    # Die Entschlüsselung ist funktioniert wieder wie die Verschlüsselung. Außer dass der Schlüssel subtrahiert wird.
     decrypted_text = ""
     for i in text:
         decrypted_text += chr((ord(i) - key) % 1114111)
@@ -328,7 +313,7 @@ def caesar_with_unicode_decryption(event):
           .wrapper-pre {
             max-width: 100%;
           }
-          
+
           .wrapper-section {
             margin: 20px 0px;
             display: grid;
@@ -455,7 +440,7 @@ def caesar_with_unicode_decryption(event):
           .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
-            width: fit-content;
+            width: auto;
           }
       
           .main1_1 {
