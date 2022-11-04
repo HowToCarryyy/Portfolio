@@ -7,7 +7,7 @@
         <title>Caesar</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
         <link rel="stylesheet" href="/js/pyscript/pyscript.css" />
-        <script defer src="/js/pyscript/pyscript.js"></script>
+        <!-- <script defer src="/js/pyscript/pyscript.js"></script> -->
         <script src="/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
         <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
@@ -48,8 +48,19 @@
                 <div class="section-child" id="simple_caesar_decryption_output" style="display: none;"></div>
               </section>
               <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def simple_caesar_encryption(text, key):
+    # Für die einfachste Version der Caesar-Verschlüsselung wird der Text zunächst in Großbuchstaben umgewandelt.
     text = text.upper()
+    # Um den verschlüsselten Text zu speichern, wird eine leere Variable deklariert.
     encrypted_text = ""
+    # Für jeden Buchstaben im Text wird ein neuer Buchstabe erzeugt. Dieser wird durch die ASCII-Tabelle ermittelt. 
+    # Diese enthält die Zahlenwerte für die Buchstaben und kann in Python mit den Funktionen ord() und chr() verwendet werden. 
+    ### Beispiel: ord("A") = 65, chr(65) = "A"
+    # Das Alphabet der ASCII-Tabelle beginnt bei 65. Daher muss dieser Wert von der ASCII-Zahl des Buchstabens abgezogen werden. 
+    # Anschließend wird der Schlüssel addiert. Dieser Wert wird durch 26 modulo genommen. 
+    # Dieser Wert entspricht der Anzahl der Buchstaben im Alphabet. 
+    ### Beispiel: (ord("A") - 65 + 3) % 26 = 3 (3 ist in diesem Fall der Key und entspricht dem Wert "D")
+    # Anschließend wird wieder 65 addiert. Dieser Wert entspricht dem Wert des Buchstabens A in der ASCII-Tabelle. 
+    # Dieser Wert wird wieder in einen Buchstaben umgewandelt.
     for i in text:
         if 65 <= ord(i) <= 90:
             encrypted_text += chr((ord(i) + key - 65) % 26 + 65)
@@ -60,6 +71,8 @@
     return encrypted_text
 
 def simple_caesar_decryption(text, key):
+    # Für die Entschlüsselung wird genau der gleiche Algorithmus verwendet, wie bei der Verschlüsselung. 
+    # Der einzige Unterschied ist, dass der Schlüssel subtrahiert wird.
     text = text.upper()
     decrypted_text = ""
     for i in text:

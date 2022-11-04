@@ -7,7 +7,7 @@
         <title>Vigenère</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
         <link rel="stylesheet" href="/js/pyscript/pyscript.css" />
-        <script defer src="/js/pyscript/pyscript.js"></script>
+        <!-- <script defer src="/js/pyscript/pyscript.js"></script> -->
         <script src="/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
         <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
@@ -46,7 +46,10 @@
                   <button class="section-child btn" id="vigenere_decryption_btn" type="submit" py-onClick="vigenere_decryption('')">Entschlüsseln</button>
                   <div class="section-child" id="vigenere_decryption_output" style="display: none;"></div>
                 </section>
-                <pre><h3 class="headline3">Code (Python):</h3><code class="language-python"></code></pre>              
+                <div class="wrapper-pre">
+                <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def vigenere(input, key, direction):
+  return "".join([" " if input[x] == " " else chr((ord(input[x]) + (direction * (ord(key[x % len(key)])) + 65) - 65) % 26 + 65) for x in range(len(input))])</code></pre>              
+                </div>
             </article>
             <py-script src="./event_handler.py"></py-script>
         </main>
@@ -65,6 +68,10 @@
 
           .headline3 {
             color: #FFCC32;
+          }
+
+          .wrapper-pre {
+            width: 50% !important;
           }
 
           .wrapper-section {
@@ -127,9 +134,11 @@
             src: url(/src/Nexa_Bold.otf);
           }
       
-      
+
           pre {
             color: #FFCC32;
+            overflow-x: scroll;
+            width: min-content;
           }
       
           .link-header {
@@ -190,7 +199,7 @@
           .language-python {
             background-color: #1A1A1A;
             border: solid 2px #FFFFFF;
-            width: fit-content;
+            width: auto;
           }
       
           .main1_1 {
