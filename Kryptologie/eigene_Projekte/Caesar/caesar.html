@@ -47,6 +47,7 @@
                 <button class="section-child btn" id="simple_caesar_decryption_btn" type="submit" py-onClick="simple_caesar_decryption('')">Entschlüsseln</button>
                 <div class="section-child" id="simple_caesar_decryption_output" style="display: none;"></div>
               </section>
+              <div class="wrapper-pre">
               <pre><h3 class="headline3">Code (Python):</h3><code class="language-python">def simple_caesar_encryption(text, key):
     # Für die einfachste Version der Caesar-Verschlüsselung wird der Text zunächst in Großbuchstaben umgewandelt.
     text = text.upper()
@@ -84,6 +85,7 @@ def simple_caesar_decryption(text, key):
             decrypted_text += i
     return decrypted_text
               </code></pre><br>
+            </div>
               <pre><h3 class="headline3">Code (PyScript):</h3><code class="language-python">import Caesar as c
 
 def simple_caesar_encryption(event):
@@ -323,6 +325,10 @@ def caesar_with_unicode_decryption(event):
             color: #FFCC32;
           }
 
+          .wrapper-pre {
+            max-width: 100%;
+          }
+          
           .wrapper-section {
             margin: 20px 0px;
             display: grid;
@@ -386,6 +392,9 @@ def caesar_with_unicode_decryption(event):
       
           pre {
             color: #FFCC32;
+            overflow-x: scroll;
+            width: min-content;
+            max-width: calc(100vw / 2);
           }
       
           .link-header {

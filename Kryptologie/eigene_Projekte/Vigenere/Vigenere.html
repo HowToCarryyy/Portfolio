@@ -7,7 +7,7 @@
         <title>Vigenère</title>
         <link rel="icon" href="/src/sj_logo_yellow.png">
         <link rel="stylesheet" href="/js/pyscript/pyscript.css" />
-        <!-- <script defer src="/js/pyscript/pyscript.js"></script> -->
+        <script defer src="/js/pyscript/pyscript.js"></script>
         <script src="/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
         <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
@@ -71,7 +71,7 @@
           }
 
           .wrapper-pre {
-            width: 50% !important;
+            max-width: 100%;
           }
 
           .wrapper-section {
@@ -139,6 +139,7 @@
             color: #FFCC32;
             overflow-x: scroll;
             width: min-content;
+            max-width: calc(100vw / 2);
           }
       
           .link-header {
