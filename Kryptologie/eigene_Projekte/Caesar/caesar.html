@@ -20,12 +20,18 @@
         <div class="wrapper-header">
           <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
           <h1 style="background-color:#FFCC32 !important;">
-            <a class="link-header" href="/src/Projekte/">Caesar</a>
-            <p class="header-desc">↑ Hier klicken, um die Aufgaben zu sehen. </p>
+            <a class="link-header" href="https://pyscript.net/">Caesar</a>
+            <p class="header-desc">mit PyScript im Browser</p>
           </h1>
         </div>
         <main class="main1_1">
             <article class="expl_1_1">
+              <h2 class="headline3">GUI</h2>
+              <br>
+              <p>Das GUI habe ich im Browser mit PyScript geschrieben. PyScript ist ein Projekt, welches es erlaubt, Python-Code im Browser auszuführen. Dies ist durch das komplilieren/transponieren zu WebAssembly möglich. <br>
+              In dem Code von meinem GUI habe ich mit JavaScript Funktionen gearbeitet, die den jeweilgen Output wieder zurück an das DOM senden. Hier wird es dann mit HTML und CSS dargestellt. <br>
+              Da PyScript ein relativ neues Framework ist, können eventuell noch Fehler auftreten.</p>
+              <br>
               <h2 class="headline3">Die einfachste Form der Caesar Verschlüsselung:</h2>
               <br>
               <p>
@@ -84,7 +90,10 @@ def simple_caesar_decryption(text, key):
             decrypted_text += i
     return decrypted_text
               </code></pre><br>
-              <pre><h3 class="headline3">Code (PyScript):</h3><code class="language-python">import Caesar as c
+              <pre><h3 class="headline3">Code (PyScript):</h3><code class="language-python">
+from js import document
+
+import Caesar as c
 
 def simple_caesar_encryption(event):
     text_input = document.getElementById("simple_caesar_encryption_text")
