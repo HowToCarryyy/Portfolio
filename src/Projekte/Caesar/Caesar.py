@@ -15,8 +15,6 @@ def simple_caesar_encryption(text, key):
     for i in text:
         if 65 <= ord(i) <= 90:
             encrypted_text += chr((ord(i) + key - 65) % 26 + 65)
-        elif i == " ":
-            encrypted_text += " "
         else:
             encrypted_text += i
     return encrypted_text
@@ -29,8 +27,6 @@ def simple_caesar_decryption(text, key):
     for i in text:
         if 65 <= ord(i) <= 90:
             decrypted_text += chr((ord(i) - key - 65) % 26 + 65)
-        elif i == " ":
-            decrypted_text += " "
         else:
             decrypted_text += i
     return decrypted_text
@@ -48,8 +44,8 @@ def caesar_upper_and_lower_encryption(text, key):
             encrypted_text += chr((ord(i) + key - 97) % 26 + 97)
         elif 65 <= ord(i) <= 90:
             encrypted_text += chr((ord(i) + key - 65) % 26 + 65)
-        elif i == " ":
-            encrypted_text += " "
+        else:
+            encrypted_text += i
     return encrypted_text
 
 def caesar_upper_and_lower_decryption(text, key):
@@ -61,8 +57,8 @@ def caesar_upper_and_lower_decryption(text, key):
             decrypted_text += chr((ord(i) - key - 97) % 26 + 97)
         elif 65 <= ord(i) <= 90:
             decrypted_text += chr((ord(i) - key - 65) % 26 + 65)
-        elif i == " ":
-            decrypted_text += " "
+        else:
+            decrypted_text += i
     return decrypted_text
 
 
