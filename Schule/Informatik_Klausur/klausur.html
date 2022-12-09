@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Caesar</title>
+        <link rel="icon" href="/src/sj_logo_yellow.png">
+        <link rel="stylesheet" href="/js/pyscript/pyscript.css" />
+        <script defer src="/js/pyscript/pyscript.js"></script>
+        <script src="/js/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <link rel="stylesheet" href="/styles/atom-one-dark-reasonable.min.css">
+        <py-env>
+- paths:
+  - /Schule/Informatik_Klausur/klausur.py
+        </py-env>
+    </head>
+    <body>
+        <div class="wrapper-header">
+          <a class="logo-header-link" href="../../../index.html"><img class="logo-header" src="/src/sj_logo.png"></img></a>
+          <h1 style="background-color:#FFCC32 !important;">
+            <a class="link-header" href="https://pyscript.net/">Klausur</a>
+            <p class="header-desc">in Python mit PyScript im Browser</p>
+          </h1>
+        </div>
+        <main class="main1_1">
+          <article class="expl_1_1">
+            <h3 class="headline3">Aufgabe 1:</h3>
+              <pre><h3 class="headline-3">Code:</h3><code class="language-python">def aufgabe1(zahl1_in, zahl2_in):
+  zahl1 = zahl1_in
+  zahl2 = zahl2_in
+  if zahl1 > zahl2:
+      return "Der größe nach sortiert sind die Zahlen: "+ str(zahl2) + ", "+ str(zahl1)
+  else:
+      return "Der größe nach sortiert sind die Zahlen: "+ str(zahl1) + ", "+ str(zahl2) </code></pre>
+              <br><br>
+              
+            
+              <input class="section-child" type="number" id="aufgabe_1_input_1" placeholder="Zahl 1 eingeben: " />
+              <br>
+              <br>
+              <input class="section-child" type="number" id="aufgabe_1_input_2" placeholder="Zahl 2 eingeben: " />
+              <br>
+              <br>
+              <button class="section-child btn" id="aufgabe_1_submit_button" type="submit" py-onClick="aufgabe1('')">Eingabe </button>
+              <br>
+              <br>
+
+              <div class="section-child output" id="aufgabe_1_output">
+                  <h3 class="headline3-white">Ergebnis:</h3>
+                  <pre><code class="language-python" id="aufgabe_1_output_code" style="display: none;"></code></pre>
+              </div>
+          </article>
+            <py-script src="./event_handler.py"></py-script>
+        </main>
+        <a class="topbtn" href="#" title="Go to top">▲</a>
+        <style>
+          html {
+            width: auto;
+            font-family: Nexa_Bold;
+          }
+      
+          * {
+            background-color: #1A1A1A;
+            margin: 0;
+            scroll-behavior: smooth;
+          }
+
+          .headline3 {
+            color: #FFCC32;
+          }
+
+          .headline3-white {
+            color: #FFFFFF;
+          }
+
+          .wrapper-pre {
+            max-width: 100%;
+          }
+
+          .wrapper-section {
+            margin: 20px 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            gap: 1rem;
+          }
+          .section-child {
+            padding: 0.5rem;
+            border: 2px solid #FFCC32;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            background-color: #1A1A1A;
+            color: #FFCC32;
+            font-family: Nexa_Bold;
+            padding: 0.5rem;
+            width: 90% !important;
+            text-align: center;
+          }
+
+          .output {
+            text-align: left;
+            border: none;
+          }
+
+          .btn:hover {
+            background-color: #FFCC32;
+            color: #1A1A1A;
+            cursor: pointer;
+          }
+          .topbtn {
+            text-decoration: none;
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #FFCC32;
+            color: #1A1A1A;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+          }
+      
+          a.topbtn:hover {
+            background-color: #555;
+          }
+      
+          pre>h3>code {
+            font-family: 'Ubuntu Mono', monospace !important;
+          }
+      
+          pre>h3 {
+            font-family: Nexa_Bold !important;
+          }
+      
+          @font-face {
+            font-family: Nexa_Bold;
+            src: url(/src/Nexa_Bold.otf);
+          }
+      
+      
+          pre {
+            color: #FFCC32;
+            overflow-x: scroll;
+            width: min-content;
+            max-width: calc(100vw / 2);
+          }
+      
+          .link-header {
+            font-size: 1em;
+            background-color: #FFCC32;
+            color: #1A1A1A;
+            width: 550px;
+            text-decoration: none;
+          }
+      
+          h1 {
+            position: relative;
+            font-size: (1.8em, 5vw, 2.5em);
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+          }
+      
+          .header-desc {
+            color: #1A1A1A;
+            background-color: #FFCC32;
+            font-size: 0.5em;
+          }
+      
+          .logo-header {
+            position: relative;
+            width: 140px;
+            height: auto;
+            background-color: transparent;
+            margin-left: 20px;
+          }
+      
+          .logo-header-link {
+            background-color: transparent;
+          }
+      
+          .wrapper-header {
+            position: relative;
+            display: grid;
+            background-color: #FFCC32;
+            margin-bottom: 40px;
+            align-items: center;
+            height: 200px;
+            grid-template-columns: repeat(3, 1fr);
+          }
+      
+          .expl_1_1 {
+            box-sizing: border-box;
+            padding-right: 20px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+          }
+      
+          .result-1_1 {
+            width: 100%;
+            height: auto;
+          }
+          
+          .language-python {
+            background-color: #1A1A1A;
+            border: solid 2px #FFFFFF;
+            width: auto;
+            font-size: medium;
+          }
+      
+          .main1_1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: #1A1A1A;
+            gap: 25px;
+            background-color: #1A1A1A;
+            margin: 0 auto;
+            width: 50%;
+            margin-bottom: 50px;
+            
+          }
+      
+          .code1_1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+          }
+      
+          .footer1_1 {
+            background-color: #FFCC32;
+            height: 10px;
+            grid-row: 2;
+            grid-column: 1 / 3;
+          }
+      
+          .main1_2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: #1A1A1A;
+            gap: 25px;
+            background-color: #1A1A1A;
+            margin: 0 auto;
+            width: 75%;
+          }
+      
+          .code1_2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+          }
+      
+          .expl_1_2 {
+            box-sizing: border-box;
+            padding-right: 20px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+          }
+      
+          .result-1_2 {
+            width: 100%;
+            height: auto;
+          }
+      
+          ::-webkit-scrollbar {
+            width: 10px;
+          }
+      
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #1A1A1A;
+          }
+      
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #FFCC32;
+          }
+      
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #d8ad2b;
+          }
+      
+          @media (max-width: 900px) {
+            .logo-header {
+              display: none;
+            }
+      
+            .main1_1 {
+              display: block;
+              margin: 0 auto;
+            }
+      
+            .code1_1 {
+              display: block;
+              margin: 0 auto;
+            }
+      
+            .left1_1 {
+              display: block;
+            }
+      
+            .result-1_1 {
+              margin-bottom: 40px;
+            }
+      
+            .expl_1_1 {
+              margin-bottom: 35px;
+            }
+      
+            .footer1_1 {
+              grid-row: 2;
+              grid-column: 1;
+            }
+      
+      
+      
+            .main1_2 {
+              display: block;
+              margin: 0 auto;
+            }
+      
+            .code1_2 {
+              display: block;
+              margin: 0 auto;
+            }
+      
+            .left1_2 {
+              display: block;
+            }
+      
+            .result-1_2 {
+              margin-bottom: 40px;
+            }
+      
+            .expl_1_2 {
+              margin-bottom: 35px;
+            }
+      
+            pre {
+              width: min-content;
+              margin-bottom: 20px;
+            }
+          }
+      
+          @media(max-width: 450px) {
+            html {
+              width: min-content;
+            }
+      
+            .Article-Wrapper {
+              padding: 5px;
+            }
+          }
+        </style>
+      </body>
+</html>
